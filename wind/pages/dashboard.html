@@ -1,0 +1,1183 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">主面板
+        <small>
+            请使用现代浏览器Firefox、Chrome，IE10/11访问，IE 9以下不能显示。手机端浏览器也可以访问，可体验图形和菜单自动布局的特性。
+        </small></h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<h2>发电功率
+<small>
+    动态数据视图，手机端和电脑端自动适配布局。
+</small>
+</h2>
+<div class="row">
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-primary" id="power-0" style="height: 200px">
+
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-primary" id="power-1" style="height: 200px">
+
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-primary" id="power-2" style="height: 200px">
+
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-primary" id="power-3" style="height: 200px">
+
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-primary" id="power-4" style="height: 200px">
+
+        </div>
+    </div>
+    <div class="col-lg-3 col-md-6">
+        <div class="panel panel-primary" id="power-5" style="height: 200px">
+
+        </div>
+    </div>
+</div>
+
+<h2>发电量
+<small>
+    请尝试点击“预测”、“实际”图例和右侧折线、柱形、堆积、平铺切换。尝试将橙色或绿色色块拖拽、合并，体验拖拽重计算特性。点击还原可恢复原始状态
+</small>
+</h2>
+<div class="row">
+    <div class="col-lg-12 hidden-phone">
+        <div class="panel panel-primary" id="kw-0" style="height: 400px">
+
+        </div>
+    </div>
+    <div class="col-lg-12 hidden-phone">
+        <div class="panel panel-primary" id="kw-1" style="height: 400px">
+
+        </div>
+    </div>
+    <div class="col-lg-12 hidden-phone">
+        <div class="panel panel-primary" id="kw-2" style="height: 400px">
+
+        </div>
+    </div>
+
+</div>
+
+<script>
+    require.config({
+        paths: {
+            'echarts': '../js/echarts',
+            'echarts/chart/gauge': '../js/echarts'
+        }
+    });
+
+    require(
+            [
+                'echarts',
+                'echarts/chart/gauge'
+            ],
+            function (ec) {
+                initGraph(ec);
+            }
+    );
+
+    function initGraph(ec) {
+        var charts = [];
+        var options = [];
+
+        for (var i = 0; i < stationName.length; i++) {
+
+            var id = 'power-' + i;
+            var chart = ec.init(document.getElementById(id));
+
+            var option = {
+                title: {
+                    text: stationName[i]
+                },
+                series : [
+                    {
+                        name:'发电功率',
+                        type:'gauge',
+                        center : ['50%', '50%'],    // 默认全局居中
+                        radius : [0, '85%'],
+                        startAngle: 140,
+                        endAngle : -140,
+                        min: 0,                     // 最小值
+                        max: 50,                   // 最大值
+                        precision: 0,               // 小数精度，默认为0，无小数点
+                        splitNumber: 10,             // 分割段数，默认为5
+                        axisLine: {            // 坐标轴线
+                            show: true,        // 默认显示，属性show控制显示与否
+                            lineStyle: {       // 属性lineStyle控制线条样式
+                                color: [[0.2, 'lightgreen'],[0.4, 'orange'],[0.8, 'skyblue'],[1, '#ff4500']],
+                                width: 30
+                            }
+                        },
+                        axisTick: {            // 坐标轴小标记
+                            show: true,        // 属性show控制显示与否，默认不显示
+                            splitNumber: 5,    // 每份split细分多少段
+                            length :8,         // 属性length控制线长
+                            lineStyle: {       // 属性lineStyle控制线条样式
+                                color: '#eee',
+                                width: 1,
+                                type: 'solid'
+                            }
+                        },
+                        axisLabel: {           // 坐标轴文本标签，详见axis.axisLabel
+                            show: false
+                        },
+                        splitLine: {           // 分隔线
+                            show: true,        // 默认显示，属性show控制显示与否
+                            length :30,         // 属性length控制线长
+                            lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                                color: '#eee',
+                                width: 2,
+                                type: 'solid'
+                            }
+                        },
+                        pointer : {
+                            length : '80%',
+                            width : 8,
+                            color : 'auto'
+                        },
+                        title : {
+                            show : true,
+                            offsetCenter: ['-65%', -10],       // x, y，单位px
+                            textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                color: '#333',
+                                fontSize : 15
+                            }
+                        },
+                        detail : {
+                            show : true,
+                            backgroundColor: 'rgba(0,0,0,0)',
+                            borderWidth: 0,
+                            borderColor: '#ccc',
+//                            width: 100,
+//                            height: 40,
+                            offsetCenter: ['-60%', 10],       // x, y，单位px
+                            formatter:'{value}MW',
+                            textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                color: 'auto',
+                                fontSize : 20
+                            }
+                        },
+                        data:[{value: 25, name: '发电功率'}]
+                    }
+                ]
+            };
+
+            charts.push(chart);
+            options.push(option);
+        }
+
+        setInterval(function () {
+
+            for (var i = 0; i < charts.length; i++) {
+                options[i].series[0].data[0].value = (Math.random() * 50).toFixed(2) - 0;
+                charts[i].setOption(options[i], true);
+            }
+       }, 2000);
+    }
+</script>
+
+<script>
+    require.config({
+        paths: {
+            'echarts': '../js/echarts',
+            'echarts/chart/bar': '../js/echarts'
+        }
+    });
+
+    require(
+            [
+                'echarts',
+                'echarts/chart/bar'
+            ],
+            function (ec) {
+                initGraphKw(ec);
+            }
+    );
+
+    function generateRandomData(length) {
+        var data = [];
+
+        for (var i = 0; i < length; i++) {
+            data.push(Math.floor((Math.random() * 50)));
+        }
+
+        return data;
+    }
+
+    function initGraphKw(ec) {
+
+        var dayChart = ec.init(document.getElementById('kw-0'));
+        var monthChart = ec.init(document.getElementById('kw-1'));
+        var yearChart = ec.init(document.getElementById('kw-2'));
+
+        var data1 = generateRandomData(6);
+        var data2 = generateRandomData(6);
+
+        var dayOption = {
+            title : {
+                text: '日发电量'
+            },
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                },
+                formatter: function (param){
+                    return param[0][1] + '<br/>'
+                            + param[0][0] + ' : ' + param[0][2] + '<br/>'
+                            + param[1][0] + ' : ' + param[1][2];
+                }
+            },
+            legend: {
+                selectedMode:true,
+                data:['预测', '实际']
+            },
+            toolbox: {
+                show : true,
+                feature : {
+                    magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            calculable : true,
+            xAxis : [
+                {
+                    type : 'category',
+                    data : stationName
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+                    boundaryGap: [0, 0]
+                }
+            ],
+            series : [
+                {
+                    name:'预测',
+                    type:'bar',
+                    barCategoryGap: '50%',
+                    itemStyle: {
+                        normal: {
+                            color: 'tomato',
+                            borderColor: 'tomato',
+                            borderWidth: 6,
+                            borderRadius:0,
+                            label : {
+                                show: true, position: 'insideTop'
+                            }
+                        }
+                    },
+                    data:generateRandomData(6)
+                },
+                {
+                    name:'实际',
+                    type:'bar',
+                    itemStyle: {
+                        normal: {
+                            color: 'green',
+                            borderColor: 'tomato',
+                            borderWidth: 6,
+                            borderRadius:0,
+                            label : {
+                                show: true,
+                                position: 'top',
+                                formatter: function (a, b, c) {
+                                    for (var i = 0, l = dayOption.xAxis[0].data.length; i < l; i++) {
+                                        if (dayOption.xAxis[0].data[i] == b) {
+                                            return c;
+                                        }
+                                    }
+                                },
+                                textStyle: {
+                                    color: 'tomato'
+                                }
+                            }
+                        }
+                    },
+                    data:generateRandomData(6)
+                }
+            ]
+        };
+        var monthOption = {
+            title : {
+                text: '月发电量'
+            },
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                },
+                formatter: function (param){
+                    return param[0][1] + '<br/>'
+                            + param[0][0] + ' : ' + param[0][2] + '<br/>'
+                            + param[1][0] + ' : ' + (param[1][2]);
+                }
+            },
+            legend: {
+                selectedMode:true,
+                data:['预测', '实际']
+            },
+            toolbox: {
+                show : true,
+                feature : {
+                    magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            calculable : true,
+            xAxis : [
+                {
+                    type : 'category',
+                    data : stationName
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+                    boundaryGap: [0, 0]
+                }
+            ],
+            series : [
+                {
+                    name:'预测',
+                    type:'bar',
+                    barCategoryGap: '50%',
+                    itemStyle: {
+                        normal: {
+                            color: 'tomato',
+                            borderColor: 'tomato',
+                            borderWidth: 6,
+                            borderRadius:0,
+                            label : {
+                                show: true, position: 'insideTop'
+                            }
+                        }
+                    },
+                    data:generateRandomData(6)
+                },
+                {
+                    name:'实际',
+                    type:'bar',
+                    itemStyle: {
+                        normal: {
+                            color: 'green',
+                            borderColor: 'tomato',
+                            borderWidth: 6,
+                            borderRadius:0,
+                            label : {
+                                show: true,
+                                position: 'top',
+                                formatter: function (a, b, c) {
+                                    for (var i = 0, l = monthOption.xAxis[0].data.length; i < l; i++) {
+                                        if (monthOption.xAxis[0].data[i] == b) {
+                                            return c;
+                                        }
+                                    }
+                                },
+                                textStyle: {
+                                    color: 'tomato'
+                                }
+                            }
+                        }
+                    },
+                    data:generateRandomData(6)
+                }
+            ]
+        };
+
+        var yearOption = {
+            title : {
+                text: '年发电量'
+            },
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                },
+                formatter: function (param){
+                    return param[0][1] + '<br/>'
+                            + param[0][0] + ' : ' + param[0][2] + '<br/>'
+                            + param[1][0] + ' : ' + (param[1][2]);
+                }
+            },
+            legend: {
+                selectedMode:true,
+                data:['预测', '实际']
+            },
+            toolbox: {
+                show : true,
+                feature : {
+                    magicType : {show: true, type: ['line', 'bar', 'stack', 'tiled']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            calculable : true,
+            xAxis : [
+                {
+                    type : 'category',
+                    data : stationName
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+                    boundaryGap: [0, 0]
+                }
+            ],
+            series : [
+                {
+                    name:'预测',
+                    type:'bar',
+                    barCategoryGap: '50%',
+                    itemStyle: {
+                        normal: {
+                            color: 'tomato',
+                            borderColor: 'tomato',
+                            borderWidth: 6,
+                            borderRadius:0,
+                            label : {
+                                show: true, position: 'insideTop'
+                            }
+                        }
+                    },
+                    data:generateRandomData(6)
+                },
+                {
+                    name:'实际',
+                    type:'bar',
+                    itemStyle: {
+                        normal: {
+                            color: 'green',
+                            borderColor: 'tomato',
+                            borderWidth: 6,
+                            borderRadius:0,
+                            label : {
+                                show: true,
+                                position: 'top',
+                                formatter: function (a, b, c) {
+                                    for (var i = 0, l = yearOption.xAxis[0].data.length; i < l; i++) {
+                                        if (yearOption.xAxis[0].data[i] == b) {
+                                            return c;
+                                        }
+                                    }
+                                },
+                                textStyle: {
+                                    color: 'tomato'
+                                }
+                            }
+                        }
+                    },
+                    data:generateRandomData(6)
+                }
+            ]
+        };
+
+        dayChart.setOption(dayOption);
+        monthChart.setOption(monthOption);
+        yearChart.setOption(yearOption);
+    }
+</script>
+
+
+<!--<div class="row">-->
+<!--<div class="col-lg-8">-->
+<!--<div class="panel panel-default">-->
+<!--<div class="panel-heading">-->
+<!--<i class="fa fa-bar-chart-o fa-fw"></i> Area Chart Example-->
+<!--<div class="pull-right">-->
+<!--<div class="btn-group">-->
+<!--<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">-->
+<!--Actions-->
+<!--<span class="caret"></span>-->
+<!--</button>-->
+<!--<ul class="dropdown-menu pull-right" role="menu">-->
+<!--<li><a href="#">Action</a>-->
+<!--</li>-->
+<!--<li><a href="#">Another action</a>-->
+<!--</li>-->
+<!--<li><a href="#">Something else here</a>-->
+<!--</li>-->
+<!--<li class="divider"></li>-->
+<!--<li><a href="#">Separated link</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash; /.panel-heading &ndash;&gt;-->
+<!--<div class="panel-body">-->
+<!--<div id="morris-area-chart"></div>-->
+<!--</div>-->
+<!--&lt;!&ndash; /.panel-body &ndash;&gt;-->
+<!--</div>-->
+<!--&lt;!&ndash; /.panel &ndash;&gt;-->
+<!--<div class="panel panel-default">-->
+<!--<div class="panel-heading">-->
+<!--<i class="fa fa-bar-chart-o fa-fw"></i> Bar Chart Example-->
+<!--<div class="pull-right">-->
+<!--<div class="btn-group">-->
+<!--<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">-->
+<!--Actions-->
+<!--<span class="caret"></span>-->
+<!--</button>-->
+<!--<ul class="dropdown-menu pull-right" role="menu">-->
+<!--<li><a href="#">Action</a>-->
+<!--</li>-->
+<!--<li><a href="#">Another action</a>-->
+<!--</li>-->
+<!--<li><a href="#">Something else here</a>-->
+<!--</li>-->
+<!--<li class="divider"></li>-->
+<!--<li><a href="#">Separated link</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash; /.panel-heading &ndash;&gt;-->
+<!--<div class="panel-body">-->
+<!--<div class="row">-->
+<!--<div class="col-lg-4">-->
+<!--<div class="table-responsive">-->
+<!--<table class="table table-bordered table-hover table-striped">-->
+<!--<thead>-->
+<!--<tr>-->
+<!--<th>#</th>-->
+<!--<th>Date</th>-->
+<!--<th>Time</th>-->
+<!--<th>Amount</th>-->
+<!--</tr>-->
+<!--</thead>-->
+<!--<tbody>-->
+<!--<tr>-->
+<!--<td>3326</td>-->
+<!--<td>10/21/2013</td>-->
+<!--<td>3:29 PM</td>-->
+<!--<td>$321.33</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>3325</td>-->
+<!--<td>10/21/2013</td>-->
+<!--<td>3:20 PM</td>-->
+<!--<td>$234.34</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>3324</td>-->
+<!--<td>10/21/2013</td>-->
+<!--<td>3:03 PM</td>-->
+<!--<td>$724.17</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>3323</td>-->
+<!--<td>10/21/2013</td>-->
+<!--<td>3:00 PM</td>-->
+<!--<td>$23.71</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>3322</td>-->
+<!--<td>10/21/2013</td>-->
+<!--<td>2:49 PM</td>-->
+<!--<td>$8345.23</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>3321</td>-->
+<!--<td>10/21/2013</td>-->
+<!--<td>2:23 PM</td>-->
+<!--<td>$245.12</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>3320</td>-->
+<!--<td>10/21/2013</td>-->
+<!--<td>2:15 PM</td>-->
+<!--<td>$5663.54</td>-->
+<!--</tr>-->
+<!--<tr>-->
+<!--<td>3319</td>-->
+<!--<td>10/21/2013</td>-->
+<!--<td>2:13 PM</td>-->
+<!--<td>$943.45</td>-->
+<!--</tr>-->
+<!--</tbody>-->
+<!--</table>-->
+<!--</div>-->
+<!--&lt;!&ndash; /.table-responsive &ndash;&gt;-->
+<!--</div>-->
+<!--&lt;!&ndash; /.col-lg-4 (nested) &ndash;&gt;-->
+<!--<div class="col-lg-8">-->
+<!--<div id="morris-bar-chart"></div>-->
+<!--</div>-->
+<!--&lt;!&ndash; /.col-lg-8 (nested) &ndash;&gt;-->
+<!--</div>-->
+<!--&lt;!&ndash; /.row &ndash;&gt;-->
+<!--</div>-->
+<!--&lt;!&ndash; /.panel-body &ndash;&gt;-->
+<!--</div>-->
+<!--&lt;!&ndash; /.panel &ndash;&gt;-->
+<!--<div class="panel panel-default">-->
+<!--<div class="panel-heading">-->
+<!--<i class="fa fa-clock-o fa-fw"></i> Responsive Timeline-->
+<!--</div>-->
+<!--&lt;!&ndash; /.panel-heading &ndash;&gt;-->
+<!--<div class="panel-body">-->
+<!--<ul class="timeline">-->
+<!--<li>-->
+<!--<div class="timeline-badge"><i class="fa fa-check"></i>-->
+<!--</div>-->
+<!--<div class="timeline-panel">-->
+<!--<div class="timeline-heading">-->
+<!--<h4 class="timeline-title">Lorem ipsum dolor</h4>-->
+
+<!--<p>-->
+<!--<small class="text-muted"><i class="fa fa-clock-o"></i> 11 hours ago via Twitter-->
+<!--</small>-->
+<!--</p>-->
+<!--</div>-->
+<!--<div class="timeline-body">-->
+<!--<p>Lorem-->
+<!--ipsum-->
+<!--dolor-->
+<!--sit-->
+<!--amet, consectetur-->
+<!--adipisicing-->
+<!--elit.Libero-->
+<!--laboriosam-->
+<!--dolor-->
+<!--perspiciatis-->
+<!--omnis-->
+<!--exercitationem.Beatae, officia-->
+<!--pariatur ? Est cum-->
+<!--veniam-->
+<!--excepturi.Maiores-->
+<!--praesentium, porro-->
+<!--voluptas-->
+<!--suscipit-->
+<!--facere-->
+<!--rem-->
+<!--dicta, debitis.</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</li>-->
+<!--<li class="timeline-inverted">-->
+<!--<div class="timeline-badge warning"><i class="fa fa-credit-card"></i>-->
+<!--</div>-->
+<!--<div class="timeline-panel">-->
+<!--<div class="timeline-heading">-->
+<!--<h4 class="timeline-title">Lorem ipsum dolor</h4>-->
+<!--</div>-->
+<!--<div class="timeline-body">-->
+<!--<p>Lorem-->
+<!--ipsum-->
+<!--dolor-->
+<!--sit-->
+<!--amet, consectetur-->
+<!--adipisicing-->
+<!--elit.Autem-->
+<!--dolorem-->
+<!--quibusdam, tenetur-->
+<!--commodi-->
+<!--provident-->
+<!--cumque-->
+<!--magni-->
+<!--voluptatem-->
+<!--libero, quis-->
+<!--rerum.Fugiat-->
+<!--esse-->
+<!--debitis-->
+<!--optio, tempore.Animi-->
+<!--officiis-->
+<!--alias, officia-->
+<!--repellendus.</p>-->
+
+<!--<p>Lorem-->
+<!--ipsum-->
+<!--dolor-->
+<!--sit-->
+<!--amet, consectetur-->
+<!--adipisicing-->
+<!--elit.Laudantium-->
+<!--maiores-->
+<!--odit-->
+<!--qui-->
+<!--est-->
+<!--tempora-->
+<!--eos, nostrum-->
+<!--provident-->
+<!--explicabo-->
+<!--dignissimos-->
+<!--debitis-->
+<!--vel-->
+<!--!Adipisci-->
+<!--eius-->
+<!--voluptates, ad-->
+<!--aut-->
+<!--recusandae-->
+<!--minus-->
+<!--eaque-->
+<!--facere.</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</li>-->
+<!--<li>-->
+<!--<div class="timeline-badge danger"><i class="fa fa-bomb"></i>-->
+<!--</div>-->
+<!--<div class="timeline-panel">-->
+<!--<div class="timeline-heading">-->
+<!--<h4 class="timeline-title">Lorem ipsum dolor</h4>-->
+<!--</div>-->
+<!--<div class="timeline-body">-->
+<!--<p>Lorem-->
+<!--ipsum-->
+<!--dolor-->
+<!--sit-->
+<!--amet, consectetur-->
+<!--adipisicing-->
+<!--elit.Repellendus-->
+<!--numquam-->
+<!--facilis-->
+<!--enim-->
+<!--eaque, tenetur-->
+<!--nam-->
+<!--id-->
+<!--qui-->
+<!--vel-->
+<!--velit-->
+<!--similique-->
+<!--nihil-->
+<!--iure-->
+<!--molestias-->
+<!--aliquam, voluptatem-->
+<!--totam-->
+<!--quaerat, magni-->
+<!--commodi-->
+<!--quisquam.</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</li>-->
+<!--<li class="timeline-inverted">-->
+<!--<div class="timeline-panel">-->
+<!--<div class="timeline-heading">-->
+<!--<h4 class="timeline-title">Lorem ipsum dolor</h4>-->
+<!--</div>-->
+<!--<div class="timeline-body">-->
+<!--<p>Lorem-->
+<!--ipsum-->
+<!--dolor-->
+<!--sit-->
+<!--amet, consectetur-->
+<!--adipisicing-->
+<!--elit.Voluptates-->
+<!--est-->
+<!--quaerat-->
+<!--asperiores-->
+<!--sapiente, eligendi, nihil.Itaque-->
+<!--quos, alias-->
+<!--sapiente-->
+<!--rerum-->
+<!--quas-->
+<!--odit-->
+<!--!Aperiam-->
+<!--officiis-->
+<!--quidem-->
+<!--delectus-->
+<!--libero, omnis-->
+<!--ut-->
+<!--debitis-->
+<!--!</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</li>-->
+<!--<li>-->
+<!--<div class="timeline-badge info"><i class="fa fa-save"></i>-->
+<!--</div>-->
+<!--<div class="timeline-panel">-->
+<!--<div class="timeline-heading">-->
+<!--<h4 class="timeline-title">Lorem ipsum dolor</h4>-->
+<!--</div>-->
+<!--<div class="timeline-body">-->
+<!--<p>Lorem-->
+<!--ipsum-->
+<!--dolor-->
+<!--sit-->
+<!--amet, consectetur-->
+<!--adipisicing-->
+<!--elit.Nobis-->
+<!--minus-->
+<!--modi-->
+<!--quam-->
+<!--ipsum-->
+<!--alias-->
+<!--at-->
+<!--est-->
+<!--molestiae-->
+<!--excepturi-->
+<!--delectus-->
+<!--nesciunt, quibusdam-->
+<!--debitis-->
+<!--amet, beatae-->
+<!--consequuntur-->
+<!--impedit-->
+<!--nulla-->
+<!--qui-->
+<!--!Laborum, atque.</p>-->
+<!--<hr>-->
+<!--<div class="btn-group">-->
+<!--<button type="button" class="btn btn-primary btn-sm dropdown-toggle"-->
+<!--data-toggle="dropdown">-->
+<!--<i class="fa fa-gear"></i> <span class="caret"></span>-->
+<!--</button>-->
+<!--<ul class="dropdown-menu" role="menu">-->
+<!--<li><a href="#">Action</a>-->
+<!--</li>-->
+<!--<li><a href="#">Another action</a>-->
+<!--</li>-->
+<!--<li><a href="#">Something else here</a>-->
+<!--</li>-->
+<!--<li class="divider"></li>-->
+<!--<li><a href="#">Separated link</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</li>-->
+<!--<li>-->
+<!--<div class="timeline-panel">-->
+<!--<div class="timeline-heading">-->
+<!--<h4 class="timeline-title">Lorem ipsum dolor</h4>-->
+<!--</div>-->
+<!--<div class="timeline-body">-->
+<!--<p>Lorem-->
+<!--ipsum-->
+<!--dolor-->
+<!--sit-->
+<!--amet, consectetur-->
+<!--adipisicing-->
+<!--elit.Sequi-->
+<!--fuga-->
+<!--odio-->
+<!--quibusdam.Iure-->
+<!--expedita, incidunt-->
+<!--unde-->
+<!--quis-->
+<!--nam-->
+<!--!Quod, quisquam.Officia-->
+<!--quam-->
+<!--qui-->
+<!--adipisci-->
+<!--quas-->
+<!--consequuntur-->
+<!--nostrum-->
+<!--sequi.Consequuntur, commodi.</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</li>-->
+<!--<li class="timeline-inverted">-->
+<!--<div class="timeline-badge success"><i class="fa fa-graduation-cap"></i>-->
+<!--</div>-->
+<!--<div class="timeline-panel">-->
+<!--<div class="timeline-heading">-->
+<!--<h4 class="timeline-title">Lorem ipsum dolor</h4>-->
+<!--</div>-->
+<!--<div class="timeline-body">-->
+<!--<p>Lorem-->
+<!--ipsum-->
+<!--dolor-->
+<!--sit-->
+<!--amet, consectetur-->
+<!--adipisicing-->
+<!--elit.Deserunt-->
+<!--obcaecati, quaerat-->
+<!--tempore-->
+<!--officia-->
+<!--voluptas-->
+<!--debitis-->
+<!--consectetur-->
+<!--culpa-->
+<!--amet, accusamus-->
+<!--dolorum-->
+<!--fugiat, animi-->
+<!--dicta-->
+<!--aperiam, enim-->
+<!--incidunt-->
+<!--quisquam-->
+<!--maxime-->
+<!--neque-->
+<!--eaque.</p>-->
+<!--</div>-->
+<!--</div>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--&lt;!&ndash; /.panel-body &ndash;&gt;-->
+<!--</div>-->
+<!--&lt;!&ndash; /.panel &ndash;&gt;-->
+<!--</div>-->
+<!--&lt;!&ndash; /.col-lg-8 &ndash;&gt;-->
+<!--<div class="col-lg-4">-->
+<!--<div class="panel panel-default">-->
+<!--<div class="panel-heading">-->
+<!--<i class="fa fa-bell fa-fw"></i> Notifications Panel-->
+<!--</div>-->
+<!--&lt;!&ndash; /.panel-heading &ndash;&gt;-->
+<!--<div class="panel-body">-->
+<!--<div class="list-group">-->
+<!--<a href="#" class="list-group-item">-->
+<!--<i class="fa fa-comment fa-fw"></i> New Comment-->
+<!--<span class="pull-right text-muted small"><em>4 minutes ago</em>-->
+<!--</span>-->
+<!--</a>-->
+<!--<a href="#" class="list-group-item">-->
+<!--<i class="fa fa-twitter fa-fw"></i> 3 New Followers-->
+<!--<span class="pull-right text-muted small"><em>12 minutes ago</em>-->
+<!--</span>-->
+<!--</a>-->
+<!--<a href="#" class="list-group-item">-->
+<!--<i class="fa fa-envelope fa-fw"></i> Message Sent-->
+<!--<span class="pull-right text-muted small"><em>27 minutes ago</em>-->
+<!--</span>-->
+<!--</a>-->
+<!--<a href="#" class="list-group-item">-->
+<!--<i class="fa fa-tasks fa-fw"></i> New Task-->
+<!--<span class="pull-right text-muted small"><em>43 minutes ago</em>-->
+<!--</span>-->
+<!--</a>-->
+<!--<a href="#" class="list-group-item">-->
+<!--<i class="fa fa-upload fa-fw"></i> Server Rebooted-->
+<!--<span class="pull-right text-muted small"><em>11:32 AM</em>-->
+<!--</span>-->
+<!--</a>-->
+<!--<a href="#" class="list-group-item">-->
+<!--<i class="fa fa-bolt fa-fw"></i> Server Crashed!-->
+<!--<span class="pull-right text-muted small"><em>11:13 AM</em>-->
+<!--</span>-->
+<!--</a>-->
+<!--<a href="#" class="list-group-item">-->
+<!--<i class="fa fa-warning fa-fw"></i> Server Not Responding-->
+<!--<span class="pull-right text-muted small"><em>10:57 AM</em>-->
+<!--</span>-->
+<!--</a>-->
+<!--<a href="#" class="list-group-item">-->
+<!--<i class="fa fa-shopping-cart fa-fw"></i> New Order Placed-->
+<!--<span class="pull-right text-muted small"><em>9:49 AM</em>-->
+<!--</span>-->
+<!--</a>-->
+<!--<a href="#" class="list-group-item">-->
+<!--<i class="fa fa-money fa-fw"></i> Payment Received-->
+<!--<span class="pull-right text-muted small"><em>Yesterday</em>-->
+<!--</span>-->
+<!--</a>-->
+<!--</div>-->
+<!--&lt;!&ndash; /.list-group &ndash;&gt;-->
+<!--<a href="#" class="btn btn-default btn-block">View All Alerts</a>-->
+<!--</div>-->
+<!--&lt;!&ndash; /.panel-body &ndash;&gt;-->
+<!--</div>-->
+<!--&lt;!&ndash; /.panel &ndash;&gt;-->
+<!--<div class="panel panel-default">-->
+<!--<div class="panel-heading">-->
+<!--<i class="fa fa-bar-chart-o fa-fw"></i> Donut Chart Example-->
+<!--</div>-->
+<!--<div class="panel-body">-->
+<!--<div id="morris-donut-chart"></div>-->
+<!--<a href="#" class="btn btn-default btn-block">View Details</a>-->
+<!--</div>-->
+<!--&lt;!&ndash; /.panel-body &ndash;&gt;-->
+<!--</div>-->
+<!--&lt;!&ndash; /.panel &ndash;&gt;-->
+<!--<div class="chat-panel panel panel-default">-->
+<!--<div class="panel-heading">-->
+<!--<i class="fa fa-comments fa-fw"></i>-->
+<!--Chat-->
+<!--<div class="btn-group pull-right">-->
+<!--<button type="button" class="btn btn-default btn-xs dropdown-toggle" data-toggle="dropdown">-->
+<!--<i class="fa fa-chevron-down"></i>-->
+<!--</button>-->
+<!--<ul class="dropdown-menu slidedown">-->
+<!--<li>-->
+<!--<a href="#">-->
+<!--<i class="fa fa-refresh fa-fw"></i> Refresh-->
+<!--</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">-->
+<!--<i class="fa fa-check-circle fa-fw"></i> Available-->
+<!--</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">-->
+<!--<i class="fa fa-times fa-fw"></i> Busy-->
+<!--</a>-->
+<!--</li>-->
+<!--<li>-->
+<!--<a href="#">-->
+<!--<i class="fa fa-clock-o fa-fw"></i> Away-->
+<!--</a>-->
+<!--</li>-->
+<!--<li class="divider"></li>-->
+<!--<li>-->
+<!--<a href="#">-->
+<!--<i class="fa fa-sign-out fa-fw"></i> Sign Out-->
+<!--</a>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash; /.panel-heading &ndash;&gt;-->
+<!--<div class="panel-body">-->
+<!--<ul class="chat">-->
+<!--<li class="left clearfix">-->
+<!--<span class="chat-img pull-left">-->
+<!--<img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar"-->
+<!--class="img-circle"/>-->
+<!--</span>-->
+
+<!--<div class="chat-body clearfix">-->
+<!--<div class="header">-->
+<!--<strong class="primary-font">Jack Sparrow</strong>-->
+<!--<small class="pull-right text-muted">-->
+<!--<i class="fa fa-clock-o fa-fw"></i> 12 mins ago-->
+<!--</small>-->
+<!--</div>-->
+<!--<p>-->
+<!--Lorem-->
+<!--ipsum-->
+<!--dolor-->
+<!--sit-->
+<!--amet, consectetur-->
+<!--adipiscing-->
+<!--elit.Curabitur-->
+<!--bibendum-->
+<!--ornare-->
+<!--dolor, quis-->
+<!--ullamcorper-->
+<!--ligula-->
+<!--sodales.-->
+<!--</p>-->
+<!--</div>-->
+<!--</li>-->
+<!--<li class="right clearfix">-->
+<!--<span class="chat-img pull-right">-->
+<!--<img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar"-->
+<!--class="img-circle"/>-->
+<!--</span>-->
+
+<!--<div class="chat-body clearfix">-->
+<!--<div class="header">-->
+<!--<small class=" text-muted">-->
+<!--<i class="fa fa-clock-o fa-fw"></i> 13 mins ago-->
+<!--</small>-->
+<!--<strong class="pull-right primary-font">Bhaumik Patel</strong>-->
+<!--</div>-->
+<!--<p>-->
+<!--Lorem-->
+<!--ipsum-->
+<!--dolor-->
+<!--sit-->
+<!--amet, consectetur-->
+<!--adipiscing-->
+<!--elit.Curabitur-->
+<!--bibendum-->
+<!--ornare-->
+<!--dolor, quis-->
+<!--ullamcorper-->
+<!--ligula-->
+<!--sodales.-->
+<!--</p>-->
+<!--</div>-->
+<!--</li>-->
+<!--<li class="left clearfix">-->
+<!--<span class="chat-img pull-left">-->
+<!--<img src="http://placehold.it/50/55C1E7/fff" alt="User Avatar"-->
+<!--class="img-circle"/>-->
+<!--</span>-->
+
+<!--<div class="chat-body clearfix">-->
+<!--<div class="header">-->
+<!--<strong class="primary-font">Jack Sparrow</strong>-->
+<!--<small class="pull-right text-muted">-->
+<!--<i class="fa fa-clock-o fa-fw"></i> 14 mins ago-->
+<!--</small>-->
+<!--</div>-->
+<!--<p>-->
+<!--Lorem-->
+<!--ipsum-->
+<!--dolor-->
+<!--sit-->
+<!--amet, consectetur-->
+<!--adipiscing-->
+<!--elit.Curabitur-->
+<!--bibendum-->
+<!--ornare-->
+<!--dolor, quis-->
+<!--ullamcorper-->
+<!--ligula-->
+<!--sodales.-->
+<!--</p>-->
+<!--</div>-->
+<!--</li>-->
+<!--<li class="right clearfix">-->
+<!--<span class="chat-img pull-right">-->
+<!--<img src="http://placehold.it/50/FA6F57/fff" alt="User Avatar"-->
+<!--class="img-circle"/>-->
+<!--</span>-->
+
+<!--<div class="chat-body clearfix">-->
+<!--<div class="header">-->
+<!--<small class=" text-muted">-->
+<!--<i class="fa fa-clock-o fa-fw"></i> 15 mins ago-->
+<!--</small>-->
+<!--<strong class="pull-right primary-font">Bhaumik Patel</strong>-->
+<!--</div>-->
+<!--<p>-->
+<!--Lorem-->
+<!--ipsum-->
+<!--dolor-->
+<!--sit-->
+<!--amet, consectetur-->
+<!--adipiscing-->
+<!--elit.Curabitur-->
+<!--bibendum-->
+<!--ornare-->
+<!--dolor, quis-->
+<!--ullamcorper-->
+<!--ligula-->
+<!--sodales.-->
+<!--</p>-->
+<!--</div>-->
+<!--</li>-->
+<!--</ul>-->
+<!--</div>-->
+<!--&lt;!&ndash; /.panel-body &ndash;&gt;-->
+<!--<div class="panel-footer">-->
+<!--<div class="input-group">-->
+<!--<input id="btn-input" type="text" class="form-control input-sm"-->
+<!--placeholder="Type your message here..."/>-->
+<!--<span class="input-group-btn">-->
+<!--<button class="btn btn-warning btn-sm" id="btn-chat">-->
+<!--Send-->
+<!--</button>-->
+<!--</span>-->
+<!--</div>-->
+<!--</div>-->
+<!--&lt;!&ndash; /.panel-footer &ndash;&gt;-->
+<!--</div>-->
+<!--&lt;!&ndash; /.panel .chat-panel &ndash;&gt;-->
+<!--</div>-->
+<!--&lt;!&ndash; /.col-lg-4 &ndash;&gt;-->
+<!--</div>-->

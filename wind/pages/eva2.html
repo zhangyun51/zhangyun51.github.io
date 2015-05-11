@@ -1,0 +1,120 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">总体运行
+            <small>
+                评价指标可视化
+            </small>
+        </h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="col-lg-6 col-md-12">
+    <div class="panel panel-primary" id="health-0" style="height: 400px">
+
+    </div>
+</div>
+<div class="col-lg-6 col-md-12">
+    <div class="panel panel-primary" id="health-1" style="height: 400px">
+
+    </div>
+</div>
+<div class="col-lg-6 col-md-12">
+    <div class="panel panel-primary" id="health-2" style="height: 400px">
+
+    </div>
+</div>
+<div class="col-lg-6 col-md-12">
+    <div class="panel panel-primary" id="health-3" style="height: 400px">
+
+    </div>
+</div>
+<div class="col-lg-6 col-md-12">
+    <div class="panel panel-primary" id="health-4" style="height: 400px">
+
+    </div>
+</div>
+<div class="col-lg-6 col-md-12">
+    <div class="panel panel-primary" id="health-5" style="height: 400px">
+
+    </div>
+</div>
+</div>
+
+<script>
+    require.config({
+        paths: {
+            'echarts': '../js/echarts',
+            'echarts/chart/radar': '../js/echarts'
+        }
+    });
+
+    require(
+            [
+                'echarts',
+                'echarts/chart/radar'
+            ],
+            function (ec) {
+                initGraph(ec);
+            }
+    );
+
+    function generateRandom(length) {
+        var data = [];
+
+        for (var i = 0; i < length; i++) {
+            data.push(Math.random());
+        }
+
+        return data;
+    }
+
+    function initGraph(ec) {
+
+        for (var i = 0; i < stationName.length; i++) {
+
+            var id = 'health-' + i;
+            var chart = ec.init(document.getElementById(id));
+
+
+            option = {
+                title : {
+                    text: stationName[i]
+                },
+                tooltip : {
+                    trigger: 'axis'
+                },
+                polar : [
+                    {
+                        indicator : [
+                            { text: '设备健康度', max: 1},
+                            { text: '设备运行率', max: 1},
+                            { text: '设备折旧率', max: 1},
+                            { text: '安全运行率', max: 1},
+                            { text: '预测符合度', max: 1},
+                            { text: '利润率', max: 1}
+                        ]
+                    }
+                ],
+                calculable : true,
+                series : [
+                    {
+                        name: '总体评价',
+                        type: 'radar',
+                        data : [
+                            {
+                                value : generateRandom(6),
+                                name : '总体评价'
+                            }
+                        ]
+                    }
+                ]
+            };
+
+
+            chart.setOption(option);
+        }
+
+
+    }
+</script>
