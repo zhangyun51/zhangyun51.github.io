@@ -1,0 +1,2951 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<?xml-stylesheet  href="../css/demo.css" type="text/css" ?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg width="100%" height="100%" onload="try{init();} catch(e){}" viewBox="-725 63 809 538" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:cge="http://iec.ch/TC57/2005/SVG-schema#">
+<defs>
+<style type="text/css"><![CDATA[
+.Area { stroke:rgb(0,128,0);fill:none}
+.AreaY { stroke:rgb(255,255,0);fill:none}
+.PowerTransformer { stroke:rgb(255,0,0);fill:none}
+.MainLine { stroke:rgb(255,255,0);fill:none}
+.Line { stroke:rgb(0,128,255);fill:none}
+.SwitchClose { stroke:rgb(0,255,0);fill:none}
+.SwitchOpen { stroke:rgb(255,0,255);fill:none}
+.inside { stroke:rgb(0,128,0);fill:none}
+.zfyx12 { stroke:rgb(0,40,0);fill:none}
+.zfyx { stroke:rgb(0,128,0);fill:none}
+.qtyx { stroke:rgb(192,192,192);fill:none}
+.zxbzText { fill:rgb(200,200,200)}
+.HideLine { stroke:rgb(0,0,0);fill:none}
+.HideText { fill:rgb(0,0,0)}
+.ftyText { fill:rgb(128,128,128)}
+.ftySymbol { stroke:rgb(128,128,128);fill:none}
+.MeasureA { fill:rgb(0,255,0)}
+.MeasureB { fill:rgb(255,0,0)}
+.MeasureC { fill:rgb(255,255,0)}
+.MeasureQ { fill:rgb(255,255,255)}
+.DefaultText { fill:rgb(255,255,255)}
+.DefaultSymbol { stroke:rgb(255,255,255);fill:none}
+
+.RedLine { stroke:rgb(255,0,0);fill:none}
+.YellowLine { stroke:rgb(255,255,0);fill:none}
+.GreenLine { stroke:rgb(0,255,0);fill:none}
+]]></style>
+
+<script language="JavaScript" xlink:href="../js/demo.js" />
+<script language="JavaScript"><![CDATA[
+	parentWindow = window.parent;
+	
+	function alertTest(){
+		var dataElement = document.getElementById('FL$10325790$9010');
+		get_firstchild(dataElement).setAttribute('class', 'MeasureA');
+		
+		var dataElement = document.getElementById('FL$10325790$9020');
+		get_firstchild(dataElement).setAttribute('class', 'MeasureA');
+		
+		parentWindow.moveButton();
+	}
+]]></script>
+
+<symbol id="CurrentTransformer" fileInfo="电流互感器" viewBox="-40 -40 81 81">
+<ellipse cx="0" cy="0" rx="3" ry="2.5" fill-opacity="0" stroke-width="0.5"/>
+<path d="M0 -5 L0 5" fill-opacity="0" stroke-width="0.5"/>
+<path d="M4.5 0 L8.5 0" fill-opacity="0" stroke-width="0.5"/>
+<path d="M6 -1.5 L6 1.5" fill-opacity="0" stroke-width="0.5"/>
+<path d="M7 -1.5 L7 1.5" fill-opacity="0" stroke-width="0.5"/>
+</symbol>
+<symbol id="Others:JX_FTU-光纤" fileInfo="FTU-光纤" viewBox="-40 -40 81 81">
+<path d="M-10 -10 L10 -10 L10 10 L-10 10 L-10 -10 z" fill-opacity="0" stroke-width="1"/>
+<text x="-7.5" y="-3" font-size="6.5" font-family="Simsun" fill-opacity="0" >G</text>
+<line x1="-10" y1="-1" x2="10" y2="-1" stroke-width="1"/>
+<text x="-7.5" y="8" font-size="10" font-family="Simsun" fill-opacity="0" >FTU</text>
+</symbol>
+<symbol id="Others:JX_FTU-无线" fileInfo="FTU-无线" viewBox="-40 -40 81 81">
+<path d="M-10 -10 L10 -10 L10 10 L-10 10 L-10 -10 z" fill-opacity="0" stroke-width="1"/>
+<text x="-7.5" y="-3" font-size="6.5" font-family="Simsun" fill-opacity="0" >W</text>
+<line x1="-10" y1="-1" x2="10" y2="-1" stroke-width="1"/>
+<text x="-7.5" y="8" font-size="10" font-family="Simsun" fill-opacity="0" >FTU</text>
+</symbol>
+<symbol id="Others:JX_FTU-载波" fileInfo="FTU-载波" viewBox="-40 -40 81 81">
+<path d="M-10 -10 L10 -10 L10 10 L-10 10 L-10 -10 z" fill-opacity="0" stroke-width="1"/>
+<text x="-7.5" y="-3" font-size="6.5" font-family="Simsun" fill-opacity="0" >Z</text>
+<line x1="-10" y1="-1" x2="10" y2="-1" stroke-width="1"/>
+<text x="-7.5" y="8" font-size="10" font-family="Simsun" fill-opacity="0" >FTU</text>
+</symbol>
+<symbol id="Others:JX_DTU-光纤" fileInfo="DTU-光纤" viewBox="-40 -40 81 81">
+<path d="M-10 -10 L10 -10 L10 10 L-10 10 L-10 -10 z" fill-opacity="0" stroke-width="1"/>
+<text x="-7.5" y="-3" font-size="6.5" font-family="Simsun" fill-opacity="0" >G</text>
+<line x1="-10" y1="-1" x2="10" y2="-1" stroke-width="1"/>
+<text x="-7.5" y="8" font-size="10" font-family="Simsun" fill-opacity="0" >DTU</text>
+</symbol>
+<symbol id="Others:JX_DTU-无线" fileInfo="DTU-无线" viewBox="-40 -40 81 81">
+<path d="M-10 -10 L10 -10 L10 10 L-10 10 L-10 -10 z" fill-opacity="0" stroke-width="1"/>
+<text x="-7.5" y="-3" font-size="6.5" font-family="Simsun" fill-opacity="0" >W</text>
+<line x1="-10" y1="-1" x2="10" y2="-1" stroke-width="1"/>
+<text x="-7.5" y="8" font-size="10" font-family="Simsun" fill-opacity="0" >DTU</text>
+</symbol>
+<symbol id="Others:JX_DTU-载波" fileInfo="DTU-载波" viewBox="-40 -40 81 81">
+<path d="M-10 -10 L10 -10 L10 10 L-10 10 L-10 -10 z" fill-opacity="0" stroke-width="1"/>
+<text x="-7.5" y="-3" font-size="6.5" font-family="Simsun" fill-opacity="0" >Z</text>
+<line x1="-10" y1="-1" x2="10" y2="-1" stroke-width="1"/>
+<text x="-7.5" y="8" font-size="10" font-family="Simsun" fill-opacity="0" >DTU</text>
+</symbol>
+<symbol id="MeterCommunicationModule" fileInfo="配网仪TTU" viewBox="-40 -40 81 81">
+<path d="M-10 -10 L10 -10 L10 10 L-10 10 L-10 -10 z" fill-opacity="0" stroke-width="1"/>
+<line x1="-10" y1="-6" x2="10" y2="-6" stroke-width="1"/>
+<text x="-8" y="7" font-size="10" font-family="Simsun" fill-opacity="0" >TTU</text>
+</symbol>
+<symbol id="GeneratorOwner" fileInfo="发电机" viewBox="-40 -40 81 81">
+<circle cx="0" cy="0" r="15" fill-opacity="0" stroke-width="2"/>
+<path d="M-10 -5 A2,2 0 0 0 0,0 A2,2 0 0 1 10,5"/>
+</symbol>
+<symbol id="Others:JX_电动机" fileInfo="电动机" viewBox="-40 -40 81 81">
+<circle cx="0" cy="0" r="15" fill-opacity="0" stroke-width="2"/>
+<path d="M-8 8 L-7 -7 L0 5 L7 -7 L8 8" fill-opacity="0" stroke-width="1"/>
+</symbol>
+<symbol id="StaticVarCompensator" fileInfo="无功补偿器" viewBox="-40 -40 81 81">
+<circle cx="0" cy="0" r="15" fill-opacity="0" stroke-width="2"/>
+<text x="-9" y="8" font-size="12" font-family="Simsun" fill-opacity="0" >RPC</text>
+</symbol>
+<symbol id="GroundDisconnector:JX_Close_0" fileInfo="站房接地刀闸闭合" viewBox="-40 -40 81 81">
+<line x1="-8" y1="-1" x2="-8" y2="10" stroke-width="1"/> 
+<line x1="-8" y1="-1" x2="-2" y2="-1" stroke-width="1"/>
+<line x1="-2" y1="-3" x2="-2" y2="1" stroke-width="1"/>
+<line x1="-2.3" y1="-3" x2="4" y2="-1" stroke-width="1"/>
+<line x1="3.5" y1="-1" x2="10" y2="-1" stroke-width="1"/>
+<line x1="10" y1="-5" x2="10" y2="3" stroke-width="0.5"/>
+<line x1="11" y1="-3" x2="11" y2="2" stroke-width="0.5"/>
+<line x1="12" y1="-2" x2="12" y2="1" stroke-width="0.5"/>
+</symbol>
+<symbol id="GroundDisconnector:JX_Open_0" fileInfo="站房接地刀闸断开" viewBox="-40 -40 81 81">
+<line x1="-8" y1="-1" x2="-8" y2="10" stroke-width="1"/> 
+<line x1="-8" y1="-1" x2="-2" y2="-1" stroke-width="1"/>
+<line x1="-2" y1="-3" x2="-2" y2="1" stroke-width="1"/>
+<line x1="-1" y1="-5" x2="4" y2="-1" stroke-width="1"/>
+<line x1="3.5" y1="-1" x2="10" y2="-1" stroke-width="1"/>
+<line x1="10" y1="-5" x2="10" y2="3" stroke-width="0.5"/>
+<line x1="11" y1="-3" x2="11" y2="2" stroke-width="0.5"/>
+<line x1="12" y1="-2" x2="12" y2="1" stroke-width="0.5"/>
+</symbol>
+<symbol id="Others:JX_负控" fileInfo="FK" viewBox="-40 -40 81 81">
+<path d="M-12 -12 L12 -12 L12 12 L-12 12 L-12 -12 z" fill-opacity="0" stroke-width="1"/>
+<line x1="-12" y1="-8" x2="12" y2="-8" stroke-width="1"/>
+<text x="-9" y="8" font-size="12" font-family="Simsun" fill-opacity="0" >FK</text>
+</symbol>
+<symbol id="Others:JX_FQD" fileInfo="防窃电" viewBox="-40 -40 81 81">
+<path d="M-12 -12 L12 -12 L12 12 L-12 12 L-12 -12 z" fill-opacity="0" stroke-width="1"/>
+<line x1="-12" y1="-8" x2="12" y2="-8" stroke-width="1"/>
+<text x="-9" y="8" font-size="12" font-family="Simsun" fill-opacity="0" >FQD</text>
+</symbol>
+<symbol id="Pole:JX_钢杆" fileInfo="钢杆" viewBox="-40 -40 81 81">
+<circle cx="0" cy="0" r="10" fill-opacity="0" stroke-width="2"/>
+<path d="M0 -10 L7 5 L-7 5 L0 -10" fill-opacity="0" stroke-width="2"/>
+</symbol>
+<symbol id="Pole:JX_水泥杆" fileInfo="水泥杆" viewBox="-40 -40 81 81">
+<circle cx="0" cy="0" r="10" stroke-width="2"/>
+</symbol>
+<symbol id="Pole:JX_铁塔" fileInfo="铁塔" viewBox="-40 -40 81 81">
+<path d="M-10 10 L10 10 L10 -10 L-10 -10 L-10 10 z" fill-opacity="0" stroke-width="2"/>
+<line x1="-10" y1="-10" x2="10" y2="10" stroke-width="2"/>
+<line x1="10" y1="-10" x2="-10" y2="10" stroke-width="2"/>
+</symbol>
+<symbol id="LoadBreakSwitch:JX_Close_0" fileInfo="站房环网柜-负荷开关闭合" viewBox="-40 -40 81 81">
+<path d="M-13 0 L-5 0 L5 -5" fill-opacity="0" stroke-width="1" />
+<circle cx="4" cy="0" r="3" fill="#ffffff" fill-opacity="1" stroke-width="2" />
+<line x1="8" y1="-4" x2="8" y2="4" stroke-width="1" />
+<line x1="8" y1="0" x2="13" y2="0" stroke-width="1" />
+</symbol>
+<symbol id="LoadBreakSwitch:JX_Open_0" fileInfo="站房环网柜-负荷开关断开" viewBox="-40 -40 81 81">
+<path d="M-13 0 L-7 0 L1 -7" fill-opacity="0" stroke-width="1" />
+<circle cx="4" cy="0" r="3" fill="#ffffff" fill-opacity="1" stroke-width="2" />
+<line x1="8" y1="-4" x2="8" y2="4" stroke-width="1" />
+<line x1="8" y1="0" x2="13" y2="0" stroke-width="1" />
+</symbol>
+<symbol id="LoadBreakSwitch:JX_Open_1" fileInfo="站房环网柜-柱上负荷开关断开" viewBox="-40 -40 81 81">
+<path d="M-8 -4 L8 -4 L8 4 L-8 4 L-8 -4 z" fill-opacity="0" stroke-width="1.5"/>
+<line x1="-15" y1="0" x2="-8" y2="0" stroke-width="1"/>
+<line x1="8" y1="0" x2="15" y2="0" stroke-width="1"/>
+<line x1="0" y1="-4" x2="0" y2="4" stroke-width="1"/>
+</symbol>
+<symbol id="LoadBreakSwitch:JX_Close_1" fileInfo="站房环网柜-柱上负荷开关闭合" viewBox="-40 -40 81 81">
+<path d="M-8 -4 L8 -4 L8 4 L-8 4 L-8 -4 z" fill-opacity="0" stroke-width="1.5"/>
+<line x1="-15" y1="0" x2="15" y2="0" stroke-width="1"/>
+</symbol>
+<symbol id="Junction:JX_关口计量柜"  fileInfo="关口计量柜" viewBox="-40 -40 81 81">
+<path d="M-10 -12 L10 -12 L10 12 L-10 12 L-10 -12 z" fill-opacity="0" stroke-width="1.5"/>
+<line x1="-6" y1="6" x2="6" y2="6" stroke-width="2"/>
+</symbol>
+<symbol id="LoadBreakSwitch:JX_Open_2" fileInfo="站房环网柜-带熔丝负荷开关断开" viewBox="-40 -40 81 81">
+<path d="M-13 0 L-4 0 L2 -6 " fill-opacity="0" stroke-width="1"/>
+<path d="M-11 -4 L-6 -4 L-6 4 L-11 4 L-11 -4 z" fill-opacity="0" stroke-width="1"/>
+<circle cx="5" cy="0" r="3" fill="#ffffff" fill-opacity="1" stroke-width="2"/>
+<line x1="9" y1="-4" x2="9" y2="4" stroke-width="1"/>
+<line x1="9" y1="0" x2="13" y2="0" stroke-width="1"/>
+</symbol>
+<symbol id="LoadBreakSwitch:JX_Close_2" fileInfo="站房环网柜-带熔丝负荷开关闭合" viewBox="-40 -40 81 81">
+<path d="M-13 0 L-3 0 L6 -5 " fill-opacity="0" stroke-width="1"/>
+<path d="M-11 -4 L-6 -4 L-6 4 L-11 4 L-11 -4 z" fill-opacity="0" stroke-width="1"/>
+<circle cx="5" cy="0" r="3" fill="#ffffff" fill-opacity="1" stroke-width="2"/>
+<line x1="9" y1="-4" x2="9" y2="4" stroke-width="1"/>
+<line x1="9" y1="0" x2="13" y2="0" stroke-width="1"/>
+</symbol>
+<symbol id="Breaker:JX_Close_0" fileInfo="站房环网柜-柱上断路器电流型闭合" viewBox="-40 -40 81 81">
+<path d="M-7 -5 L7 -5 L7 5 L-7 5 L-7 -5 z" fill-opacity="0" stroke-width="1"/>
+<line x1="0" y1="-2.5" x2="2" y2="-3" stroke-width="1"/>
+<path d="M-14 0 L-4 0 L4 -2 " fill-opacity="0" stroke-width="1" />
+<line x1="4" y1="-2" x2="4" y2="2" stroke-width="1"/>
+<line x1="4" y1="0" x2="14" y2="0" stroke-width="1"/>
+<line x1="10" y1="-5" x2="12" y2="-5" stroke-width="0.5"/>
+<line x1="10" y1="-1" x2="12" y2="-1" stroke-width="0.5"/>
+<line x1="11" y1="-5" x2="11" y2="-1" stroke-width="1"/>
+</symbol>
+<symbol id="Breaker:JX_Open_0" fileInfo="站房环网柜-柱上断路器电流型断开" viewBox="-40 -40 81 81">
+<path d="M-7 -5 L7 -5 L7 5 L-7 5 L-7 -5 z" fill-opacity="0" stroke-width="1"/>
+<line x1="-1.5" y1="-2.8" x2="0" y2="-3.5" stroke-width="1"/>
+<path d="M-14 0 L-4 0 L2.5 -3.5 " fill-opacity="0" stroke-width="1" />
+<line x1="4" y1="-2" x2="4" y2="2" stroke-width="1"/>
+<line x1="4" y1="0" x2="14" y2="0" stroke-width="1"/>
+<line x1="10" y1="-5" x2="12" y2="-5" stroke-width="0.5"/>
+<line x1="10" y1="-1" x2="12" y2="-1" stroke-width="0.5"/>
+<line x1="11" y1="-5" x2="11" y2="-1" stroke-width="1"/>
+</symbol>
+<symbol id="Breaker:JX_Close_1" fileInfo="站房环网柜-柱上断路器电压型闭合" viewBox="-40 -40 81 81">
+<path d="M-14 0 L-4 0 L4 -2" fill-opacity="0" stroke-width="1"/>
+<path d="M-7 -5 L7 -5 L7 5 L-7 5 L-7 -5 z" fill-opacity="0" stroke-width="1"/>
+<line x1="4" y1="-2" x2="4" y2="2" stroke-width="1"/>
+<line x1="4" y1="0" x2="14" y2="0" stroke-width="1"/>
+<text x="9" y="0" font-size="6" font-family="Simsun">U</text>
+</symbol>
+<symbol id="Breaker:JX_Open_1" fileInfo="站房环网柜-柱上断路器电压型断开" viewBox="-40 -40 81 81">
+<path d="M-14 0 L-4 0 L3 -4" fill-opacity="0" stroke-width="1"/>
+<path d="M-7 -5 L7 -5 L7 5 L-7 5 L-7 -5 z" fill-opacity="0" stroke-width="1"/>
+<line x1="4" y1="-2" x2="4" y2="2" stroke-width="1"/>
+<line x1="4" y1="0" x2="14" y2="0" stroke-width="1"/>
+<text x="9" y="0" font-size="6" font-family="Simsun">U</text>
+</symbol>
+<symbol id="Breaker:JX_Close_2" fileInfo="站房环网柜-柱上断路器闭合" viewBox="-40 -40 81 81">
+<path d="M-14 0 L-4 0 L4 -2 " fill-opacity="0" stroke-width="1"/>
+<path d="M-7 -5 L7 -5 L7 5 L-7 5 L-7 -5 z" fill-opacity="0" stroke-width="1"/>
+<line x1="4" y1="-2" x2="4" y2="2" stroke-width="1"/>
+<line x1="4" y1="0" x2="14" y2="0" stroke-width="1"/>
+</symbol>
+<symbol id="Breaker:JX_Open_2" fileInfo="站房环网柜-柱上断路器断开" viewBox="-40 -40 81 81">
+<path d="M-14 0 L-4 0 L2.5 -4 " fill-opacity="0" stroke-width="1"/>
+<path d="M-7 -5 L7 -5 L7 5 L-7 5 L-7 -5 z" fill-opacity="0" stroke-width="1"/>
+<line x1="4" y1="-2" x2="4" y2="2" stroke-width="1"/>
+<line x1="4" y1="0" x2="14" y2="0" stroke-width="1"/>
+</symbol>
+<symbol id="Others:JX_跨越类型-河流" fileInfo="跨越类型-河流" viewBox="-40 -40 81 81">
+<line x1="-15" y1="-3" x2="15" y2="-3" stroke-width="1"/>
+<line x1="-15" y1="3" x2="15" y2="3" stroke-width="1"/>
+<line x1="-12" y1="-6" x2="-12" y2="6" stroke-width="1"/>
+<line x1="-6" y1="-6" x2="-6" y2="6" stroke-width="1"/>
+<line x1="0" y1="-6" x2="0" y2="6" stroke-width="1"/>
+<line x1="6" y1="-6" x2="6" y2="6" stroke-width="1"/>
+<line x1="12" y1="-6" x2="12" y2="6" stroke-width="1"/>
+</symbol>
+<symbol id="Others:JX_跨越类型-铁路" fileInfo="跨越类型-铁路" viewBox="-40 -40 81 81">
+<line x1="-15" y1="-3" x2="15" y2="-3" stroke-width="1"/>
+<line x1="-15" y1="3" x2="15" y2="3" stroke-width="1"/>
+<line x1="-13" y1="0" x2="-6" y2="0" stroke-width="1"/>
+<line x1="-4" y1="0" x2="3" y2="0" stroke-width="1"/>
+<line x1="6" y1="0" x2="13" y2="0" stroke-width="1"/>
+</symbol>
+<symbol id="Others:JX_跨越类型" fileInfo="跨越类型" viewBox="-40 -40 81 81">
+<line x1="-15" y1="-4.5" x2="15" y2="-4.5" stroke-width="1"/>
+<line x1="-11" y1="-1.5" x2="11" y2="-1.5" stroke-width="1"/>
+<line x1="-11" y1="1.5" x2="11" y2="1.5" stroke-width="1"/>
+<line x1="-15" y1="4.5" x2="15" y2="4.5" stroke-width="1"/>
+</symbol>
+<symbol id="Others:JX_跨越类型-电源点" fileInfo="跨越类型-电源点" viewBox="-40 -40 81 81">
+<path d="M-5 -10 L5 -10 L5 10 L-5 10 L-5 -10 z" fill-opacity="0" stroke-width="1"/>
+<line x1="-5" y1="0" x2="5" y2="0" stroke-width="1"/>
+<line x1="-5" y1="0" x2="5" y2="-10" stroke-width="1"/>
+<line x1="5" y1="0" x2="-5" y2="10" stroke-width="1"/>
+</symbol>
+<symbol id="Jumper" fileInfo="10KV断连" viewBox="-40 -40 81 81">
+<path d="M-14 7 A-14,-14 0 1 1 14,7" fill-opacity="0"  stroke-width="2"/>
+<circle cx="0" cy="5" r="2" fill="#0000ff" fill-opacity="1" stroke-width="2"/>
+</symbol>
+<symbol id="Disconnector:JX_Close_0" fileInfo="站房联络开关-闭合" viewBox="-40 -40 81 81">
+<line x1="-0.5" y1="-4" x2="-0.9" y2="-6" stroke-width="0.2" />
+<path d="M-1 -4 L0 -4.2 L-0.2 -2.5 L-1 -4 z" fill="#ffffff" fill-opacity="1" stroke-width="0.1" />
+<path d="M-15 0 L-8 0 L5 -3" fill-opacity="0" stroke-width="1" />
+<line x1="5" y1="-3" x2="5" y2="3" stroke-width="1" />
+<line x1="5" y1="0" x2="15" y2="0" stroke-width="1" />
+</symbol>
+<symbol id="Disconnector:JX_Open_0" fileInfo="站房联络开关-断开" viewBox="-40 -40 81 81">
+<line x1="-2.5" y1="-6" x2="-3" y2="-8" stroke-width="0.2" />
+<path d="M-3 -5.8 L-2 -6.2 L-2 -4.5 L-3 -5.8 z" fill="#ffffff" fill-opacity="1" stroke-width="0.1" />
+<path d="M-15 0 L-8 0 L5 -3" fill-opacity="0" stroke-width="1" />
+<line x1="5" y1="-3" x2="5" y2="3" stroke-width="1" />
+<line x1="5" y1="0" x2="15" y2="0" stroke-width="1" />
+</symbol>
+<symbol id="Disconnector:JX_Close_1" fileInfo="站房联络开关-闭合" viewBox="-40 -40 81 81">
+<line x1="-0.5" y1="-4" x2="-0.9" y2="-6" stroke-width="0.2" />
+<path d="M-1 -4 L0 -4.2 L-0.2 -2.5 L-1 -4 z" fill="#228B22" fill-opacity="1" stroke-width="0.1" />
+<path d="M-15 0 L-8 0 L5 -3" fill-opacity="0" stroke-width="1" />
+<line x1="5" y1="-3" x2="5" y2="3" stroke-width="1" />
+<line x1="5" y1="0" x2="15" y2="0" stroke-width="1" />
+</symbol>
+<symbol id="Disconnector:JX_Open_1" fileInfo="站房联络开关-断开" viewBox="-40 -40 81 81">
+<line x1="-2.5" y1="-6" x2="-3" y2="-8" stroke-width="0.2" />
+<path d="M-3 -5.8 L-2 -6.2 L-2 -4.5 L-3 -5.8 z" fill="#228B22" fill-opacity="1" stroke-width="0.1" />
+<path d="M-15 0 L-8 0 L5 -3" fill-opacity="0" stroke-width="1" />
+<line x1="5" y1="-3" x2="5" y2="3" stroke-width="1" />
+<line x1="5" y1="0" x2="15" y2="0" stroke-width="1" />
+</symbol>
+<symbol id="FaultIndicator" fileInfo="故障指示器" viewBox="-40 -40 81 81">
+<path d="M-3 -6 L3 -6 L-3 6 L3 6" fill-opacity="0" stroke-width="1.5"/>
+</symbol>
+<symbol id="Junction:JX_双电缆头" fileInfo="双向电缆终端头" viewBox="-40 -40 81 81">
+<path d="M0 -7 L7 -4 L0 -1 L0 -7 z" fill-opacity="0" stroke-width="1"/>
+<path d="M0 1 L7 4 L0 7 L0 1 z" fill-opacity="0" stroke-width="1"/>
+<path d="M0 -4 L-3 -4 L-3 4 L0 4 " fill-opacity="0" stroke-width="1"/>
+<line x1="-3" y1="0" x2="-9" y2="0" stroke-width="1"/>
+</symbol>
+<symbol id="Junction:JX_单电缆头" fileInfo="电缆头-单头" viewBox="-40 -40 81 81">
+<line x1="0" y1="0" x2="-9" y2="0" stroke-width="1"/>
+<path d="M0 -4 L9 0 L0 4 L0 -4 z" fill-opacity="0" stroke-width="1"/>
+</symbol>
+<symbol id="Junction:JX_电缆中间接头" fileInfo="电缆中间接头" viewBox="-40 -40 81 81">
+<path d="M0 -6 L12 0 L0 6 L-12 0 L0 -6 z" fill-opacity="0" stroke-width="0.5"/>
+<text x="-6" y="2" font-size="6" font-family="Simsun" fill-opacity="0" >10kV</text>
+</symbol>
+<symbol id="Breaker:JX_Open_3" fileInfo="站房环网柜-跌落式熔断器断开-电压型" viewBox="-40 -40 81 81">
+<path d="M-7.2 1 L3.5 -6 L5.8 -2.5 L-5 4.5 L-7.2 1 z" fill-opacity="0" stroke-width="1"/>
+<path d="M-14 4 L-8 4 L8 -6" fill-opacity="0" stroke-width="1"/>
+<path d="M-3.2 -3.8 L-3 -5 L-2 -4.5" fill-opacity="0" stroke-width="0.5"/>
+<line x1="-3" y1="-5" x2="-1.9" y2="-3" stroke-width="0.5"/>
+<path d="M10 0 L10 4 L14 4" fill-opacity="0" stroke-width="1"/>
+</symbol>
+<symbol id="Breaker:JX_Close_3" fileInfo="站房环网柜-跌落式熔断器闭合-电流型" viewBox="-40 -40 81 81">
+<path d="M2.8 -6.8 L4.2 -9 L7 -8" fill-opacity="0" stroke-width="1.5" />
+<line x1="4.5" y1="-8.5" x2="6" y2="-4" fill-opacity="0" stroke-width="1.5" />
+<path d="M-2 -2 L14 -5 L15 1 L-1 4 L-2 -2 z" fill-opacity="0" stroke-width="1.5" />
+<path d="M-14 2 L-7 2 L20 -3" fill-opacity="0" stroke-width="1.5" />
+<path d="M20 -3.8 L20 4 L32 4" fill-opacity="0" stroke-width="1.5" />
+</symbol>
+<symbol id="LoadBreakSwitch:JX_Open_3" fileInfo="站房环网柜-带熔丝负荷开关断开" viewBox="-40 -40 81 81">
+<path d="M-7 -4 L-3 -4 L-3 4 L-7 4 L-7 -4 z" fill-opacity="0" stroke-width="1"/>
+<path d="M-12 0 L-2 0 L4 -6 " fill-opacity="0" stroke-width="1"/>
+<circle cx="5" cy="0" r="3" fill-opacity="0" stroke-width="1"/>
+<line x1="8.5" y1="-4" x2="8.5" y2="4" stroke-width="1"/>
+<line x1="8" y1="0" x2="12" y2="0" stroke-width="1"/>
+</symbol>
+<symbol id="LoadBreakSwitch:JX_Close_3" fileInfo="站房环网柜-带熔丝负荷开关闭合" viewBox="-40 -40 81 81">
+<path d="M-7 -4 L-3 -4 L-3 4 L-7 4 L-7 -4 z" fill-opacity="0" stroke-width="1"/>
+<path d="M-12 0 L-1 0 L5 -5 " fill-opacity="0" stroke-width="1"/>
+<circle cx="5" cy="0" r="3" fill-opacity="0" stroke-width="1"/>
+<line x1="8.5" y1="-4" x2="8.5" y2="4" stroke-width="1"/>
+<line x1="8" y1="0" x2="12" y2="0" stroke-width="1"/>
+</symbol>
+<symbol id="PowerTransformer:JX_柱上公变" fileInfo="柱上变压器" viewBox="-20 -20 40 40">
+<circle cx="0" cy="-6" r="8" fill-opacity="0" stroke-width="1"/>
+<circle cx="0" cy="6" r="8" fill-opacity="0" stroke-width="1"/>
+<ellipse cx="0" cy="0" rx="4.5" ry="1" fill="#ff0000" fill-opacity="1" stroke-width="2"/>
+</symbol>
+<symbol id="PowerTransformer:JX_公变" fileInfo="站房变压器-公变" viewBox="-20 -20 40 40">
+<circle cx="0" cy="-6" r="8" fill-opacity="0" stroke-width="1"/>
+<circle cx="0" cy="6" r="8" fill-opacity="0" stroke-width="1"/>
+<ellipse cx="0" cy="0" rx="4.5" ry="1" fill="#ff0000" fill-opacity="1" stroke-width="2"/>
+</symbol>
+<symbol id="PowerTransformer:JX_专变" fileInfo="站房变压器-专变" viewBox="-20 -20 40 40">
+<circle cx="0" cy="-6" r="8" fill-opacity="0" stroke-width="1"/>
+<circle cx="0" cy="6" r="8" fill-opacity="0" stroke-width="1"/>
+</symbol>
+<symbol id="PowerTransformer:JX_农变" fileInfo="站房变压器-农变" viewBox="-20 -20 40 40">
+<circle cx="0" cy="-5" r="8" fill-opacity="0" stroke-width="1"/>
+<circle cx="0" cy="5" r="8" fill-opacity="0" stroke-width="1"/>
+<text x="-1" y="2" font-size="4.5" font-family="Simsun" fill-opacity="0" >N</text>
+</symbol> 
+<symbol id="PowerTransformer:JX_专改公" fileInfo="变压器-专改公" viewBox="-20 -20 40 40">
+<circle cx="0" cy="-5" r="8" fill-opacity="0" stroke-width="1"/>
+<circle cx="0" cy="5" r="8" fill-opacity="0" stroke-width="1"/>
+<path d="M6 0.2 A1,2 90 1 1 -6,0.2" fill="#ff0000" fill-opacity="1" stroke-width="1"/>
+</symbol>
+<symbol id="PowerTransformer:JX_其它" fileInfo="变压器-其它(小水电)" viewBox="-20 -20 40 40">
+<circle cx="0" cy="-5" r="8" fill-opacity="0" stroke-width="1"/>
+<circle cx="0" cy="5" r="8" fill-opacity="0" stroke-width="1"/> 
+<path d="M-4.5 1 L-3 -1 L-1.5 1 L0 -1 L1.5 1 L3 -1 L4.5 1" stroke-width="0.6"/>
+</symbol>
+<symbol id="PowerTransformer:JX_柱上专变" fileInfo="柱上变压器-专变" viewBox="-20 -20 40 40">
+<circle cx="0" cy="-6" r="8" fill-opacity="0" stroke-width="1"/>
+<circle cx="0" cy="6" r="8" fill-opacity="0" stroke-width="1"/>
+</symbol>
+<symbol id="LoadBreakSwitch:JX_Close_4" fileInfo="站房环网柜-自动化负荷开关闭合" viewBox="-40 -40 81 81">
+<line x1="1" y1="-4" x2="3" y2="-5" stroke-width="1" />
+<path d="M-12 0 L-5 0 L5 -4 " fill-opacity="0" stroke-width="1" />
+<circle cx="4" cy="0" r="3" fill-opacity="0" stroke-width="1" />
+<line x1="7.5" y1="-3" x2="7.5" y2="3" stroke-width="1" />
+<line x1="7" y1="0" x2="12" y2="0" stroke-width="1" />
+</symbol>
+<symbol id="LoadBreakSwitch:JX_Open_4" fileInfo="站房环网柜-自动化负荷开关断开" viewBox="-40 -40 81 81">
+<line x1="-1" y1="-5" x2="0.5" y2="-6.5" stroke-width="1" />
+<path d="M-12 0 L-5 0 L2 -6 " fill-opacity="0" stroke-width="1" />
+<circle cx="4" cy="0" r="3" fill-opacity="0" stroke-width="1" />
+<line x1="7.5" y1="-3" x2="7.5" y2="3" stroke-width="1" />
+</symbol>
+<symbol id="Breaker:JX_Close_4" fileInfo="站房环网柜-自动化断路器闭合" viewBox="-40 -40 81 81">
+<line x1="-1" y1="-3" x2="1" y2="-4" stroke-width="1" />
+<path d="M-12 0 L-4 0 L3 -3 " fill-opacity="0" stroke-width="1" />
+<line x1="7" y1="2.5" x2="1.5" y2="-2.5" stroke-width="1" />
+<line x1="1.5" y1="2.5" x2="7" y2="-2.5" stroke-width="1" />
+<line x1="4" y1="0" x2="12" y2="0" stroke-width="1" />
+</symbol>
+<symbol id="Breaker:JX_Open_4" fileInfo="站房环网柜-自动化断路器断开" viewBox="-40 -40 81 81">
+<line x1="-3" y1="-4.5" x2="-1" y2="-7" stroke-width="1" />
+<path d="M-12 0 L-5 0 L1 -7 " fill-opacity="0" stroke-width="1" />
+<line x1="7" y1="2.5" x2="1.5" y2="-2.5" stroke-width="1" />
+<line x1="1.5" y1="2.5" x2="7" y2="-2.5" stroke-width="1" />
+<line x1="4" y1="0" x2="12" y2="0" stroke-width="1" />
+</symbol>
+<symbol id="GroundingMethod" fileInfo="接地挂环" viewBox="-40 -40 81 81">
+<path d="M-6 0 L6 0 L0 -10 L-6 0 z" fill-opacity="0" stroke-width="1"/>
+<line x1="0" y1="0" x2="0" y2="4" stroke-width="1"/>
+<line x1="-7" y1="4" x2="7" y2="4" stroke-width="0.5"/>
+<line x1="-4.5" y1="6" x2="4.5" y2="6" stroke-width="0.5"/>
+<line x1="-2" y1="8" x2="2" y2="8" stroke-width="0.5"/>
+</symbol>
+<symbol id="Junction:JX_穿墙套管" fileInfo="穿墙套管" viewBox="-40 -40 81 81">
+<path d="M0 -6 L12 0 L0 6 L-12 0 L0 -6 z" fill-opacity="0" stroke-width="1"/>
+<line x1="0" y1="-6" x2="0" y2="6" stroke-width="1"/>
+<line x1="12" y1="0" x2="-12" y2="0" stroke-width="1"/>
+</symbol>
+<symbol id="Others:JX_箭头" fileInfo="箭头" viewBox="-40 -40 81 81">
+<line x1="-12" y1="0" x2="2" y2="0" stroke-width="1"/>
+<path d="M2 -5 L12 0 L2 5 L2 -5 z" fill="#ffffff" fill-opacity="1" stroke-width="1"/>
+</symbol>
+<symbol id="Disconnector:JX_Close_2"  fileInfo="刀闸-关" viewBox="-40 -40 81 81">
+<path d="M-12 0 L-6 0 L4 -3 L4 3 " fill-opacity="0" stroke-width="1" />
+<line x1="4" y1="0" x2="12" y2="0" stroke-width="1" />
+</symbol>
+<symbol id="Disconnector:JX_Open_2"  fileInfo="刀闸-开" viewBox="-40 -40 81 81">
+<path d="M-12 0 L-6 0 L1 -6 " fill-opacity="0" stroke-width="1" />
+<line x1="4" y1="-3" x2="4" y2="3" stroke-width="1" />
+<line x1="4" y1="0" x2="12" y2="0" stroke-width="1" />
+</symbol>
+<symbol id="Others:JX_"  viewBox="-40 -40 81 81">
+<path d="M-10 -12 L10 -12 L10 12 L-10 12 L-10 -12 z" fill-opacity="0" stroke-width="1"/>
+<path d="M-10 -12 L10 -12 L10 -8 L-10 -8 L-10 -12 z" fill="#ffffff" fill-opacity="1" stroke-width="1"/>
+<text x="-3" y="8" font-size="15" font-family="Simsun" fill-opacity="0" >Z</text>
+</symbol>
+<symbol id="CurrentTransformer:JX_单相二级" fileInfo="变电站电压互感器-单相二级" viewBox="-40 -40 81 81">
+<circle cx="0" cy="-5" r="6" fill-opacity="0" stroke-width="1"/>
+<circle cx="-5" cy="3" r="6" fill-opacity="0" stroke-width="1"/>
+<circle cx="5" cy="3" r="6" fill-opacity="0" stroke-width="1"/>
+<line x1="-2" y1="-5" x2="2" y2="-5" stroke-width="1"/>
+<line x1="-7" y1="3" x2="-3" y2="3" stroke-width="1"/>
+<line x1="3" y1="3" x2="7" y2="3" stroke-width="1"/>
+</symbol>
+<symbol id="Disconnector:JX_副柜" fileInfo="站房环网柜-副柜" viewBox="-40 -40 81 81">
+<path d="M-15 0.5 L-7 0.5 L-7 5.5 L6 5.5 L6 0.5 L15 0.5" fill-opacity="0" stroke-width="1"/>
+</symbol>
+<symbol id="Disconnector:JX_简易开关柜" fileInfo="站房环网柜-简易开关柜" viewBox="-40 -40 81 81">
+<line x1="-12" y1="0" x2="12" y2="0" stroke-width="1"/>
+<line x1="-8" y1="-3" x2="-8" y2="3" stroke-width="1"/>
+<line x1="-5" y1="-3" x2="-5" y2="3" stroke-width="1"/>
+<line x1="-2" y1="-3" x2="-2" y2="3" stroke-width="1"/>
+</symbol>
+<symbol id="Compensator" fileInfo="电容器" viewBox="-40 -40 81 81">
+<line x1="-10" y1="0" x2="-3" y2="0" stroke-width="1"/>
+<line x1="-3" y1="-5" x2="-3" y2="5" stroke-width="1"/>
+<line x1="3" y1="-5" x2="3" y2="5" stroke-width="1"/>
+<line x1="3" y1="0" x2="10" y2="0" stroke-width="1"/>
+</symbol>
+<symbol id="SurgeProtector" fileInfo="避雷器" viewBox="-20 -20 40 40">
+<line x1="-8" y1="-2" x2="-8" y2="2" stroke-width="0.5"/>
+<line x1="-7" y1="-3" x2="-7" y2="3" stroke-width="0.5"/>
+<line x1="-6" y1="-4" x2="-6" y2="4" stroke-width="0.5"/>
+<line x1="-6" y1="0" x2="2.5" y2="0" stroke-width="1"/>
+<path d="M1 -1.5 L3 0 L1 1.5" fill-opacity="0" stroke-width="0.5"/>
+<path d="M-3 -2.5 L8 -2.5 L8 2.5 L-3 2.5 L-3 -2.5 z" fill-opacity="0" stroke-width="0.8"/>
+<line x1="8" y1="0" x2="12" y2="0" stroke-width="1"/>
+</symbol>
+<symbol id="Breaker:JX_Close_5" fileInfo="断路器闭合" viewBox="-20 -20 40 40">
+<line x1="-8" y1="-1" x2="-6" y2="-1" stroke-width="1"/>
+<path d="M-5 -3.2 L-6 -1 L-5 1.2" fill-opacity="0" stroke-width="0.5"/>
+<path d="M-4.2 -3 L-5 -1 L-4.2 1" fill-opacity="0" stroke-width="0.5"/>
+<line x1="-5" y1="-1" x2="-2.8" y2="-1" stroke-width="0.7"/>
+<line x1="-3" y1="-1" x2="1" y2="-3" stroke-width="0.7"/>
+<line x1="2.5" y1="1" x2="0.5" y2="-3" stroke-width="0.7"/>
+<line x1="0.5" y1="1" x2="2.5" y2="-3" stroke-width="0.7"/>
+<line x1="2" y1="-1" x2="5.5" y2="-1" stroke-width="0.7"/>
+<path d="M4.5 -3.2 L5.5 -1 L4.5 1.2" fill-opacity="0" stroke-width="0.5"/>
+<path d="M5.5 -3.5 L6.5 -1 L5.5 1.5" fill-opacity="0" stroke-width="0.5"/>
+<line x1="6.5" y1="-1" x2="8.5" y2="-1" stroke-width="1"/>
+</symbol>
+<symbol id="Breaker:JX_Open_5" fileInfo="断路器断开" viewBox="-20 -20 40 40">
+<line x1="-8" y1="-1" x2="-6" y2="-1" stroke-width="1"/>
+<path d="M-5 -3.2 L-6 -1 L-5 1.2" fill-opacity="0" stroke-width="0.5"/>
+<path d="M-4.2 -3 L-5 -1 L-4.2 1" fill-opacity="0" stroke-width="0.5"/>
+<line x1="-5" y1="-1" x2="-3" y2="-1" stroke-width="0.7"/>
+<line x1="-3" y1="-1" x2="0" y2="-4.5" stroke-width="0.7"/>
+<line x1="3" y1="0.7" x2="1" y2="-2.7" stroke-width="0.7"/>
+<line x1="1" y1="0.7" x2="3" y2="-2.7" stroke-width="0.7"/>
+<line x1="2.5" y1="-1" x2="5.5" y2="-1" stroke-width="0.7"/>
+<path d="M4.5 -3.2 L5.5 -1 L4.5 1.2" fill-opacity="0" stroke-width="0.5"/>
+<path d="M5.5 -3.5 L6.5 -1 L5.5 1.5" fill-opacity="0" stroke-width="0.5"/>
+<line x1="6.5" y1="-1" x2="8.5" y2="-1" stroke-width="1"/>
+</symbol>
+<symbol id="Disconnector:JX_Close_3" fileInfo="10kV开关闭合" viewBox="-40 -40 81 81">
+<line x1="-4" y1="-2" x2="10" y2="-2" stroke-width="1"/>
+<line x1="-10" y1="0" x2="-6" y2="0" stroke-width="1"/>
+<circle cx="-4" cy="0" r="2" fill="#ffffff" fill-opacity="1" stroke-width="1"/>
+<circle cx="10" cy="0" r="2" fill="#ffffff" fill-opacity="1" stroke-width="1"/>
+<line x1="12" y1="0" x2="15" y2="0" stroke-width="1"/>
+</symbol>
+<symbol id="Disconnector:JX_Open_3" fileInfo="10kV开关断开" viewBox="-40 -40 81 81">
+<line x1="-4" y1="-2" x2="6" y2="-6" stroke-width="1"/>
+<line x1="-10" y1="0" x2="-6" y2="0" stroke-width="1"/>
+<circle cx="-4" cy="0" r="2" fill="#ffffff" fill-opacity="1" stroke-width="1"/>
+<circle cx="10" cy="0" r="2" fill="#ffffff" fill-opacity="1" stroke-width="1"/>
+<line x1="12" y1="0" x2="15" y2="0" stroke-width="1"/>
+</symbol>
+<symbol id="GroundDisconnector:JX_Close_1" fileInfo="站房接地刀闸闭合" viewBox="-40 -40 81 81">
+<line x1="-8" y1="-1" x2="-2" y2="-1" stroke-width="1"/>
+<line x1="-2" y1="-3" x2="-2" y2="1" stroke-width="1"/>
+<line x1="-2.3" y1="-3" x2="4" y2="-1" stroke-width="1"/>
+<line x1="3.5" y1="-1" x2="10" y2="-1" stroke-width="1"/>
+<line x1="10" y1="-5" x2="10" y2="3" stroke-width="0.5"/>
+<line x1="11" y1="-3" x2="11" y2="2" stroke-width="0.5"/>
+<line x1="12" y1="-2" x2="12" y2="1" stroke-width="0.5"/>
+</symbol>
+<symbol id="GroundDisconnector:JX_Open_1" fileInfo="站房接地刀闸断开" viewBox="-40 -40 81 81">
+<line x1="-8" y1="-1" x2="-2" y2="-1" stroke-width="1"/>
+<line x1="-2" y1="-3" x2="-2" y2="1" stroke-width="1"/>
+<line x1="-1" y1="-5" x2="4" y2="-1" stroke-width="1"/>
+<line x1="3.5" y1="-1" x2="10" y2="-1" stroke-width="1"/>
+<line x1="10" y1="-5" x2="10" y2="3" stroke-width="0.5"/>
+<line x1="11" y1="-3" x2="11" y2="2" stroke-width="0.5"/>
+<line x1="12" y1="-2" x2="12" y2="1" stroke-width="0.5"/>
+</symbol>
+<symbol id="CurrentTransformer:JX_单相三级" fileInfo="变电站电压互感器-单相三级" viewBox="-40 -40 81 81">
+<circle cx="0" cy="-5" r="6" fill-opacity="0" stroke-width="1"/>
+<circle cx="0" cy="4" r="6" fill-opacity="0" stroke-width="1"/>
+<line x1="-2" y1="-5" x2="2" y2="-5" stroke-width="1"/>
+<line x1="-2" y1="5" x2="2" y2="5" stroke-width="1"/>
+</symbol>
+<symbol id="Disconnector:JX_Close_4" fileInfo="站房环网柜-10kV刀闸闭合" viewBox="-40 -40 81 81">
+<line x1="-8" y1="-1" x2="-3" y2="-1" stroke-width="1"/>
+<line x1="-3.5" y1="-1" x2="8.5" y2="-3" stroke-width="1"/>
+<line x1="8" y1="-3" x2="8" y2="1" stroke-width="1"/>
+<line x1="8" y1="-1" x2="18" y2="-1" stroke-width="1"/>
+</symbol>
+<symbol id="Breaker:JX_Close_6" fileInfo="站房环网柜-10kV断路器闭合" viewBox="-40 -40 81 81">
+<line x1="-8" y1="-1.5" x2="-2" y2="-1.5" stroke-width="1"/>
+<line x1="-2.5" y1="-1" x2="9" y2="-5" stroke-width="1"/>
+<line x1="12" y1="1" x2="7" y2="-4" stroke-width="1"/>
+<line x1="7" y1="1" x2="12" y2="-4" stroke-width="1"/>
+<line x1="9" y1="-1.5" x2="18" y2="-1.5" stroke-width="1"/>
+</symbol>
+<symbol id="Breaker:JX_Open_6" fileInfo="站房环网柜-10kV断路器断开" viewBox="-40 -40 81 81">
+<line x1="-8" y1="-1.5" x2="-2" y2="-1.5" stroke-width="1"/>
+<line x1="-2.5" y1="-1" x2="7" y2="-6.5" stroke-width="1"/>
+<line x1="12" y1="1" x2="7" y2="-4" stroke-width="1"/>
+<line x1="7" y1="1" x2="12" y2="-4" stroke-width="1"/>
+<line x1="9" y1="-1.5" x2="18" y2="-1.5" stroke-width="1"/>
+</symbol>
+<symbol id="Disconnector:JX_Open_4" fileInfo="站房环网柜-10kV刀闸断开" viewBox="-40 -40 81 81">
+<line x1="-8" y1="-1" x2="-2" y2="-1" stroke-width="1"/>
+<line x1="-2.5" y1="-1" x2="6" y2="-6" stroke-width="1"/>
+<line x1="9" y1="-3" x2="9" y2="1" stroke-width="1"/>
+<line x1="9" y1="-1" x2="18" y2="-1" stroke-width="1"/>
+</symbol>
+<symbol id="LoadBreakSwitch:JX_Open_5" fileInfo="站房环网柜-10kV负荷开关断开" viewBox="-40 -40 81 81">
+<path d="M-12 0 L-6 0 L0 -7" fill-opacity="0" stroke-width="1"/>
+<circle cx="1" cy="0" r="3" fill-opacity="0" stroke-width="1"/>
+<line x1="4.5" y1="-4" x2="4.5" y2="4" stroke-width="1"/>
+<line x1="5" y1="0" x2="12" y2="0" stroke-width="1"/>
+</symbol>
+<symbol id="LoadBreakSwitch:JX_Close_5" fileInfo="站房环网柜-10kV负荷开关闭合" viewBox="-40 -40 81 81">
+<path d="M-12 0 L-6 0 L2 -4.5" fill-opacity="0" stroke-width="1"/>
+<circle cx="1" cy="0" r="3" fill-opacity="0" stroke-width="1"/>
+<line x1="4.5" y1="-4" x2="4.5" y2="4" stroke-width="1"/>
+<line x1="5" y1="0" x2="12" y2="0" stroke-width="1"/>
+</symbol>
+<symbol id="Substation" fileInfo="变电站" viewBox="-40 -40 81 81">
+<path d="M2 11 L11 11 L11 -11 L-11 -11 L-11 11 L-2 11" fill-opacity="0" stroke-width="1"/>
+<line x1="-6" y1="0" x2="6" y2="0" stroke-width="1"/>
+<line x1="-6" y1="0" x2="6" y2="-10" stroke-width="1"/>
+</symbol>
+<symbol id="Junction:JX_站房终端头" fileInfo="站房终端头" viewBox="-40 -40 81 81">
+<path d="M-20 0 L0 -5 L0 5 L-20 0 L-20 0" fill-opacity="0" stroke-width="1"/>
+</symbol>
+<symbol id="ServiceDeliveryPoint:JX_高压表" fileInfo="高压表" viewBox="-40 -40 81 81">
+<line x1="-8" y1="-11.5" x2="12" y2="-11.5" stroke-width="11"/>
+<path d="M-8 -16 L12 -16 L12 17 L-8 17 L-8 -16 z" fill-opacity="0" stroke-width="1"/>
+<text x="-3" y="12.5" font-size="20" font-family="Simsun">G</text>
+</symbol>
+<symbol id="ServiceDeliveryPoint:JX_抽屉式计量柜" fileInfo="计量柜" viewBox="-40 -40 81 81">
+<path d="M-12.5 -14.5 L-12.5 -25" fill-opacity="0" stroke-width="0.5"/>
+<ellipse cx="-12.5" cy="-20" rx="3" ry="2.5" fill-opacity="0" stroke-width="0.5"/>
+<path d="M0 -20 L-8 -20" fill-opacity="0" stroke-width="0.5"/>
+<path d="M-1 -23 L-6 -16" fill-opacity="0" stroke-width="0.5"/>
+<path d="M-3 -23 L-8 -16" fill-opacity="0" stroke-width="0.5"/>
+<path d="M1 29.5 L1 -29.5" fill-opacity="0" stroke-width="1"/>
+<path d="M6 -14.5 L6 -25" fill-opacity="0" stroke-width="0.5"/>
+<ellipse cx="6" cy="-20" rx="3" ry="2.5" fill-opacity="0" stroke-width="0.5"/>
+<path d="M10 -20 L18 -20" fill-opacity="0" stroke-width="0.5"/>
+<path d="M15 -23 L10 -16" fill-opacity="0" stroke-width="0.5"/>
+<path d="M17 -23 L12 -16" fill-opacity="0" stroke-width="0.5"/>
+<path d="M1 -13 L13 -13 L13 13" fill-opacity="0" stroke-width="1"/>
+<path d="M9 -8 L17 -8 L17 5 L9 5 L9 -8" fill-opacity="0" stroke-width="0.7"/>
+<circle cx="13" cy="16.5" r="4" fill-opacity="0" stroke-width="0.5"/>
+<text x="11.5" y="17" font-size="4" font-family="Arial" fill-opacity="1" >V</text>
+<circle cx="13" cy="22" r="4" fill-opacity="0" stroke-width="0.5"/>
+<text x="11.5" y="24.7" font-size="4" font-family="Arial" fill-opacity="1" >V</text>
+</symbol>
+<symbol id="ServiceDeliveryPoint:JX_固定式计量柜" fileInfo="计量柜"  viewBox="-40 -40 81 81">
+<path d="M-12.5 -14.5 L-12.5 -25" fill-opacity="0" stroke-width="0.5"/>
+<ellipse cx="-12.5" cy="-20" rx="3" ry="2.5" fill-opacity="0" stroke-width="0.5"/>
+<path d="M0 -20 L-8 -20" fill-opacity="0" stroke-width="0.5"/>
+<path d="M-1 -23 L-6 -16" fill-opacity="0" stroke-width="0.5"/>
+<path d="M-3 -23 L-8 -16" fill-opacity="0" stroke-width="0.5"/>
+<path d="M1 29.5 L1 -29.5" fill-opacity="0" stroke-width="1"/>
+<path d="M6 -14.5 L6 -25" fill-opacity="0" stroke-width="0.5"/>
+<ellipse cx="6" cy="-20" rx="3" ry="2.5" fill-opacity="0" stroke-width="0.5"/>
+<path d="M10 -20 L18 -20" fill-opacity="0" stroke-width="0.5"/>
+<path d="M15 -23 L10 -16" fill-opacity="0" stroke-width="0.5"/>
+<path d="M17 -23 L12 -16" fill-opacity="0" stroke-width="0.5"/>
+<path d="M0 -13 L13 -13 L13 13" fill-opacity="0" stroke-width="1"/>
+<path d="M9 -8 L17 -8 L17 5 L9 5 L9 -8" fill-opacity="0" stroke-width="0.7"/>
+<circle cx="13" cy="16.5" r="4" fill-opacity="0" stroke-width="0.5"/>
+<text x="11.5" y="17" font-size="4" font-family="Arial" fill-opacity="1" >V</text>
+<circle cx="13" cy="22" r="4" fill-opacity="0" stroke-width="0.5"/>
+<text x="11.5" y="24.7" font-size="4" font-family="Arial" fill-opacity="1" >V</text>
+</symbol>
+</defs>
+
+<g id="Head_layer">
+<path d="M-724.7925,62.9425 L83.92334,62.9425 L83.92334,600.8148 L-724.7925,600.8148 z" fill="rgb(0,0,0)" stroke="rgb(0,0,0)" stroke-width="1"/>
+</g>
+<g id="ACLineSegment_Layer">
+<g id="10689755">
+<path d="M-301.31,391.78 L-294.19,391.78" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10689755" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10689852">
+<path d="M-311.48,335.4 L-304.14,335.4" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10689852" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10690575">
+<path d="M-213.75,163.91 L-213.75,172.78" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10690575" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10690602">
+<path d="M-253.67,218.24 L-253.67,225.94" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10690602" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10690888">
+<path d="M-88.25,101.33 L-86.23,101.33" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10690888" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10690901">
+<path d="M-86.13,101.31 L-86.13,103.15" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10690901" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10690928">
+<path d="M-86.32,78.04 L-94.35,78.04" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10690928" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10690994">
+<path d="M-259.31,88.03 L-267.03,88.03" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10690994" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10691014">
+<path d="M-182.38,101.41 L-182.38,96.32" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10691014" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10691033">
+<path d="M-182.75,77.42 L-190.41,77.42" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10691033" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10692311">
+<path d="M-203.96,471.15 L-203.96,473.56" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10692311" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10692321">
+<path d="M-224.27,459.78 L-232.55,459.78" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10692321" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10692332">
+<path d="M-204.06,452.5 L-211.52,452.5" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10692332" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10692336">
+<path d="M-184.06,459.97 L-191.18,459.97" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10692336" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10695644">
+<path d="M-153.99,517.4 L-149.42,517.4" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10695644" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10695745">
+<path d="M-165.22,517.39 L-165.22,524.11" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10695745" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10696346">
+<path d="M-26.53,471.42 L-22.28,471.42" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10696346" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10697141">
+<path d="M-12.46,386.77 L-11.42,386.77" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10697141" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10697166">
+<path d="M-26.25,275 L-23.3,275" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10697166" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10697237">
+<path d="M-1.71,274.96 L-.14,274.96" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10697237" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11039731">
+<path d="M-26.53,274.83 L-26.53,271.87" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11039731" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11039758">
+<path d="M-23.23,386.77 L-26.5,386.77" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11039758" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11043199">
+<path d="M-26.53,471.4 L-26.53,387.16" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11043199" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11062455">
+<path d="M-213.75,163.91 L-215.7,163.91" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11062455" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11063182">
+<path d="M-86.27,78.09 L-86.27,76.59" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11063182" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11063887">
+<path d="M-182.55,77.91 L-182.55,76.31" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11063887" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11064541">
+<path d="M-259.25,88.27 L-259.25,87.07" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11064541" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11075253">
+<path d="M-149.42,517.4 L-149.52,480.92 L-26.42,480.92" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11075253" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11078163">
+<path d="M-12.3,386.81 L-12.3,379.4" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11078163" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11078971">
+<path d="M-32.42,239.44 L-26.37,239.44" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11078971" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11078972">
+<path d="M-32.97,261.63 L-26.71,261.63" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11078972" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11078998">
+<path d="M-252.94,218.25 L-254.68,218.25" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11078998" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11079079">
+<path d="M-303.99,335.76 L-303.99,333.77" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11079079" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11079119">
+<path d="M-294,379.16 L-294,380.75" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11079119" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11079124">
+<path d="M-294.07,391.21 L-294.07,392.87" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11079124" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11079156">
+<path d="M-224.07,473.56 L-224.07,471.09" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11079156" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11079158">
+<path d="M-224.01,460.22 L-224.01,458.06" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11079158" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11079160">
+<path d="M-183.98,473.56 L-183.98,471.17" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11079160" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11079163">
+<path d="M-183.88,460.35 L-183.88,458.19" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11079163" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11119262">
+<path d="M-304.09,346.58 L-304.08,350.43" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11119262" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11135977">
+<path d="M-26.53,386.81 L-26.53,376.72 L-26.53,274.83" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11135977" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11136041">
+<path d="M-1.63,274.8 L-1.63,284.55" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11136041" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11137690">
+<path d="M-86.21,99.56 L-86.21,101.18" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11137690" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11140975">
+<path d="M-203.78,452.87 L-203.78,451.23" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11140975" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11306121">
+<path d="M-26.55,480.96 L-26.54,485.53" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11306121" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11303425">
+<path d="M-26.42,526.99 L-26.46,516.82" fill="none" stroke-width="0.7" class="Line" />
+ <metadata><cge:PSR_Ref ObjectID="11303425" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10695710">
+<path d="M-26.53,471.42 L-26.53,481.04" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10695710" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10645743">
+<path d="M-26.24,517.37 L-32.55,517.37" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10645743" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10645733">
+<path d="M-26.13,496.44 L-33.28,496.44" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10645733" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11323722">
+<path d="M-223.97,473.66 L-213.59,473.66 L-203.98,473.66" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11323722" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11558972">
+<path d="M-185.68,163.84 L-189.32,163.84" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11558972" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11559126">
+<path d="M-228.41,218.53 L-234.93,218.53" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11559126" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11559279">
+<path d="M-259.07,99.2 L-259.07,101.46" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11559279" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11559656">
+<path d="M-312.28,350.42 L-308.82,350.42 L-304.06,350.42" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11559656" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11559792">
+<path d="M-309,379.16 L-306.74,379.16 L-294.03,379.16" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11559792" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11977346">
+<path d="M-203.98,473.66 L-197.59,473.66 L-184.1,473.66" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11977346" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11983872">
+<path d="M-187.75,101.41 L-182.41,101.41" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11983872" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11984170">
+<path d="M-259.24,101.46 L-253.84,101.46 L-251.51,101.46" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11984170" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="15496623">
+<path d="M-189.32,163.84 L-194.39,163.83" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="15496623" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="15741271">
+<path d="M-182.42,101.41 L-177.82,101.41 L-174.81,101.41" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="15741271" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11559869">
+<path d="M-224.07,477.05 L-224.07,473.65" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11559869" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10691298">
+<path d="M-560.14,149.83 L-560.14,445.19 L-548.99,445.16 L-548.99,433.57" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10691298" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10691438">
+<path d="M-543.49,149.79 L-543.49,298.3 L-514.52,298.3 L-514.52,255.49" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10691438" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10691462">
+<path d="M-460.32,264.25 L-460.32,272.56 L-444.21,272.56 L-444.21,268.81" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10691462" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10691468">
+<path d="M-475.85,264.54 L-475.85,280.07 L-413.5,280.07 L-413.5,269.15" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10691468" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10691570">
+<path d="M-489.25,263.82 L-489.25,285.35 L-385.66,285.35 L-385.66,269.86" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10691570" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10691623">
+<path d="M-520.48,149.83 L-520.48,187.05 L-372.95,187.05 L-372.95,146.77" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10691623" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10691876">
+<path d="M-397.22,145.57 L-397.22,184.75 L-397.14,188.97 L-397.14,192.2 L-344.88,192.2 L-344.89,346.59 L-369.07,346.79 L-368.83,335.54" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10691876" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10691924">
+<path d="M-371.12,335.51 L-371.21,350.28 L-321.53,350.47" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10691924" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10692071">
+<path d="M-386.99,337.95 L-386.52,361.11 L-248.45,360.88 L-248.37,351.16" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10692071" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10692111">
+<path d="M-422.34,337.19 L-421.66,380.04 L-352.7,379.06 L-317.37,379.06" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10692111" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10692165">
+<path d="M-424.48,337.25 L-424.16,388.31 L-423.85,437.59" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10692165" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10692398">
+<path d="M-311,448.38 L-311.1,499.4 L-224.2,499.61 L-223.94,485.93" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10692398" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10692470">
+<path d="M-403.91,339.11 L-403.74,368.75 L-151.2,368.11 L-151.2,357.34" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10692470" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10692565">
+<path d="M-124.69,357.09 L-124.69,428.99" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10692565" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10692576">
+<path d="M-95.86,357.17 L-95.86,429.24" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10692576" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10692654">
+<path d="M-124.81,292.6 L-124.81,296.3 L-111.18,296.3 L-111.18,290.7" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10692654" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10692666">
+<path d="M-149.71,292.27 L-149.71,301.22 L-79.91,301.22 L-79.91,288.95" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10692666" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10692947">
+<path d="M-97.88,101.37 L-165.69,101.37" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10692947" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10692976">
+<path d="M-197.09,101.46 L-242.98,101.46" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10692976" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10694798">
+<path d="M-519.38,432.7 L-519.38,517.2 L-175.7,517.2" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10694798" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10700086">
+<path d="M-646.97,110.65 L-646.97,186.49 L-578.83,186.49 L-578.83,149.95" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10700086" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11078907">
+<path d="M-2.22,471.33 L15.16,471.43 L15.16,446.91 L15.16,442.52" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="11078907" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10696810">
+<path d="M-26.34,230.01 L-26.34,159.33" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10696810" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10692851">
+<path d="M-86.09,112.64 L-86.09,173.81 L-30.75,173.69 L-22.05,174.17 L.84,174.28 L.84,158.85" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10692851" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10692842">
+<path d="M-176.85,163.76 L-91.73,163.76 L-91.73,179.81 L-31.27,179.68 L-21.62,179.98 L3.31,180.11 L3.31,158.77" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10692842" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10692786">
+<path d="M63.66,159.43 L63.66,218.14 L-24.27,218.14 L-29.85,218.45 L-219.02,218.45" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10692786" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10692708">
+<path d="M65.8,159.32 L65.8,226.34 L-23.78,226.34 L-30.34,226.5 L-173.44,226.5 L-173.44,310.38 L-161.08,310.38 L-161.08,284.76" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10692708" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10637301">
+<path d="M-419.72,146.54 L-419.41,178.97 L-456.4,178.87 L-456.48,146.82" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="Line" />
+ <metadata><cge:PSR_Ref ObjectID="10637301" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="14964998">
+<path d="M-423.86,437.63 L-423.86,470.41 L-313.25,470.79 L-313.25,448.79" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="14964998" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="17482153">
+<path d="M34.16,159.66 L34.16,178.95 L61.45,178.95 L68.3,178.63 L80.02,178.63 L80.02,127.5 L-38.47,127.5 L-38.47,89.65" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="17482153" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="17482105">
+<path d="M-31.34,104.62 L-31.34,115.25 L18.24,115.25 L18.24,95.29" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="17482105" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="17482110">
+<path d="M-21.26,104.96 L-21.26,110.12 L15.99,110.12 L20.65,110.04 L41.6,110.04 L41.6,94.71" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="17482110" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="17485745">
+<path d="M6.13,104.49 L6.13,108.2 L6.13,112.16 L6.13,113.45 L6.23,117.31 L6.23,118.83 L69.38,118.83 L69.38,94.82" fill="none" stroke-width="0.7" stroke-dasharray="6 2" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="17485745" ObjectName="" Plane="0" /></metadata>
+</g>
+</g>
+<g id="BusbarSection_Layer">
+<g id="10679928">
+<path d="M-581.8,137.89 L-518.47,137.89" fill="none" stroke-width="0.7" class="inside" />
+ <metadata><cge:PSR_Ref ObjectID="10679928" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10679935">
+<path d="M-422.78,135.21 L-364.25,135.21" fill="none" stroke-width="0.7" class="inside" />
+ <metadata><cge:PSR_Ref ObjectID="10679935" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10682360">
+<path d="M-518.49,244.72 L-503.91,244.72" fill="none" stroke-width="0.7" class="inside" />
+ <metadata><cge:PSR_Ref ObjectID="10682360" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10682461">
+<path d="M-503.87,257.23 L-503.87,259.34 L-496.99,259.34 L-496.99,244.9 L-454.79,244.9" fill="none" stroke-width="0.7" class="inside" />
+ <metadata><cge:PSR_Ref ObjectID="10682461" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10682941">
+<path d="M-552.85,405.55 L-510.39,405.55" fill="none" stroke-width="0.7" class="inside" />
+ <metadata><cge:PSR_Ref ObjectID="10682941" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10683202">
+<path d="M-368.1,315.31 L-425.45,315.36" fill="none" stroke-width="0.7" class="inside" />
+ <metadata><cge:PSR_Ref ObjectID="10683202" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10684208">
+<path d="M-156.15,336.09 L-90.17,336.09" fill="none" stroke-width="0.7" class="inside" />
+ <metadata><cge:PSR_Ref ObjectID="10684208" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10684847">
+<path d="M-138.19,284.67 L-138.19,287.61 L-130.2,287.61 L-130.2,272.66 L-120.35,272.66" fill="none" stroke-width="0.7" class="inside" />
+ <metadata><cge:PSR_Ref ObjectID="10684847" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10689376">
+<path d="M-163.66,272.66 L-138.08,272.66" fill="none" stroke-width="0.7" class="inside" />
+ <metadata><cge:PSR_Ref ObjectID="10689376" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10691071">
+<path d="M-29.01,142.91 L68.52,142.91" fill="none" stroke-width="0.7" class="inside" />
+ <metadata><cge:PSR_Ref ObjectID="10691071" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="17482040">
+<path d="M-3.55,76.51 L-43.08,76.51" fill="none" stroke-width="0.7" class="inside" />
+ <metadata><cge:PSR_Ref ObjectID="17482040" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="17482075">
+<path d="M-9.39,89.46 L-9.39,98.72 L.77,98.72 L.77,76.7 L9.68,76.7" fill="none" stroke-width="0.7" class="inside" />
+ <metadata><cge:PSR_Ref ObjectID="17482075" ObjectName="" Plane="0" /></metadata>
+</g>
+</g>
+<g id="Circuit_Layer">
+<g id="10325790">
+<path d="M-662.69,110.65 L-629.08,110.65" fill="none" stroke-width="0.7" class="MainLine" />
+ <metadata><cge:PSR_Ref ObjectID="10325790" ObjectName="" Plane="0" /></metadata>
+</g>
+</g>
+<g id="ConnectLine_Layer">
+<g id="10325791">
+<path d="M-135.11,547.68 L-54.26,547.68 L89.47,547.68" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="10325791" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10325792">
+<path d="M-72.2,601.68 L-72.2,565.75 L-72.2,556.41 L-72.2,533.96" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="10325792" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10325793">
+<path d="M-45.25,601.79 L-45.25,592.99 L-45.25,587.81" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="10325793" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10325794">
+<path d="M26.91,601.66 L26.91,593.06 L26.91,587.93" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="10325794" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10325795">
+<path d="M-718.59,62.89 L89.9,62.89 L89.9,601.88 L-718.59,601.88 L-718.59,62.89" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="10325795" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10325796">
+<path d="M-134.92,587.93 L-54.07,587.93 L89.66,587.93" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="10325796" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10325797">
+<path d="M-134.8,561.14 L-72.32,561.16" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="10325797" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10325798">
+<path d="M-135.51,534.18 L-133.71,534.18 L-52.86,534.18 L36,534.18 L89.9,534.18" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="10325798" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10325799">
+<path d="M89.9,556.61 L89.9,601.88 L-135.33,601.88 L-135.33,556.61 L-135.33,534.15" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="10325799" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10325800">
+<path d="M-108.22,601.31 L-108.22,565.38 L-108.22,556.74 L-108.22,534.29" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="10325800" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10325801">
+<path d="M.19,601.79 L.19,592.7 L.19,587.93" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="10325801" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10325802">
+<path d="M-134.99,574.75 L-72.44,574.75" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="10325802" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11069950">
+<path d="M-26.3,155.07 L-26.3,142.91" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="11069950" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11069978">
+<path d="M2.07,155.56 L2.07,142.91" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="11069978" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11069999">
+<path d="M35.25,156.1 L35.25,142.91" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="11069999" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11072503">
+<path d="M-549,428.54 L-549,405.71" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="11072503" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11072570">
+<path d="M-538.37,405.55 L-538.37,422.49" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="11072570" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11072652">
+<path d="M-528.19,405.55 L-528.19,422.32" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="11072652" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11072697">
+<path d="M-519.36,427.89 L-519.36,405.81" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="11072697" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11079023">
+<path d="M64.69,155.92 L64.69,143.16" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="11079023" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11079057">
+<path d="M-423.4,333.84 L-423.42,315.36" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="11079057" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11079059">
+<path d="M-403.83,333.91 L-403.85,315.72" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="11079059" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11079065">
+<path d="M-387.02,332.81 L-387.03,315.66" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="11079065" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11079068">
+<path d="M-370.04,331.86 L-370.05,315.67" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="11079068" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11462809">
+<path d="M-151.15,352.74 L-151.15,336.09" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="11462809" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11462811">
+<path d="M-124.84,352.66 L-124.84,336.3" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="11462811" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="11462815">
+<path d="M-95.99,352.48 L-95.99,336.29" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="11462815" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="15645027">
+<path d="M-578.67,141.49 L-578.67,141.33" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="15645027" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="15645028">
+<path d="M-560.03,141.49 L-560.03,141.33" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="15645028" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="15645029">
+<path d="M-543.3,141.49 L-543.3,141.33" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="15645029" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="15645030">
+<path d="M-520.27,141.66 L-520.27,141.49" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="15645030" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="15645031">
+<path d="M-419.79,138.41 L-419.79,138.25" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="15645031" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="15645032">
+<path d="M-397.13,138.58 L-397.13,138.41" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="15645032" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="15645033">
+<path d="M-372.99,138.5 L-372.99,138.33" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="15645033" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="15645044">
+<path d="M-514.37,247.65 L-514.37,247.48" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="15645044" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="15645045">
+<path d="M-489.02,248.31 L-489.02,248.14" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="15645045" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="15645046">
+<path d="M-475.61,248.31 L-475.61,248.14" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="15645046" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="15645047">
+<path d="M-460.03,247.81 L-460.03,247.65" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="15645047" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="15645148">
+<path d="M-124.6,275.78 L-124.6,275.62" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="15645148" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="15645194">
+<path d="M-160.91,275.4 L-160.91,275.23" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="15645194" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="15645195">
+<path d="M-149.53,275.7 L-149.53,275.54" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="15645195" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="17482045">
+<path d="M-38.31,78.11 L-38.31,76.94" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="17482045" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="17482058">
+<path d="M-31.12,76.98 L-31.12,77.97" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="17482058" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="17482068">
+<path d="M-21.01,76.82 L-21.01,77.98" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="17482068" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="17482076">
+<path d="M6.45,77.19 L6.45,78.67" fill="none" stroke-width="0.7" class="zfyx" />
+ <metadata><cge:PSR_Ref ObjectID="17482076" ObjectName="" Plane="0" /></metadata>
+</g>
+</g>
+<g id="GroundDisconnector_Layer">
+<g id="10680282">
+ <use xlink:href="#GroundDisconnector:JX_Open_0" x="-586.39" y="136.66" width="20" height="20" fill="none"  class="SwitchOpen" transform="rotate(89.42685,-576.39,146.66)" />
+ <metadata><cge:PSR_Ref ObjectID="10680282" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10680291">
+ <use xlink:href="#GroundDisconnector:JX_Open_0" x="-567.76" y="136.85" width="20" height="20" fill="none"  class="SwitchOpen" transform="rotate(89.42685,-557.76,146.85)" />
+ <metadata><cge:PSR_Ref ObjectID="10680291" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10680295">
+ <use xlink:href="#GroundDisconnector:JX_Open_0" x="-551.05" y="136.66" width="20" height="20" fill="none"  class="SwitchOpen" transform="rotate(89.42685,-541.05,146.66)" />
+ <metadata><cge:PSR_Ref ObjectID="10680295" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10680301">
+ <use xlink:href="#GroundDisconnector:JX_Open_0" x="-527.98" y="136.87" width="20" height="20" fill="none"  class="SwitchOpen" transform="rotate(89.42685,-517.98,146.87)" />
+ <metadata><cge:PSR_Ref ObjectID="10680301" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10680306">
+ <use xlink:href="#GroundDisconnector:JX_Close_0" x="-427.47" y="133.45" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(89.42685,-417.47,143.45)" />
+ <metadata><cge:PSR_Ref ObjectID="10680306" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10680338">
+ <use xlink:href="#GroundDisconnector:JX_Open_0" x="-404.74" y="133.62" width="20" height="20" fill="none"  class="SwitchOpen" transform="rotate(89.42685,-394.74,143.62)" />
+ <metadata><cge:PSR_Ref ObjectID="10680338" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10680344">
+ <use xlink:href="#GroundDisconnector:JX_Open_0" x="-380.67" y="133.54" width="20" height="20" fill="none"  class="SwitchOpen" transform="rotate(89.42685,-370.67,143.54)" />
+ <metadata><cge:PSR_Ref ObjectID="10680344" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10685456">
+ <use xlink:href="#GroundDisconnector:JX_Open_0" x="-168.72" y="271.08" width="20" height="20" fill="none"  class="SwitchOpen" transform="rotate(89.42685,-158.72,281.08)" />
+ <metadata><cge:PSR_Ref ObjectID="10685456" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10685601">
+ <use xlink:href="#GroundDisconnector:JX_Open_0" x="-154.4" y="271.63" width="20" height="20" fill="none"  class="SwitchOpen" transform="rotate(89.42685,-144.4,281.63)" />
+ <metadata><cge:PSR_Ref ObjectID="10685601" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10685614">
+ <use xlink:href="#GroundDisconnector:JX_Open_0" x="-130.46" y="271.6" width="20" height="20" fill="none"  class="SwitchOpen" transform="rotate(89.42685,-120.46,281.6)" />
+ <metadata><cge:PSR_Ref ObjectID="10685614" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="17482079">
+ <use xlink:href="#GroundDisconnector:JX_Close_0" x="-38.76" y="76.55" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(89.42685,-28.76,86.55)" />
+ <metadata><cge:PSR_Ref ObjectID="17482079" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="17482080">
+ <use xlink:href="#GroundDisconnector:JX_Close_0" x="-28.71" y="76.5" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(89.42685,-18.71,86.5)" />
+ <metadata><cge:PSR_Ref ObjectID="17482080" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="17482081">
+ <use xlink:href="#GroundDisconnector:JX_Close_0" x="-1.41" y="76.2" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(89.42685,8.59,86.2)" />
+ <metadata><cge:PSR_Ref ObjectID="17482081" ObjectName=""  Plane="0" /> </metadata>
+</g>
+</g>
+<g id="Junction_Layer">
+<g id="14964991">
+ <use xlink:href="#Junction:JX_电缆中间接头" x="-433.85" y="427.59" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(89.99979,-423.85,437.59)" />
+ <metadata><cge:PSR_Ref ObjectID="14964991" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10681782">
+ <use xlink:href="#Junction:JX_单电缆头" x="-429.75" y="134.28" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-419.75,144.28)" />
+ <metadata><cge:PSR_Ref ObjectID="10681782" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10681974">
+ <use xlink:href="#Junction:JX_单电缆头" x="-570.16" y="137.6" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-560.16,147.6)" />
+ <metadata><cge:PSR_Ref ObjectID="10681974" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10682019">
+ <use xlink:href="#Junction:JX_单电缆头" x="-588.8" y="137.43" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-578.8,147.43)" />
+ <metadata><cge:PSR_Ref ObjectID="10682019" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10682065">
+ <use xlink:href="#Junction:JX_单电缆头" x="-407.14" y="133.7" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-397.14,143.7)" />
+ <metadata><cge:PSR_Ref ObjectID="10682065" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10682111">
+ <use xlink:href="#Junction:JX_单电缆头" x="-382.95" y="134.28" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-372.95,144.28)" />
+ <metadata><cge:PSR_Ref ObjectID="10682111" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10682152">
+ <use xlink:href="#Junction:JX_单电缆头" x="-553.51" y="137.51" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-543.51,147.51)" />
+ <metadata><cge:PSR_Ref ObjectID="10682152" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10682157">
+ <use xlink:href="#Junction:JX_单电缆头" x="-530.4" y="137.68" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-520.4,147.68)" />
+ <metadata><cge:PSR_Ref ObjectID="10682157" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684259">
+ <use xlink:href="#Junction:JX_单电缆头" x="-161.11" y="345.27" width="20" height="20" fill="none"  class="inside" transform="rotate(88.99722,-151.11,355.27)" />
+ <metadata><cge:PSR_Ref ObjectID="10684259" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684267">
+ <use xlink:href="#Junction:JX_单电缆头" x="-134.73" y="345.27" width="20" height="20" fill="none"  class="inside" transform="rotate(88.99722,-124.73,355.27)" />
+ <metadata><cge:PSR_Ref ObjectID="10684267" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684271">
+ <use xlink:href="#Junction:JX_单电缆头" x="-105.97" y="345.08" width="20" height="20" fill="none"  class="inside" transform="rotate(88.99722,-95.97,355.08)" />
+ <metadata><cge:PSR_Ref ObjectID="10684271" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684289">
+ <use xlink:href="#Junction:JX_双电缆头" x="-322.15" y="437.94" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-312.15,447.94)" />
+ <metadata><cge:PSR_Ref ObjectID="10684289" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684294">
+ <use xlink:href="#Junction:JX_双电缆头" x="-433.41" y="326.6" width="20" height="20" fill="none"  class="inside" transform="rotate(89.95189,-423.41,336.6)" />
+ <metadata><cge:PSR_Ref ObjectID="10684294" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684341">
+ <use xlink:href="#Junction:JX_双电缆头" x="-380.03" y="324.65" width="20" height="20" fill="none"  class="inside" transform="rotate(89.95189,-370.03,334.65)" />
+ <metadata><cge:PSR_Ref ObjectID="10684341" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684347">
+ <use xlink:href="#Junction:JX_单电缆头" x="-397.01" y="325.41" width="20" height="20" fill="none"  class="inside" transform="rotate(89.95189,-387.01,335.41)" />
+ <metadata><cge:PSR_Ref ObjectID="10684347" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684353">
+ <use xlink:href="#Junction:JX_单电缆头" x="-413.91" y="326.46" width="20" height="20" fill="none"  class="inside" transform="rotate(89.95189,-403.91,336.46)" />
+ <metadata><cge:PSR_Ref ObjectID="10684353" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684354">
+ <use xlink:href="#Junction:JX_单电缆头" x="-524.6" y="244.27" width="20" height="20" fill="none"  class="inside" transform="rotate(89.62035,-514.6,254.27)" />
+ <metadata><cge:PSR_Ref ObjectID="10684354" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684365">
+ <use xlink:href="#Junction:JX_单电缆头" x="-499.19" y="252.2" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-489.19,262.2)" />
+ <metadata><cge:PSR_Ref ObjectID="10684365" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684368">
+ <use xlink:href="#Junction:JX_单电缆头" x="-470.32" y="252.05" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-460.32,262.05)" />
+ <metadata><cge:PSR_Ref ObjectID="10684368" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684371">
+ <use xlink:href="#Junction:JX_单电缆头" x="-485.81" y="252.28" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-475.81,262.28)" />
+ <metadata><cge:PSR_Ref ObjectID="10684371" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684374">
+ <use xlink:href="#Junction:JX_单电缆头" x="-454.35" y="256.53" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-444.35,266.53)" />
+ <metadata><cge:PSR_Ref ObjectID="10684374" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684376">
+ <use xlink:href="#Junction:JX_单电缆头" x="-423.46" y="257" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-413.46,267)" />
+ <metadata><cge:PSR_Ref ObjectID="10684376" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684381">
+ <use xlink:href="#Junction:JX_单电缆头" x="-395.54" y="257.69" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-385.54,267.69)" />
+ <metadata><cge:PSR_Ref ObjectID="10684381" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684384">
+ <use xlink:href="#Junction:JX_单电缆头" x="-559" y="421.07" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-549,431.07)" />
+ <metadata><cge:PSR_Ref ObjectID="10684384" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684396">
+ <use xlink:href="#Junction:JX_单电缆头" x="-529.4" y="420.47" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-519.4,430.47)" />
+ <metadata><cge:PSR_Ref ObjectID="10684396" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684433">
+ <use xlink:href="#Junction:JX_单电缆头" x="-134.61" y="421.56" width="20" height="20" fill="none"  class="inside" transform="rotate(-89.99979,-124.61,431.56)" />
+ <metadata><cge:PSR_Ref ObjectID="10684433" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684442">
+ <use xlink:href="#Junction:JX_单电缆头" x="-105.74" y="421.35" width="20" height="20" fill="none"  class="inside" transform="rotate(-90.4937,-95.74,431.35)" />
+ <metadata><cge:PSR_Ref ObjectID="10684442" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10689460">
+ <use xlink:href="#Junction:JX_单电缆头" x="-171.04" y="272.32" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-161.04,282.32)" />
+ <metadata><cge:PSR_Ref ObjectID="10689460" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10689469">
+ <use xlink:href="#Junction:JX_单电缆头" x="-159.75" y="279.83" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-149.75,289.83)" />
+ <metadata><cge:PSR_Ref ObjectID="10689469" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10689472">
+ <use xlink:href="#Junction:JX_单电缆头" x="-89.87" y="276.51" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-79.87,286.51)" />
+ <metadata><cge:PSR_Ref ObjectID="10689472" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10689474">
+ <use xlink:href="#Junction:JX_单电缆头" x="-134.81" y="280.24" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-124.81,290.24)" />
+ <metadata><cge:PSR_Ref ObjectID="10689474" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10689478">
+ <use xlink:href="#Junction:JX_单电缆头" x="-121.23" y="278.33" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-111.23,288.33)" />
+ <metadata><cge:PSR_Ref ObjectID="10689478" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10689592">
+ <use xlink:href="#Junction:JX_单电缆头" x="-258.37" y="338.47" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-248.37,348.47)" />
+ <metadata><cge:PSR_Ref ObjectID="10689592" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10691159">
+ <use xlink:href="#Junction:JX_双电缆头" x="54.76" y="148.59" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,64.76,158.59)" />
+ <metadata><cge:PSR_Ref ObjectID="10691159" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10691167">
+ <use xlink:href="#Junction:JX_双电缆头" x="-7.86" y="148.19" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,2.14,158.19)" />
+ <metadata><cge:PSR_Ref ObjectID="10691167" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10691169">
+ <use xlink:href="#Junction:JX_双电缆头" x="25.27" y="148.69" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,35.27,158.69)" />
+ <metadata><cge:PSR_Ref ObjectID="10691169" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10691172">
+ <use xlink:href="#Junction:JX_单电缆头" x="-36.28" y="147.17" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-26.28,157.17)" />
+ <metadata><cge:PSR_Ref ObjectID="10691172" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="11078945">
+ <use xlink:href="#Junction:JX_单电缆头" x="5.14" y="430.04" width="20" height="20" fill="none"  class="inside" transform="rotate(90.63638,15.14,440.04)" />
+ <metadata><cge:PSR_Ref ObjectID="11078945" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="11478358">
+ <use xlink:href="#Junction:JX_单电缆头" x="-538.23" y="414.9" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-528.23,424.9)" />
+ <metadata><cge:PSR_Ref ObjectID="11478358" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="11478363">
+ <use xlink:href="#Junction:JX_单电缆头" x="-548.4" y="414.94" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-538.4,424.94)" />
+ <metadata><cge:PSR_Ref ObjectID="11478363" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="17482082">
+ <use xlink:href="#Junction:JX_单电缆头" x="-48.41" y="77.94" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-38.41,87.94)" />
+ <metadata><cge:PSR_Ref ObjectID="17482082" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="17482083">
+ <use xlink:href="#Junction:JX_单电缆头" x="-41.27" y="92.39" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-31.27,102.39)" />
+ <metadata><cge:PSR_Ref ObjectID="17482083" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="17482084">
+ <use xlink:href="#Junction:JX_单电缆头" x="-31.27" y="92.6" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,-21.27,102.6)" />
+ <metadata><cge:PSR_Ref ObjectID="17482084" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="17482085">
+ <use xlink:href="#Junction:JX_单电缆头" x="-3.81" y="92.02" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,6.19,102.02)" />
+ <metadata><cge:PSR_Ref ObjectID="17482085" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="17482086">
+ <use xlink:href="#Junction:JX_单电缆头" x="31.74" y="82.51" width="20" height="20" fill="none"  class="inside" transform="rotate(89.81847,41.74,92.51)" />
+ <metadata><cge:PSR_Ref ObjectID="17482086" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="17482087">
+ <use xlink:href="#Junction:JX_单电缆头" x="8.18" y="82.59" width="20" height="20" fill="none"  class="inside" transform="rotate(89.80222,18.18,92.59)" />
+ <metadata><cge:PSR_Ref ObjectID="17482087" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="17485704">
+ <use xlink:href="#Junction:JX_单电缆头" x="59.38" y="82.19" width="20" height="20" fill="none"  class="inside" transform="rotate(89.99979,69.38,92.19)" />
+ <metadata><cge:PSR_Ref ObjectID="17485704" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10685917">
+ <use xlink:href="#Junction:JX_单电缆头" x="-233.62" y="208.57" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-223.62,218.57)" />
+ <metadata><cge:PSR_Ref ObjectID="10685917" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10685936">
+ <use xlink:href="#Junction:JX_单电缆头" x="-191.4" y="153.78" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-181.4,163.78)" />
+ <metadata><cge:PSR_Ref ObjectID="10685936" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10685945">
+ <use xlink:href="#Junction:JX_单电缆头" x="-96.11" y="98.41" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(89.42685,-86.11,108.41)" />
+ <metadata><cge:PSR_Ref ObjectID="10685945" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10685976">
+ <use xlink:href="#Junction:JX_单电缆头" x="-180.46" y="91.46" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-170.46,101.46)" />
+ <metadata><cge:PSR_Ref ObjectID="10685976" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10685994">
+ <use xlink:href="#Junction:JX_单电缆头" x="-257.16" y="91.54" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-247.16,101.54)" />
+ <metadata><cge:PSR_Ref ObjectID="10685994" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10686017">
+ <use xlink:href="#Junction:JX_单电缆头" x="-202.78" y="91.37" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(-179.9996,-192.78,101.37)" />
+ <metadata><cge:PSR_Ref ObjectID="10686017" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10686025">
+ <use xlink:href="#Junction:JX_单电缆头" x="-103.13" y="91.37" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(-179.9996,-93.13,101.37)" />
+ <metadata><cge:PSR_Ref ObjectID="10686025" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10691941">
+ <use xlink:href="#Junction:JX_单电缆头" x="-326.67" y="340.43" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(-179.6963,-316.67,350.43)" />
+ <metadata><cge:PSR_Ref ObjectID="10691941" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10692123">
+ <use xlink:href="#Junction:JX_单电缆头" x="-323.51" y="369.16" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(-179.6976,-313.51,379.16)" />
+ <metadata><cge:PSR_Ref ObjectID="10692123" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10692379">
+ <use xlink:href="#Junction:JX_单电缆头" x="-234.01" y="471.73" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(90.08519,-224.01,481.73)" />
+ <metadata><cge:PSR_Ref ObjectID="10692379" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10695538">
+ <use xlink:href="#Junction:JX_单电缆头" x="-180.39" y="507.38" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(-178.6956,-170.39,517.38)" />
+ <metadata><cge:PSR_Ref ObjectID="10695538" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10696379">
+ <use xlink:href="#Junction:JX_单电缆头" x="-16.7" y="461.4" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-6.7,471.4)" />
+ <metadata><cge:PSR_Ref ObjectID="10696379" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="11078952">
+ <use xlink:href="#Junction:JX_单电缆头" x="-36.34" y="224.5" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(-89.99979,-26.34,234.5)" />
+ <metadata><cge:PSR_Ref ObjectID="11078952" ObjectName=""  Plane="0" /> </metadata>
+</g>
+</g>
+<g id="MeterCommunicationModule_Layer">
+<g id="13392948">
+ <use xlink:href="#MeterCommunicationModule" x="-227.04" y="441.48" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-217.04,451.48)" />
+ <metadata><cge:PSR_Ref ObjectID="13392948" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="13536076">
+ <use xlink:href="#MeterCommunicationModule" x="-14.81" y="384.18" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(-89.99979,-4.81,394.18)" />
+ <metadata><cge:PSR_Ref ObjectID="13536076" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="13613653">
+ <use xlink:href="#MeterCommunicationModule" x="-306.88" y="317.7" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-296.88,327.7)" />
+ <metadata><cge:PSR_Ref ObjectID="13613653" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="13643882">
+ <use xlink:href="#MeterCommunicationModule" x="-127.74" y="436.27" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(-179.9996,-117.74,446.27)" />
+ <metadata><cge:PSR_Ref ObjectID="13643882" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="13736044">
+ <use xlink:href="#MeterCommunicationModule" x="-262.19" y="72.01" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-252.19,82.01)" />
+ <metadata><cge:PSR_Ref ObjectID="13736044" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="13782140">
+ <use xlink:href="#MeterCommunicationModule" x="-306.07" y="417.47" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-296.07,427.47)" />
+ <metadata><cge:PSR_Ref ObjectID="13782140" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="13796840">
+ <use xlink:href="#MeterCommunicationModule" x="-110.69" y="63.23" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(-0.7690229,-100.69,73.23)" />
+ <metadata><cge:PSR_Ref ObjectID="13796840" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="14043173">
+ <use xlink:href="#MeterCommunicationModule" x="-251.25" y="323.47" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(-0.0449279,-241.25,333.47)" />
+ <metadata><cge:PSR_Ref ObjectID="14043173" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="14077379">
+ <use xlink:href="#MeterCommunicationModule" x="-232.78" y="147.58" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(-89.12476,-222.78,157.58)" />
+ <metadata><cge:PSR_Ref ObjectID="14077379" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="14103791">
+ <use xlink:href="#MeterCommunicationModule" x="-187.09" y="450.51" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-177.09,460.51)" />
+ <metadata><cge:PSR_Ref ObjectID="14103791" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="14111180">
+ <use xlink:href="#MeterCommunicationModule" x="-311.33" y="395.91" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-301.33,405.91)" />
+ <metadata><cge:PSR_Ref ObjectID="14111180" ObjectName=""  Plane="0" /> </metadata>
+</g>
+</g>
+<g id="Other_Layer">
+<g id="10683582">
+ <use xlink:href="#Pole:JX_水泥杆" x="-233.99" y="463.56" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-223.99,473.56)" />
+ <metadata><cge:PSR_Ref ObjectID="10683582" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10683600">
+ <use xlink:href="#Pole:JX_水泥杆" x="-214.09" y="463.56" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-204.09,473.56)" />
+ <metadata><cge:PSR_Ref ObjectID="10683600" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10683606">
+ <use xlink:href="#Pole:JX_水泥杆" x="-193.9" y="463.45" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-183.9,473.45)" />
+ <metadata><cge:PSR_Ref ObjectID="10683606" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10683833">
+ <use xlink:href="#Pole:JX_水泥杆" x="-314.18" y="340.36" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-304.18,350.36)" />
+ <metadata><cge:PSR_Ref ObjectID="10683833" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10683951">
+ <use xlink:href="#Pole:JX_水泥杆" x="-304.23" y="369.25" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-294.23,379.25)" />
+ <metadata><cge:PSR_Ref ObjectID="10683951" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10685723">
+ <use xlink:href="#Pole:JX_水泥杆" x="-241.31" y="208.56" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-231.31,218.56)" />
+ <metadata><cge:PSR_Ref ObjectID="10685723" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10685779">
+ <use xlink:href="#Pole:JX_水泥杆" x="-199.16" y="153.73" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-189.16,163.73)" />
+ <metadata><cge:PSR_Ref ObjectID="10685779" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10686041">
+ <use xlink:href="#Pole:JX_水泥杆" x="-269.02" y="91.5" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-259.02,101.5)" />
+ <metadata><cge:PSR_Ref ObjectID="10686041" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10686057">
+ <use xlink:href="#Pole:JX_水泥杆" x="-192.29" y="91.37" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-182.29,101.37)" />
+ <metadata><cge:PSR_Ref ObjectID="10686057" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10686061">
+ <use xlink:href="#Pole:JX_水泥杆" x="-96.13" y="91.31" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-86.13,101.31)" />
+ <metadata><cge:PSR_Ref ObjectID="10686061" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10695665">
+ <use xlink:href="#Pole:JX_铁塔" x="-159.35" y="507.4" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-149.35,517.4)" />
+ <metadata><cge:PSR_Ref ObjectID="10695665" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10695680">
+ <use xlink:href="#Pole:JX_铁塔" x="-36.38" y="471.02" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(179.9535,-26.38,481.02)" />
+ <metadata><cge:PSR_Ref ObjectID="10695680" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10695698">
+ <use xlink:href="#Pole:JX_水泥杆" x="-36.53" y="461.34" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-26.53,471.34)" />
+ <metadata><cge:PSR_Ref ObjectID="10695698" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10695703">
+ <use xlink:href="#Pole:JX_铁塔" x="-36.53" y="376.81" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-26.53,386.81)" />
+ <metadata><cge:PSR_Ref ObjectID="10695703" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10695705">
+ <use xlink:href="#Pole:JX_水泥杆" x="-36.53" y="367.03" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-26.53,377.03)" />
+ <metadata><cge:PSR_Ref ObjectID="10695705" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10696660">
+ <use xlink:href="#Pole:JX_铁塔" x="-36.53" y="264.98" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-26.53,274.98)" />
+ <metadata><cge:PSR_Ref ObjectID="10696660" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10645273">
+ <use xlink:href="#Pole:JX_铁塔" x="-36.42" y="516.99" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-26.42,526.99)" />
+ <metadata><cge:PSR_Ref ObjectID="10645273" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10682431">
+ <use xlink:href="#ServiceDeliveryPoint:JX_固定式计量柜" x="-513.58" y="241.18" width="20" height="20" fill="none"  class="inside" transform="rotate(0,-503.58,251.18)" />
+ <metadata><cge:PSR_Ref ObjectID="10682431" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684825">
+ <use xlink:href="#ServiceDeliveryPoint:JX_固定式计量柜" x="-147.78" y="268.62" width="20" height="20" fill="none"  class="inside" transform="rotate(0,-137.78,278.62)" />
+ <metadata><cge:PSR_Ref ObjectID="10684825" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="17482074">
+ <use xlink:href="#ServiceDeliveryPoint:JX_固定式计量柜" x="-18.96" y="73.29" width="20" height="20" fill="none"  class="inside" transform="rotate(0,-8.96,83.29)" />
+ <metadata><cge:PSR_Ref ObjectID="17482074" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10682523">
+ <use xlink:href="#ServiceDeliveryPoint:JX_高压表" x="-498.92" y="246.17" width="20" height="20" fill="none"  class="inside" transform="rotate(-179.9996,-488.92,256.17)" />
+ <metadata><cge:PSR_Ref ObjectID="10682523" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10682527">
+ <use xlink:href="#ServiceDeliveryPoint:JX_高压表" x="-470.18" y="245.68" width="20" height="20" fill="none"  class="inside" transform="rotate(-179.9996,-460.18,255.68)" />
+ <metadata><cge:PSR_Ref ObjectID="10682527" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10682533">
+ <use xlink:href="#ServiceDeliveryPoint:JX_高压表" x="-485.58" y="246.17" width="20" height="20" fill="none"  class="inside" transform="rotate(-179.9996,-475.58,256.17)" />
+ <metadata><cge:PSR_Ref ObjectID="10682533" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10683728">
+ <use xlink:href="#ServiceDeliveryPoint:JX_高压表" x="-213.86" y="457.41" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-203.86,467.41)" />
+ <metadata><cge:PSR_Ref ObjectID="10683728" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684450">
+ <use xlink:href="#ServiceDeliveryPoint:JX_高压表" x="-105.61" y="427.52" width="20" height="20" fill="none"  class="inside" transform="rotate(-179.9996,-95.61,437.52)" />
+ <metadata><cge:PSR_Ref ObjectID="10684450" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684913">
+ <use xlink:href="#ServiceDeliveryPoint:JX_高压表" x="-134.94" y="273.97" width="20" height="20" fill="none"  class="inside" transform="rotate(-179.9996,-124.94,283.97)" />
+ <metadata><cge:PSR_Ref ObjectID="10684913" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684922">
+ <use xlink:href="#ServiceDeliveryPoint:JX_高压表" x="-159.58" y="273.86" width="20" height="20" fill="none"  class="inside" transform="rotate(-179.9996,-149.58,283.86)" />
+ <metadata><cge:PSR_Ref ObjectID="10684922" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10685808">
+ <use xlink:href="#ServiceDeliveryPoint:JX_高压表" x="-248.7" y="207.99" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(-89.99983,-238.7,217.99)" />
+ <metadata><cge:PSR_Ref ObjectID="10685808" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10686080">
+ <use xlink:href="#ServiceDeliveryPoint:JX_高压表" x="-192.26" y="82.55" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-182.26,92.55)" />
+ <metadata><cge:PSR_Ref ObjectID="10686080" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="11123520">
+ <use xlink:href="#ServiceDeliveryPoint:JX_高压表" x="5.01" y="423.71" width="20" height="20" fill="none"  class="inside" transform="rotate(0,15.01,433.71)" />
+ <metadata><cge:PSR_Ref ObjectID="11123520" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="17482072">
+ <use xlink:href="#ServiceDeliveryPoint:JX_高压表" x="-41.17" y="85.95" width="20" height="20" fill="none"  class="inside" transform="rotate(-179.9996,-31.17,95.95)" />
+ <metadata><cge:PSR_Ref ObjectID="17482072" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="17482073">
+ <use xlink:href="#ServiceDeliveryPoint:JX_高压表" x="-31.11" y="86.12" width="20" height="20" fill="none"  class="inside" transform="rotate(-179.9996,-21.11,96.12)" />
+ <metadata><cge:PSR_Ref ObjectID="17482073" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="17486087">
+ <use xlink:href="#ServiceDeliveryPoint:JX_高压表" x="-3.51" y="85.59" width="20" height="20" fill="none"  class="inside" transform="rotate(-179.9996,6.49,95.59)" />
+ <metadata><cge:PSR_Ref ObjectID="17486087" ObjectName=""  Plane="0" /> </metadata>
+</g>
+</g>
+<g id="PowerTransformer_Layer">
+<g id="10682542">
+ <use xlink:href="#PowerTransformer:JX_专变" x="-454.44" y="248" width="20" height="20" fill="none"  class="ftySymbol" transform="rotate(0,-444.44,258)" />
+ <metadata><cge:PSR_Ref ObjectID="10682542" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10682542$B621" Plane="0" /> <cge:Meas_Ref ObjectID="LAP$10682542$B622" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10682542$B623" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10682542$B630" Plane="0" /></metadata>
+</g>
+<g id="10682687">
+ <use xlink:href="#PowerTransformer:JX_专变" x="-395.79" y="248.99" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(0,-385.79,258.99)" />
+ <metadata><cge:PSR_Ref ObjectID="10682687" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10682687$B621" Plane="0" /> <cge:Meas_Ref ObjectID="LAP$10682687$B622" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10682687$B623" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10682687$B630" Plane="0" /></metadata>
+</g>
+<g id="10682716">
+ <use xlink:href="#PowerTransformer:JX_专变" x="-423.54" y="248.31" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(0,-413.54,258.31)" />
+ <metadata><cge:PSR_Ref ObjectID="10682716" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10682716$B621" Plane="0" /> <cge:Meas_Ref ObjectID="LAP$10682716$B622" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10682716$B623" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10682716$B630" Plane="0" /></metadata>
+</g>
+<g id="10683386">
+ <use xlink:href="#PowerTransformer:JX_公变" x="-322.17" y="422" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(0,-312.17,432)" />
+ <metadata><cge:PSR_Ref ObjectID="10683386" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10683386$B621" Plane="0" /> <cge:Meas_Ref ObjectID="DMR$10683386$B622" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10683386$B623" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10683386$B630" Plane="0" /></metadata>
+</g>
+<g id="10683633">
+ <use xlink:href="#PowerTransformer:JX_公变" x="-233.8" y="441.85" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(0,-223.8,451.85)" />
+ <metadata><cge:PSR_Ref ObjectID="10683633" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10683633$B621" Plane="0" /> <cge:Meas_Ref ObjectID="DMR$10683633$B622" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10683633$B623" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10683633$B630" Plane="0" /></metadata>
+</g>
+<g id="10683683">
+ <use xlink:href="#PowerTransformer:JX_专变" x="-213.49" y="435.31" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(0,-203.49,445.31)" />
+ <metadata><cge:PSR_Ref ObjectID="10683683" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10683683$B621" Plane="0" /> <cge:Meas_Ref ObjectID="LAP$10683683$B622" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10683683$B623" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10683683$B630" Plane="0" /></metadata>
+</g>
+<g id="10683737">
+ <use xlink:href="#PowerTransformer:JX_公变" x="-193.75" y="442.31" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(0,-183.75,452.31)" />
+ <metadata><cge:PSR_Ref ObjectID="10683737" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10683737$B621" Plane="0" /> <cge:Meas_Ref ObjectID="DMR$10683737$B622" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10683737$B623" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10683737$B630" Plane="0" /></metadata>
+</g>
+<g id="10683880">
+ <use xlink:href="#PowerTransformer:JX_公变" x="-313.74" y="317.44" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(0,-303.74,327.44)" />
+ <metadata><cge:PSR_Ref ObjectID="10683880" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10683880$B621" Plane="0" /> <cge:Meas_Ref ObjectID="DMR$10683880$B622" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10683880$B623" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10683880$B630" Plane="0" /></metadata>
+</g>
+<g id="10683966">
+ <use xlink:href="#PowerTransformer:JX_公变" x="-304.19" y="389.25" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(0,-294.19,399.25)" />
+ <metadata><cge:PSR_Ref ObjectID="10683966" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10683966$B621" Plane="0" /> <cge:Meas_Ref ObjectID="DMR$10683966$B622" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10683966$B623" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10683966$B630" Plane="0" /></metadata>
+</g>
+<g id="10684094">
+ <use xlink:href="#PowerTransformer:JX_公变" x="-258.37" y="323.23" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(-0.5729374,-248.37,333.23)" />
+ <metadata><cge:PSR_Ref ObjectID="10684094" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10684094$B621" Plane="0" /> <cge:Meas_Ref ObjectID="DMR$10684094$B622" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10684094$B623" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10684094$B630" Plane="0" /></metadata>
+</g>
+<g id="10684454">
+ <use xlink:href="#PowerTransformer:JX_专变" x="-106.03" y="443.88" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(0,-96.03,453.88)" />
+ <metadata><cge:PSR_Ref ObjectID="10684454" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10684454$B621" Plane="0" /> <cge:Meas_Ref ObjectID="LAP$10684454$B622" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10684454$B623" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10684454$B630" Plane="0" /></metadata>
+</g>
+<g id="10684525">
+ <use xlink:href="#PowerTransformer:JX_公变" x="-134.81" y="436.8" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(0,-124.81,446.8)" />
+ <metadata><cge:PSR_Ref ObjectID="10684525" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10684525$B621" Plane="0" /> <cge:Meas_Ref ObjectID="DMR$10684525$B622" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10684525$B623" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10684525$B630" Plane="0" /></metadata>
+</g>
+<g id="10684930">
+ <use xlink:href="#PowerTransformer:JX_专变" x="-121.23" y="269.89" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(0,-111.23,279.89)" />
+ <metadata><cge:PSR_Ref ObjectID="10684930" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10684930$B621" Plane="0" /> <cge:Meas_Ref ObjectID="LAP$10684930$B622" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10684930$B623" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10684930$B630" Plane="0" /></metadata>
+</g>
+<g id="10684995">
+ <use xlink:href="#PowerTransformer:JX_专变" x="-90.04" y="268.23" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(0,-80.04,278.23)" />
+ <metadata><cge:PSR_Ref ObjectID="10684995" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10684995$B621" Plane="0" /> <cge:Meas_Ref ObjectID="LAP$10684995$B622" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10684995$B623" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10684995$B630" Plane="0" /></metadata>
+</g>
+<g id="10686117">
+ <use xlink:href="#PowerTransformer:JX_专变" x="-192.34" y="60.18" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(0,-182.34,70.18)" />
+ <metadata><cge:PSR_Ref ObjectID="10686117" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10686117$B621" Plane="0" /> <cge:Meas_Ref ObjectID="LAP$10686117$B622" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10686117$B623" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10686117$B630" Plane="0" /></metadata>
+</g>
+<g id="10686150">
+ <use xlink:href="#PowerTransformer:JX_公变" x="-95.94" y="60.47" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(0,-85.94,70.47)" />
+ <metadata><cge:PSR_Ref ObjectID="10686150" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10686150$B621" Plane="0" /> <cge:Meas_Ref ObjectID="DMR$10686150$B622" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10686150$B623" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10686150$B630" Plane="0" /></metadata>
+</g>
+<g id="10686209">
+ <use xlink:href="#PowerTransformer:JX_公变" x="-268.96" y="70.82" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(0,-258.96,80.82)" />
+ <metadata><cge:PSR_Ref ObjectID="10686209" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10686209$B621" Plane="0" /> <cge:Meas_Ref ObjectID="DMR$10686209$B622" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10686209$B623" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10686209$B630" Plane="0" /></metadata>
+</g>
+<g id="10690290">
+ <use xlink:href="#PowerTransformer:JX_公变" x="-231.91" y="153.99" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(-89.42685,-221.91,163.99)" />
+ <metadata><cge:PSR_Ref ObjectID="10690290" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10690290$B621" Plane="0" /> <cge:Meas_Ref ObjectID="DMR$10690290$B622" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10690290$B623" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10690290$B630" Plane="0" /></metadata>
+</g>
+<g id="10690375">
+ <use xlink:href="#PowerTransformer:JX_专变" x="-270.88" y="207.96" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(-89.42685,-260.88,217.96)" />
+ <metadata><cge:PSR_Ref ObjectID="10690375" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10690375$B621" Plane="0" /> <cge:Meas_Ref ObjectID="LAP$10690375$B622" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10690375$B623" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10690375$B630" Plane="0" /></metadata>
+</g>
+<g id="10696490">
+ <use xlink:href="#PowerTransformer:JX_专变" x="5.1" y="407" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(-0.7024572,15.1,417)" />
+ <metadata><cge:PSR_Ref ObjectID="10696490" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10696490$B621" Plane="0" /> <cge:Meas_Ref ObjectID="LAP$10696490$B622" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10696490$B623" Plane="0" /><cge:Meas_Ref ObjectID="LAP$10696490$B630" Plane="0" /></metadata>
+</g>
+<g id="10696999">
+ <use xlink:href="#PowerTransformer:JX_公变" x="-15.25" y="376.93" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(89.99979,-5.25,386.93)" />
+ <metadata><cge:PSR_Ref ObjectID="10696999" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10696999$B621" Plane="0" /> <cge:Meas_Ref ObjectID="DMR$10696999$B622" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10696999$B623" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10696999$B630" Plane="0" /></metadata>
+</g>
+<g id="10697044">
+ <use xlink:href="#PowerTransformer:JX_公变" x="-4.01" y="265.04" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(-89.42685,5.99,275.04)" />
+ <metadata><cge:PSR_Ref ObjectID="10697044" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10697044$B621" Plane="0" /> <cge:Meas_Ref ObjectID="DMR$10697044$B622" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10697044$B623" Plane="0" /><cge:Meas_Ref ObjectID="DMR$10697044$B630" Plane="0" /></metadata>
+</g>
+<g id="17482092">
+ <use xlink:href="#PowerTransformer:JX_专变" x="7.97" y="73.86" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(0,17.97,83.86)" />
+ <metadata><cge:PSR_Ref ObjectID="17482092" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="LAP$17482092$B621" Plane="0" /> <cge:Meas_Ref ObjectID="LAP$17482092$B622" Plane="0" /><cge:Meas_Ref ObjectID="LAP$17482092$B623" Plane="0" /><cge:Meas_Ref ObjectID="LAP$17482092$B630" Plane="0" /></metadata>
+</g>
+<g id="17482100">
+ <use xlink:href="#PowerTransformer:JX_专变" x="31.69" y="73.84" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(0,41.69,83.84)" />
+ <metadata><cge:PSR_Ref ObjectID="17482100" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="LAP$17482100$B621" Plane="0" /> <cge:Meas_Ref ObjectID="LAP$17482100$B622" Plane="0" /><cge:Meas_Ref ObjectID="LAP$17482100$B623" Plane="0" /><cge:Meas_Ref ObjectID="LAP$17482100$B630" Plane="0" /></metadata>
+</g>
+<g id="17485587">
+ <use xlink:href="#PowerTransformer:JX_专变" x="59.38" y="73.44" width="20" height="20" fill="none"  class="PowerTransformer" transform="rotate(0,69.38,83.44)" />
+ <metadata><cge:PSR_Ref ObjectID="17485587" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="LAP$17485587$B621" Plane="0" /> <cge:Meas_Ref ObjectID="LAP$17485587$B622" Plane="0" /><cge:Meas_Ref ObjectID="LAP$17485587$B623" Plane="0" /><cge:Meas_Ref ObjectID="LAP$17485587$B630" Plane="0" /></metadata>
+</g>
+</g>
+<g id="Substation_Layer">
+<g id="10681053">
+<path d="M-590.89,133.43 L-513.85,133.43 L-513.85,172.2 L-590.89,172.2 L-590.89,133.43 z" fill="none" stroke-width="0.7" class="Area"/>
+ <metadata><cge:PSR_Ref ObjectID="10681053" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10681096">
+<path d="M-430.49,131.16 L-359.42,131.16 L-359.42,175.89 L-430.49,175.89 L-430.49,131.16 z" fill="none" stroke-width="0.7" class="Area"/>
+ <metadata><cge:PSR_Ref ObjectID="10681096" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10683033">
+<path d="M-557.65,399.92 L-507.29,399.92 L-507.29,438.35 L-557.65,438.35 L-557.65,399.92 z" fill="none" stroke-width="0.7" class="Area"/>
+ <metadata><cge:PSR_Ref ObjectID="10683033" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10683209">
+<path d="M-365.45,310.01 L-365.42,342.48 L-426.72,342.53 L-426.75,310.06 L-365.45,310.01 z" fill="none" stroke-width="0.7" class="Area"/>
+ <metadata><cge:PSR_Ref ObjectID="10683209" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10683519">
+<path d="M-319.56,418.81 L-291.75,418.81 L-291.75,458.18 L-319.56,458.18 L-319.56,418.81 z" fill="none" stroke-width="0.7" class="Area"/>
+ <metadata><cge:PSR_Ref ObjectID="10683519" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10684603">
+<path d="M-147.39,424.06 L-114.38,423.96 L-114.38,466.04 L-147.39,466.14 L-147.39,424.06 z" fill="none" stroke-width="0.7" class="Area"/>
+ <metadata><cge:PSR_Ref ObjectID="10684603" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10684638">
+<path d="M-101.14,422.49 L-66.45,422.49 L-66.45,466.35 L-101.14,466.35 L-101.14,422.49 z" fill="none" stroke-width="0.7" class="Area"/>
+ <metadata><cge:PSR_Ref ObjectID="10684638" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10691347">
+<path d="M-32.82,165.86 L-32.82,136.7 L72.26,136.7 L72.26,165.86 L-32.82,165.86 z" fill="none" stroke-width="0.7" class="Area"/>
+ <metadata><cge:PSR_Ref ObjectID="10691347" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10684159">
+<path d="M-267.76,353.9 L-267.76,315.46 L-238.02,315.49 L-238.02,353.93 L-267.76,353.9 z" fill="none" stroke-width="0.7" class="Area"/>
+ <metadata><cge:PSR_Ref ObjectID="10684159" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10684761">
+<path d="M-157,332.07 L-88.74,332.07 L-88.74,362.89 L-157,362.89 L-157,332.07 z" fill="none" stroke-width="0.7" class="Area"/>
+ <metadata><cge:PSR_Ref ObjectID="10684761" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10696552">
+<path d="M9.38,444.69 L9.38,406.75 L40.53,406.75 L40.53,444.69 L9.38,444.69 z" fill="none" stroke-width="0.7" class="Area"/>
+ <metadata><cge:PSR_Ref ObjectID="10696552" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10276887">
+<path d="M-671.48,98.94 L-617.2,98.96 L-617.2,136.03 L-671.54,136.03 L-671.48,98.94 z" fill="none" stroke-width="0.7" class="Area"/>
+ <metadata><cge:PSR_Ref ObjectID="10276887" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10683055">
+<path d="M-526.11,233.97 L-361.1,233.97 L-361.1,288.98 L-526.11,288.98 L-526.11,233.97 z" fill="none" stroke-width="0.7" class="Area"/>
+ <metadata><cge:PSR_Ref ObjectID="10683055" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="10685677">
+<path d="M-165.44,265.2 L-56.76,265.2 L-56.76,304.3 L-165.44,304.3 L-165.44,265.2 z" fill="none" stroke-width="0.7" class="Area"/>
+ <metadata><cge:PSR_Ref ObjectID="10685677" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="17482104">
+<path d="M-47.96,71.83 L60.66,71.83 L60.66,123.02 L-47.96,123.02 L-47.96,71.83 z" fill="none" stroke-width="0.7" class="Area"/>
+ <metadata><cge:PSR_Ref ObjectID="17482104" ObjectName="" Plane="0" /></metadata>
+</g>
+<g id="17485707">
+<path d="M60.53,71.81 L88.32,71.81 L88.32,122.97 L60.53,122.97 L60.53,71.81 z" fill="none" stroke-width="0.7" class="Area"/>
+ <metadata><cge:PSR_Ref ObjectID="17485707" ObjectName="" Plane="0" /></metadata>
+</g>
+</g>
+<g id="SurgeProtector_Layer">
+<g id="10683934">
+ <use xlink:href="#SurgeProtector" x="-321.48" y="320.1" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(89.82747,-311.48,330.1)" />
+ <metadata><cge:PSR_Ref ObjectID="10683934" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684017">
+ <use xlink:href="#SurgeProtector" x="-311.29" y="387.18" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(-89.42685,-301.29,397.18)" />
+ <metadata><cge:PSR_Ref ObjectID="10684017" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684025">
+ <use xlink:href="#SurgeProtector" x="-242.47" y="444.56" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(89.42685,-232.47,454.56)" />
+ <metadata><cge:PSR_Ref ObjectID="10684025" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684041">
+ <use xlink:href="#SurgeProtector" x="-221.64" y="437.24" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(89.42685,-211.64,447.24)" />
+ <metadata><cge:PSR_Ref ObjectID="10684041" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10684047">
+ <use xlink:href="#SurgeProtector" x="-201.01" y="444.5" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(89.42685,-191.01,454.5)" />
+ <metadata><cge:PSR_Ref ObjectID="10684047" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10686239">
+ <use xlink:href="#SurgeProtector" x="-277.06" y="72.77" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(89.42685,-267.06,82.77)" />
+ <metadata><cge:PSR_Ref ObjectID="10686239" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10686244">
+ <use xlink:href="#SurgeProtector" x="-200.46" y="62.12" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(89.42685,-190.46,72.12)" />
+ <metadata><cge:PSR_Ref ObjectID="10686244" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10686252">
+ <use xlink:href="#SurgeProtector" x="-104.27" y="62.57" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(89.25735,-94.27,72.57)" />
+ <metadata><cge:PSR_Ref ObjectID="10686252" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10690459">
+ <use xlink:href="#SurgeProtector" x="-268.97" y="215.86" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-258.97,225.86)" />
+ <metadata><cge:PSR_Ref ObjectID="10690459" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10690480">
+ <use xlink:href="#SurgeProtector" x="-229.09" y="162.73" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0,-219.09,172.73)" />
+ <metadata><cge:PSR_Ref ObjectID="10690480" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10695604">
+ <use xlink:href="#SurgeProtector" x="-180.7" y="514.19" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(0.0827582,-170.7,524.19)" />
+ <metadata><cge:PSR_Ref ObjectID="10695604" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10696795">
+ <use xlink:href="#SurgeProtector" x="-42.38" y="224.09" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(90.13232,-32.38,234.09)" />
+ <metadata><cge:PSR_Ref ObjectID="10696795" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10696799">
+ <use xlink:href="#SurgeProtector" x="-42.97" y="257.06" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(-90.02648,-32.97,267.06)" />
+ <metadata><cge:PSR_Ref ObjectID="10696799" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10696972">
+ <use xlink:href="#SurgeProtector" x="-6.16" y="274.48" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(-179.9996,3.84,284.48)" />
+ <metadata><cge:PSR_Ref ObjectID="10696972" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10696982">
+ <use xlink:href="#SurgeProtector" x="-16.8" y="369.52" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(-179.9996,-6.8,379.52)" />
+ <metadata><cge:PSR_Ref ObjectID="10696982" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10645952">
+ <use xlink:href="#SurgeProtector" x="-42.81" y="501.99" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(89.90428,-32.81,511.99)" />
+ <metadata><cge:PSR_Ref ObjectID="10645952" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="10645945">
+ <use xlink:href="#SurgeProtector" x="-43.28" y="481.21" width="20" height="20" fill="none"  class="DefaultSymbol" transform="rotate(90.17261,-33.28,491.21)" />
+ <metadata><cge:PSR_Ref ObjectID="10645945" ObjectName=""  Plane="0" /> </metadata>
+</g>
+<g id="17482055">
+ <use xlink:href="#SurgeProtector" x="-50.82" y="79.04" width="20" height="20" fill="none"  class="inside" transform="rotate(-89.42685,-40.82,89.04)" />
+ <metadata><cge:PSR_Ref ObjectID="17482055" ObjectName=""  Plane="0" /> </metadata>
+</g>
+</g>
+<g id="Breaker_Layer">
+<g id="17482063">
+ <use xlink:href="#Breaker:JX_Close_6" x="-41.33" y="78.74" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-89.42685,-31.33,88.74)" />
+ <metadata><cge:PSR_Ref ObjectID="17482063" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-17482063" Plane="0" /></metadata>
+</g>
+<g id="17482066">
+ <use xlink:href="#Breaker:JX_Close_6" x="-31.16" y="78.69" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-89.42685,-21.16,88.69)" />
+ <metadata><cge:PSR_Ref ObjectID="17482066" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-17482066" Plane="0" /></metadata>
+</g>
+<g id="17482078">
+ <use xlink:href="#Breaker:JX_Close_6" x="-3.71" y="78.34" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-89.42685,6.29,88.34)" />
+ <metadata><cge:PSR_Ref ObjectID="17482078" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-17482078" Plane="0" /></metadata>
+</g>
+</g>
+<g id="Disconnector_Layer">
+<g id="10683619">
+ <use xlink:href="#Breaker:JX_Close_3" x="-193.01" y="453.87" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(90.57272,-183.01,463.87)" />
+ <metadata><cge:PSR_Ref ObjectID="10683619" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10683619" Plane="0" /></metadata>
+</g>
+<g id="10683623">
+ <use xlink:href="#Breaker:JX_Close_3" x="-212.95" y="446.31" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(90.57272,-202.95,456.31)" />
+ <metadata><cge:PSR_Ref ObjectID="10683623" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10683623" Plane="0" /></metadata>
+</g>
+<g id="10683627">
+ <use xlink:href="#Breaker:JX_Close_3" x="-233.12" y="453.89" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(90.57272,-223.12,463.89)" />
+ <metadata><cge:PSR_Ref ObjectID="10683627" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10683627" Plane="0" /></metadata>
+</g>
+<g id="10683849">
+ <use xlink:href="#Breaker:JX_Close_3" x="-313.08" y="329.23" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(89.99978,-303.08,339.23)" />
+ <metadata><cge:PSR_Ref ObjectID="10683849" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10683849" Plane="0" /></metadata>
+</g>
+<g id="10683960">
+ <use xlink:href="#Breaker:JX_Close_3" x="-305.02" y="378.15" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-89.42685,-295.02,388.15)" />
+ <metadata><cge:PSR_Ref ObjectID="10683960" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10683960" Plane="0" /></metadata>
+</g>
+<g id="10685845">
+ <use xlink:href="#Breaker:JX_Close_3" x="-259.38" y="207.31" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(0,-249.38,217.31)" />
+ <metadata><cge:PSR_Ref ObjectID="10685845" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10685845" Plane="0" /></metadata>
+</g>
+<g id="10685869">
+ <use xlink:href="#Breaker:JX_Close_3" x="-220.15" y="153.02" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-0.1351309,-210.15,163.02)" />
+ <metadata><cge:PSR_Ref ObjectID="10685869" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10685869" Plane="0" /></metadata>
+</g>
+<g id="10686086">
+ <use xlink:href="#Breaker:JX_Close_3" x="-268.25" y="81.69" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(89.42685,-258.25,91.69)" />
+ <metadata><cge:PSR_Ref ObjectID="10686086" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10686086" Plane="0" /></metadata>
+</g>
+<g id="10686097">
+ <use xlink:href="#Breaker:JX_Close_3" x="-191.6" y="71.41" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(89.42685,-181.6,81.41)" />
+ <metadata><cge:PSR_Ref ObjectID="10686097" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10686097" Plane="0" /></metadata>
+</g>
+<g id="10686106">
+ <use xlink:href="#Breaker:JX_Close_3" x="-95.3" y="71.59" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(89.42685,-85.3,81.59)" />
+ <metadata><cge:PSR_Ref ObjectID="10686106" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10686106" Plane="0" /></metadata>
+</g>
+<g id="10696935">
+ <use xlink:href="#Breaker:JX_Close_3" x="-26.06" y="377.75" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(179.9497,-16.06,387.75)" />
+ <metadata><cge:PSR_Ref ObjectID="10696935" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10696935" Plane="0" /></metadata>
+</g>
+<g id="10696957">
+ <use xlink:href="#Breaker:JX_Close_3" x="-15.17" y="265.89" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-179.8939,-5.17,275.89)" />
+ <metadata><cge:PSR_Ref ObjectID="10696957" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10696957" Plane="0" /></metadata>
+</g>
+<g id="15080209">
+ <use xlink:href="#Breaker:JX_Close_3" x="-25.16" y="462.43" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-179.9996,-15.16,472.43)" />
+ <metadata><cge:PSR_Ref ObjectID="15080209" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-15080209" Plane="0" /></metadata>
+</g>
+</g>
+<g id="LoadBreakSwitch_Layer">
+<g id="10680030">
+ <use xlink:href="#LoadBreakSwitch:JX_Close_5" x="-588.76" y="131.84" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-89.42685,-578.76,141.84)" />
+ <metadata><cge:PSR_Ref ObjectID="10680030" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10680030" Plane="0" /></metadata>
+</g>
+<g id="10680039">
+ <use xlink:href="#LoadBreakSwitch:JX_Close_5" x="-570.12" y="131.84" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-89.42685,-560.12,141.84)" />
+ <metadata><cge:PSR_Ref ObjectID="10680039" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10680039" Plane="0" /></metadata>
+</g>
+<g id="10680045">
+ <use xlink:href="#LoadBreakSwitch:JX_Close_5" x="-553.39" y="131.84" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-89.42685,-543.39,141.84)" />
+ <metadata><cge:PSR_Ref ObjectID="10680045" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10680045" Plane="0" /></metadata>
+</g>
+<g id="10680055">
+ <use xlink:href="#LoadBreakSwitch:JX_Close_5" x="-530.36" y="132" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-89.42685,-520.36,142)" />
+ <metadata><cge:PSR_Ref ObjectID="10680055" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10680055" Plane="0" /></metadata>
+</g>
+<g id="10680060">
+ <use xlink:href="#LoadBreakSwitch:JX_Open_5" x="-429.75" y="128.69" width="20" height="20" fill="none"  class="SwitchOpen" transform="rotate(-89.99979,-419.75,138.69)" />
+ <metadata><cge:PSR_Ref ObjectID="10680060" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10680060" Plane="0" /></metadata>
+</g>
+<g id="10680064">
+ <use xlink:href="#LoadBreakSwitch:JX_Close_5" x="-407.1" y="128.86" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-89.42685,-397.1,138.86)" />
+ <metadata><cge:PSR_Ref ObjectID="10680064" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10680064" Plane="0" /></metadata>
+</g>
+<g id="10680069">
+ <use xlink:href="#LoadBreakSwitch:JX_Close_5" x="-382.95" y="128.77" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-89.42685,-372.95,138.77)" />
+ <metadata><cge:PSR_Ref ObjectID="10680069" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10680069" Plane="0" /></metadata>
+</g>
+<g id="10682485">
+ <use xlink:href="#LoadBreakSwitch:JX_Close_5" x="-524.35" y="238.22" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-85.77316,-514.35,248.22)" />
+ <metadata><cge:PSR_Ref ObjectID="10682485" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10682485" Plane="0" /></metadata>
+</g>
+<g id="10682498">
+ <use xlink:href="#LoadBreakSwitch:JX_Close_3" x="-499" y="238.88" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-89.42685,-489,248.88)" />
+ <metadata><cge:PSR_Ref ObjectID="10682498" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10682498" Plane="0" /></metadata>
+</g>
+<g id="10682504">
+ <use xlink:href="#LoadBreakSwitch:JX_Close_3" x="-485.58" y="238.88" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-89.42685,-475.58,248.88)" />
+ <metadata><cge:PSR_Ref ObjectID="10682504" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10682504" Plane="0" /></metadata>
+</g>
+<g id="10682507">
+ <use xlink:href="#LoadBreakSwitch:JX_Open_3" x="-470.01" y="238.39" width="20" height="20" fill="none"  class="SwitchOpen" transform="rotate(-89.42685,-460.01,248.39)" />
+ <metadata><cge:PSR_Ref ObjectID="10682507" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10682507" Plane="0" /></metadata>
+</g>
+<g id="10683352">
+ <use xlink:href="#LoadBreakSwitch:JX_Close_3" x="-322.15" y="431.48" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(90.53231,-312.15,441.48)" />
+ <metadata><cge:PSR_Ref ObjectID="10683352" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10683352" Plane="0" /></metadata>
+</g>
+<g id="10684078">
+ <use xlink:href="#LoadBreakSwitch:JX_Close_3" x="-258.33" y="332.63" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(92.07891,-248.33,342.63)" />
+ <metadata><cge:PSR_Ref ObjectID="10684078" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10684078" Plane="0" /></metadata>
+</g>
+<g id="10684417">
+ <use xlink:href="#LoadBreakSwitch:JX_Close_3" x="-134.65" y="427.27" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-89.42685,-124.65,437.27)" />
+ <metadata><cge:PSR_Ref ObjectID="10684417" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10684417" Plane="0" /></metadata>
+</g>
+<g id="10684427">
+ <use xlink:href="#LoadBreakSwitch:JX_Close_3" x="-105.9" y="434.4" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-89.42685,-95.9,444.4)" />
+ <metadata><cge:PSR_Ref ObjectID="10684427" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10684427" Plane="0" /></metadata>
+</g>
+<g id="10684870">
+ <use xlink:href="#LoadBreakSwitch:JX_Close_5" x="-170.95" y="266.27" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-89.42685,-160.95,276.27)" />
+ <metadata><cge:PSR_Ref ObjectID="10684870" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10684870" Plane="0" /></metadata>
+</g>
+<g id="10684877">
+ <use xlink:href="#LoadBreakSwitch:JX_Close_3" x="-159.58" y="266.57" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-89.42685,-149.58,276.57)" />
+ <metadata><cge:PSR_Ref ObjectID="10684877" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10684877" Plane="0" /></metadata>
+</g>
+<g id="10684892">
+ <use xlink:href="#LoadBreakSwitch:JX_Close_3" x="-134.65" y="266.65" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-89.42685,-124.65,276.65)" />
+ <metadata><cge:PSR_Ref ObjectID="10684892" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10684892" Plane="0" /></metadata>
+</g>
+<g id="10696430">
+ <use xlink:href="#LoadBreakSwitch:JX_Close_3" x="4.93" y="416.46" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(89.87027,14.93,426.46)" />
+ <metadata><cge:PSR_Ref ObjectID="10696430" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10696430" Plane="0" /></metadata>
+</g>
+<g id="10696738">
+ <use xlink:href="#LoadBreakSwitch:JX_Close_1" x="-36.49" y="246.01" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-89.42685,-26.49,256.01)" />
+ <metadata><cge:PSR_Ref ObjectID="10696738" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10696738" Plane="0" /></metadata>
+</g>
+<g id="10645647">
+ <use xlink:href="#LoadBreakSwitch:JX_Open_1" x="-36.49" y="490.99" width="20" height="20" fill="none"  class="SwitchOpen" transform="rotate(89.95374,-26.49,500.99)" />
+ <metadata><cge:PSR_Ref ObjectID="10645647" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-10645647" Plane="0" /></metadata>
+</g>
+<g id="17482048">
+ <use xlink:href="#LoadBreakSwitch:JX_Close_5" x="-48.31" y="71.72" width="20" height="20" fill="none"  class="SwitchClose" transform="rotate(-89.42685,-38.31,81.72)" />
+ <metadata><cge:PSR_Ref ObjectID="17482048" ObjectName="" Plane="0" /><cge:Meas_Ref ObjectID="MV-0081-0-03-17482048" Plane="0" /></metadata>
+</g>
+</g>
+<g id="Text_Layer">
+<text x="-560.1393" y="188.4431" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-560.1393,183.4431)" >YJV22 -3*240 / 247m</text>
+<text x="-543.4892" y="214.7851" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-543.4892,209.7851)" >YJV22 -3*150 / 185m</text>
+<text x="-490.4531" y="186.6207" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-490.4531,181.6207)" >YJV22 -3*150 / 352m</text>
+<text x="-338.3654" y="247.754" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-338.3654,242.754)" >YJV22 -3*120 / 20m</text>
+<text x="-461.9574" y="514.8187" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-461.9574,509.8187)" >YJV22 -3*240 / 122m</text>
+<text x="-425.2713" y="420.9586" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-425.2713,415.9586)" >YJV22 -3*70 / 80m</text>
+<text x="-354.8084" y="377.0617" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-354.8084,372.0617)" >YJV22 -3*70 / 120m</text>
+<text x="-347.1461" y="367.6183" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-347.1461,362.6183)" >YJV22 -3*120 / 500m</text>
+<text x="-352.6133" y="360.0454" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-352.6133,355.0454)" >YJV22 -3*50 / 300m</text>
+<text x="-89.85606" y="378.5527" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-89.85606,373.5527)" >YJV22 -3*70 / 120m</text>
+<text x="-118.0204" y="379.2154" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-118.0204,374.2154)" >YJV22 -3*70 / 18m</text>
+<text x="-138.1395" y="234.5741" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-138.1395,229.5741)" >YJV22 -3*70 / 100m</text>
+<text x="-198.7554" y="223.9081" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-198.7554,218.9081)" >YJV22 -3*70 / 70m</text>
+<text x="-163.3747" y="168.7597" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-163.3747,163.7597)" >YJV22 -3*70 / 86m</text>
+<text x="-25.21436" y="210.4462" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0.4356999,-25.21436,205.4462)" >YJV22 -3*240 / 20m</text>
+<text x="-92.29973" y="163.033" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(-89.99979,-92.29973,158.033)" >YJV22 -3*70 / 395m</text>
+<text x="-157.6577" y="100.3258" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-157.6577,95.32581)" >YJV22 -3*70 / 120m</text>
+<text x="-239.1688" y="99.99447" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-239.1688,94.99447)" >YJV22 -3*70 / 120m</text>
+<text x="-276.2002" y="497.7106" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-276.2002,492.7106)" >YJV22 -3*70 / 240m</text>
+<text x="-653.351" y="190.6175" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(-89.42685,-653.351,185.6175)" >YJV22 -3*240 / 2978m</text>
+<text x="-296.7137" y="360.3416" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(-0.0940814,-296.7137,355.3416)" >YJV22 -3* / 310m</text>
+<text x="0.452184" y="478.7068" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0.3393393,0.452184,473.7068)" >YJV22 -3* / m</text>
+<text x="83.14825" y="178.7193" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(-89.99979,83.14825,173.7193)" >YJV22 -3*240 / 86m</text>
+<text x="-665.4714" y="95.00144" class="DefaultText" font-size="6" font-family="SimSun" transform="rotate(0,-665.4714,90.00144)" onclick="alertTest()">白云变电站</text>
+<text x="-669.8408" y="106.3554" class="DefaultText" font-size="6" font-family="SimSun" transform="rotate(0,-669.8408,101.3554)" >10kV草洋线F16</text>
+<text x="-434.6628" y="256.5347" class="ftyText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-434.6628,251.5347)" >SCB9-1000</text>
+<text x="-375.8489" y="256.866" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-375.8489,251.866)" >SCB9-1000</text>
+<text x="-403.8476" y="257.2802" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-403.8476,252.2802)" >SCB9-1000</text>
+<text x="-303.3247" y="436.1504" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.9248,-303.3247,431.1504)" >YBP-500</text>
+<text x="-229.1041" y="445.9195" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-229.1041,440.9195)" >S9-400</text>
+<text x="-208.1258" y="439.5411" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-208.1258,434.5411)" >S9-80</text>
+<text x="-178.3668" y="458.9662" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-178.3668,453.9662)" >S11-500</text>
+<text x="-309.7352" y="320.5988" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-309.7352,315.5988)" >S7-400</text>
+<text x="-289.4505" y="409.1401" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-289.4505,404.1401)" >S7-315</text>
+<text x="-252.8825" y="330.3973" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-252.8825,325.3973)" >ZGS9-Z-315</text>
+<text x="-85.72236" y="435.2629" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-85.72236,430.2629)" >ZGS11-Z-400</text>
+<text x="-139.6399" y="439.9012" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-139.6399,434.9012)" >YBP-500</text>
+<text x="-101.6188" y="278.4242" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-101.6188,273.4242)" >SCB10-315</text>
+<text x="-70.47233" y="278.0928" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-70.47233,273.0928)" >SCB10-500</text>
+<text x="-175.5918" y="78.60195" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-175.5918,73.60195)" >S8-50</text>
+<text x="-79.97461" y="79.33383" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-79.97461,74.33383)" >S11-M-315</text>
+<text x="-248.5602" y="89.92203" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-248.5602,84.92203)" >S9-500</text>
+<text x="-250.2906" y="171.1795" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-250.2906,166.1795)" >S11-400</text>
+<text x="-290.4012" y="224.7577" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-290.4012,219.7577)" >S11-125</text>
+<text x="25.61796" y="414.1931" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,25.61796,409.1931)" >ZGS11-Z-315</text>
+<text x="2.762272" y="390.055" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,2.762272,385.055)" >S9-315</text>
+<text x="12.60174" y="282.0523" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,12.60174,277.0523)" >S9-315</text>
+<text x="27.12037" y="80.46254" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.42685,27.12037,75.46254)" >SCB10-1000/10</text>
+<text x="50.67904" y="80.61038" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.42685,50.67904,75.61038)" >SCB10-1000/10</text>
+<text x="78.64414" y="80.82391" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,78.64414,75.82391)" >SCB10-1000</text>
+<text x="-424.3911" y="256.369" class="ftyText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-424.3911,251.369)" >世纪华园3#</text>
+<text x="-365.4944" y="256.1205" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-365.4944,251.1205)" >世纪华园1#</text>
+<text x="-393.9073" y="257.0317" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-393.9073,252.0317)" >世纪华园2#</text>
+<text x="-293.2299" y="436.1519" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.9248,-293.2299,431.1519)" >草洋云海</text>
+<text x="-241.6953" y="435.0679" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-241.6953,430.0679)" >草洋加工区1#</text>
+<text x="-208.7264" y="430.9054" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-208.7264,425.9054)" >惠海公司</text>
+<text x="-178.5325" y="450.5169" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-178.5325,445.5169)" >草洋加工区2#</text>
+<text x="-312.9258" y="312.0129" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-312.9258,307.0129)" >草洋居民区</text>
+<text x="-289.4505" y="398.2057" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-289.4505,393.2057)" >泽云居旁</text>
+<text x="-261.9272" y="329.9666" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-261.9272,324.9666)" >金山苑</text>
+<text x="-130.2159" y="440.2149" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-130.2159,435.2149)" >草洋西路</text>
+<text x="-92.17548" y="278.0928" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-92.17548,273.0928)" >玫瑰华廷2#</text>
+<text x="-60.69762" y="277.7615" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-60.69762,272.7615)" >玫瑰华廷1#</text>
+<text x="-175.4882" y="70.19405" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-175.4882,65.19405)" >邮电局宿舍</text>
+<text x="-80.14028" y="71.38153" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-80.14028,66.38153)" >华侨新村二期</text>
+<text x="-248.5602" y="80.313" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-248.5602,75.313)" >铁屎墩</text>
+<text x="-252.2044" y="162.4487" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-252.2044,157.4487)" >草洋开发区</text>
+<text x="-291.5609" y="215.48" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-291.5609,210.48)" >万杰电子厂</text>
+<text x="39.03746" y="414.4002" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,39.03746,409.4002)" >国土局</text>
+<text x="2.054847" y="380.6817" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,2.054847,375.6817)" >承修四路</text>
+<text x="11.77337" y="271.7806" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,11.77337,266.7806)" >卫生局斜对面</text>
+<text x="35.65304" y="80.222" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,35.65304,75.222)" >富丽达#1</text>
+<text x="59.31109" y="80.36984" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,59.31109,75.36984)" >富丽达#2</text>
+<text x="86.67321" y="80.30923" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(89.99979,86.67321,75.30923)" >富丽达#1专变</text>
+<text x="-130.5802" y="582.7345" class="HideText" font-size="7" font-family="SimSun" transform="rotate(0,-130.5802,577.7345)" >核对</text>
+<text x="-130.8187" y="595.8535" class="HideText" font-size="7" font-family="SimSun" transform="rotate(0,-130.8187,590.8535)" >制图</text>
+<text x="-67.3707" y="595.8535" class="HideText" font-size="7" font-family="SimSun" transform="rotate(0,-67.3707,590.8535)" >日期</text>
+<text x="5.379809" y="596.092" class="HideText" font-size="7" font-family="SimSun" transform="rotate(0,5.379809,591.092)" >图号</text>
+<text x="-131.2957" y="555.5425" class="HideText" font-size="7" font-family="SimSun" transform="rotate(0,-131.2957,550.5425)" >签发</text>
+<text x="-130.8187" y="569.377" class="HideText" font-size="7" font-family="SimSun" transform="rotate(0,-130.8187,564.377)" >复核</text>
+<text x="-131.2957" y="541.4695" class="HideText" font-size="7" font-family="SimSun" transform="rotate(0,-131.2957,536.4695)" >编制</text>
+<text x="-573.0825" y="153.5068" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.42685,-573.0825,148.5068)" >H1-40</text>
+<text x="-554.2786" y="153.921" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.42685,-554.2786,148.921)" >H2-40</text>
+<text x="-537.5457" y="153.424" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.42685,-537.5457,148.424)" >H3-40</text>
+<text x="-514.6828" y="153.8382" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.42685,-514.6828,148.8382)" >H4-40</text>
+<text x="-413.8708" y="150.359" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.42685,-413.8708,145.359)" >H1-40</text>
+<text x="-391.0908" y="150.649" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.42685,-391.0908,145.649)" >H2-40</text>
+<text x="-367.2753" y="150.4833" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.42685,-367.2753,145.4833)" >H3-40</text>
+<text x="-586.4191" y="150.856" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-586.4191,145.856)" >变</text>
+<text x="-586.4191" y="154.856" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-586.4191,145.856)" >电</text>
+<text x="-586.4191" y="158.856" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-586.4191,145.856)" >站</text>
+<text x="-586.4191" y="162.856" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-586.4191,145.856)" >H1</text>
+<text x="-567.3668" y="151.3531" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-567.3668,146.3531)" >国</text>
+<text x="-567.3668" y="155.3531" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-567.3668,146.3531)" >土</text>
+<text x="-567.3668" y="159.3531" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-567.3668,146.3531)" >局</text>
+<text x="-567.3668" y="163.3531" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-567.3668,146.3531)" >H2</text>
+<text x="-550.4681" y="151.6844" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-550.4681,146.6844)" >世</text>
+<text x="-550.4681" y="155.6844" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-550.4681,146.6844)" >纪</text>
+<text x="-550.4681" y="159.6844" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-550.4681,146.6844)" >华</text>
+<text x="-550.4681" y="163.6844" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-550.4681,146.6844)" >园</text>
+<text x="-550.4681" y="167.6844" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-550.4681,146.6844)" >H3</text>
+<text x="-528.5993" y="152.8441" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-528.5993,147.8441)" >草</text>
+<text x="-528.5993" y="156.8441" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-528.5993,147.8441)" >洋</text>
+<text x="-528.5993" y="160.8441" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-528.5993,147.8441)" >H4</text>
+<text x="-426.1721" y="149.862" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-426.1721,144.862)" >万</text>
+<text x="-426.1721" y="153.862" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-426.1721,144.862)" >联</text>
+<text x="-426.1721" y="157.862" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-426.1721,144.862)" >环</text>
+<text x="-426.1721" y="161.862" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-426.1721,144.862)" >网</text>
+<text x="-426.1721" y="165.862" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-426.1721,144.862)" >柜</text>
+<text x="-426.1721" y="169.862" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-426.1721,144.862)" >H1</text>
+<text x="-405.3387" y="150.359" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-405.3387,145.359)" >草</text>
+<text x="-405.3387" y="154.359" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-405.3387,145.359)" >洋</text>
+<text x="-405.3387" y="158.359" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-405.3387,145.359)" >H2</text>
+<text x="-380.1978" y="150.2762" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-380.1978,145.2762)" >世</text>
+<text x="-380.1978" y="154.2762" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-380.1978,145.2762)" >纪</text>
+<text x="-380.1978" y="158.2762" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-380.1978,145.2762)" >华</text>
+<text x="-380.1978" y="162.2762" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-380.1978,145.2762)" >园</text>
+<text x="-380.1978" y="166.2762" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-380.1978,145.2762)" >H3</text>
+<text x="-429.8583" y="256.2033" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-429.8583,251.2033)" >4020001585</text>
+<text x="-399.1259" y="257.1145" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-399.1259,252.1145)" >4020001584</text>
+<text x="-370.7959" y="256.369" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-370.7959,251.369)" >4020001583</text>
+<text x="-297.7046" y="435.9887" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.9248,-297.7046,430.9887)" >4024023620</text>
+<text x="-516.3395" y="243.4672" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-516.3395,238.4672)" >1P</text>
+<text x="-501.8431" y="243.6329" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-501.8431,238.6329)" >2P</text>
+<text x="-490.4117" y="243.3015" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-490.4117,238.3015)" >3P</text>
+<text x="-477.2407" y="243.4672" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-477.2407,238.4672)" >4P</text>
+<text x="-462.1645" y="243.3015" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-462.1645,238.3015)" >5P</text>
+<text x="-556.4324" y="412.4536" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-556.4324,407.4536)" >D10</text>
+<text x="-556.4324" y="416.4536" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-556.4324,407.4536)" >至</text>
+<text x="-556.4324" y="420.4536" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-556.4324,407.4536)" >环</text>
+<text x="-556.4324" y="424.4536" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-556.4324,407.4536)" >网</text>
+<text x="-556.4324" y="428.4536" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-556.4324,407.4536)" >柜</text>
+<text x="-546.3263" y="412.1222" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-546.3263,407.1222)" >D20</text>
+<text x="-536.5516" y="412.1222" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-536.5516,407.1222)" >D30</text>
+<text x="-511.846" y="413.4144" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-511.846,408.4144)" >D40至N1塔</text>
+<text x="-418.2107" y="330.2834" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.95189,-418.2107,325.2834)" >D40</text>
+<text x="-399.3454" y="331.9359" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.95189,-399.3454,326.9359)" >D30</text>
+<text x="-381.7637" y="333.0761" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.95189,-381.7637,328.0761)" >D20</text>
+<text x="-365.4252" y="331.0948" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.95189,-365.4252,326.0948)" >D10</text>
+<text x="-149.7054" y="347.0956" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-149.7054,342.0956)" >D10</text>
+<text x="-123.5291" y="347.2613" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-123.5291,342.2613)" >D20</text>
+<text x="-103.4827" y="347.0956" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-103.4827,342.0956)" >D30</text>
+<text x="66.74895" y="169.3032" class="HideText" font-size="4" font-family="SimSun" transform="rotate(-89.99979,66.74895,164.3032)" >D41</text>
+<text x="58.29963" y="161.5165" class="HideText" font-size="4" font-family="SimSun" transform="rotate(-89.99979,58.29963,156.5165)" >D40</text>
+<text x="37.75619" y="168.9718" class="HideText" font-size="4" font-family="SimSun" transform="rotate(-89.99979,37.75619,163.9718)" >D31</text>
+<text x="29.1412" y="161.5165" class="HideText" font-size="4" font-family="SimSun" transform="rotate(-89.99979,29.1412,156.5165)" >D30</text>
+<text x="4.455933" y="168.8061" class="HideText" font-size="4" font-family="SimSun" transform="rotate(-89.99979,4.455933,163.8061)" >D21</text>
+<text x="-4.656077" y="161.0195" class="HideText" font-size="4" font-family="SimSun" transform="rotate(-89.99979,-4.656077,156.0195)" >D20</text>
+<text x="-24.86817" y="169.3032" class="HideText" font-size="4" font-family="SimSun" transform="rotate(-89.99979,-24.86817,164.3032)" >D11</text>
+<text x="-32.82047" y="160.6882" class="HideText" font-size="4" font-family="SimSun" transform="rotate(-89.99979,-32.82047,155.6882)" >D10</text>
+<text x="-289.4505" y="402.9481" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-289.4505,397.9481)" >4024023361</text>
+<text x="-257.349" y="330.1071" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-257.349,325.1071)" >4024035464</text>
+<text x="-238.0712" y="440.3073" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-238.0712,435.3073)" >4024023360</text>
+<text x="-209.5547" y="435.0886" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-209.5547,430.0886)" >4020000036</text>
+<text x="-178.5325" y="454.6587" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-178.5325,449.6587)" >1300507085</text>
+<text x="-135.1678" y="437.3852" class="HideText" font-size="4" font-family="SimSun" transform="rotate(90.57272,-135.1678,432.3852)" >4024035451</text>
+<text x="-81.58054" y="435.2629" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-81.58054,430.2629)" >1300453883</text>
+<text x="35.08202" y="413.3233" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.99979,35.08202,408.3233)" >4020000242</text>
+<text x="35.08202" y="417.3233" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.99979,35.08202,408.3233)" >4020000141</text>
+<text x="1.877991" y="385.4568" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,1.877991,380.4568)" >4024047195</text>
+<text x="12.56528" y="276.589" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,12.56528,271.589)" >4024023362</text>
+<text x="-291.7266" y="220.0567" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-291.7266,215.0567)" >1300485894</text>
+<text x="-252.4261" y="167.033" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-252.4261,162.033)" >4024023641</text>
+<text x="-80.587" y="75.59383" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-80.587,70.59383)" >4024059163</text>
+<text x="-175.9231" y="74.29446" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-175.9231,69.29446)" >4020000220</text>
+<text x="-249.0983" y="84.86928" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-249.0983,79.86928)" >4024023357</text>
+<text x="-313.296" y="316.4304" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-313.296,311.4304)" >4024023625</text>
+<text x="-11.04291" y="529.382" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-11.04291,524.382)" >白云站教师村线F22</text>
+<text x="-163.3734" y="271.7973" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-163.3734,266.7973)" >P16</text>
+<text x="-151.445" y="271.7973" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-151.445,266.7973)" >P1</text>
+<text x="-126.7597" y="271.963" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-126.7597,266.963)" >P2</text>
+<text x="-23.07809" y="515.9219" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-23.07809,510.9218)" >L1622-2</text>
+<text x="-23.80826" y="504.2392" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-23.80826,499.2392)" >国土局L1622开关</text>
+<text x="-23.56021" y="492.9337" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-23.56021,487.9337)" >L1622-1</text>
+<text x="-23.23718" y="268.753" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-23.23718,263.753)" >1601-1</text>
+<text x="-96.79361" y="277.8029" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-96.79361,272.8029)" >1300464386</text>
+<text x="-65.48143" y="277.4716" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.42685,-65.48143,272.4716)" >1300464386</text>
+<text x="-175.9069" y="514.511" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-175.9069,509.511)" >F16-B00101</text>
+<text x="-71.83913" y="434.9851" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-71.83913,429.9851)" >华园阁</text>
+<text x="-71.83913" y="438.9851" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.99979,-71.83913,429.9851)" >(隆基房地产)</text>
+<text x="-62.29469" y="568.5298" class="HideText" font-size="8" font-family="SimSun" transform="rotate(0,-62.29469,563.5298)" >110kV白云站10kV草洋线F16</text>
+<text x="-544.3459" y="433.6491" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-544.3459,428.6491)" >备用</text>
+<text x="-532.585" y="433.826" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-532.585,428.826)" >备用</text>
+<text x="-487.3829" y="143.9859" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-487.3829,138.9859)" >至白云F17万联广场H170</text>
+<text x="-52.96854" y="541.8762" class="HideText" font-size="7" font-family="SimSun" transform="rotate(0,-52.96854,536.8762)" >惠州惠阳供电局10千伏单线图</text>
+<text x="-23.02183" y="258.3084" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-23.02183,253.3084)" >承修路1601开关</text>
+<text x="-23.19599" y="246.5211" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-23.19599,241.5211)" >1601-4</text>
+<text x="-23.77556" y="466.7686" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-23.77556,461.7686)" >F16-B00302</text>
+<text x="-103.3577" y="541.9915" class="HideText" font-size="5" font-family="SimSun" transform="rotate(0,-103.3577,536.9915)" >淡水配电班</text>
+<text x="41.45349" y="595.8238" class="HideText" font-size="7" font-family="SimSun" transform="rotate(0,41.45349,590.8238)" >白云F16</text>
+<text x="31.34356" y="80.26354" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.42685,31.34356,75.26354)" >1300614507</text>
+<text x="54.77875" y="80.3524" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.42685,54.77875,75.3524)" >1300614507</text>
+<text x="-42.43723" y="83.05778" class="HideText" font-size="3" font-family="SimSun" transform="rotate(89.42685,-42.43723,78.05778)" >601开关</text>
+<text x="-24.60547" y="95.68861" class="HideText" font-size="3" font-family="SimSun" transform="rotate(89.42685,-24.60547,90.68861)" >801开关</text>
+<text x="-14.9466" y="95.68861" class="HideText" font-size="3" font-family="SimSun" transform="rotate(89.42685,-14.9466,90.68861)" >802开关</text>
+<text x="4.371145" y="82.31479" class="HideText" font-size="3" font-family="SimSun" transform="rotate(89.42685,4.371145,77.31479)" >8031刀闸</text>
+<text x="4.165271" y="94.91659" class="HideText" font-size="3" font-family="SimSun" transform="rotate(89.42685,4.165271,89.91659)" >803开关</text>
+<text x="-14.9466" y="82.31479" class="HideText" font-size="3" font-family="SimSun" transform="rotate(89.42685,-14.9466,77.31479)" >8021刀闸</text>
+<text x="-24.60547" y="82.31479" class="HideText" font-size="3" font-family="SimSun" transform="rotate(89.42685,-24.60547,77.31479)" >8011刀闸</text>
+<text x="-40.20826" y="77.11386" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-40.20826,72.11386)" >G1</text>
+<text x="-32.77836" y="77.11386" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-32.77836,72.11386)" >G2</text>
+<text x="-23.11949" y="77.11386" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-23.11949,72.11386)" >G3</text>
+<text x="-11.97464" y="77.11386" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,-11.97464,72.11386)" >G4</text>
+<text x="4.371145" y="77.11386" class="HideText" font-size="4" font-family="SimSun" transform="rotate(0,4.371145,72.11386)" >G5</text>
+<text x="-34.26434" y="89.0017" class="HideText" font-size="3" font-family="SimSun" transform="rotate(89.42685,-34.26434,84.0017)" >80140地刀</text>
+<text x="-10.48866" y="95.68861" class="HideText" font-size="3" font-family="SimSun" transform="rotate(89.42685,-10.48866,90.68861)" >80240地刀</text>
+<text x="12.54404" y="90.48768" class="HideText" font-size="3" font-family="SimSun" transform="rotate(89.42685,12.54404,85.48768)" >80340地刀</text>
+<text x="82.55574" y="80.51511" class="HideText" font-size="4" font-family="SimSun" transform="rotate(89.99979,82.55574,75.51511)" >1300614509</text>
+<text x="-151.0929" y="523.6408" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-151.0929,518.6408)" >N1</text>
+<text x="-22.8347" y="484.0378" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-22.8347,479.0378)" >N2</text>
+<text x="-35.72243" y="390.1498" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-35.72243,385.1498)" >N10</text>
+<text x="-35.184" y="379.4639" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-35.184,374.4639)" >N11</text>
+<text x="-33.56869" y="473.8975" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-33.56869,468.8975)" >N3</text>
+<text x="-35.97094" y="277.4923" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-35.97094,272.4923)" >N13</text>
+<text x="-84.0539" y="103.7879" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-84.0539,98.78793)" >N1</text>
+<text x="-183.9288" y="108.0711" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-183.9288,103.0711)" >N3</text>
+<text x="-260.8753" y="108.6716" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-260.8753,103.6716)" >N5</text>
+<text x="-23.47599" y="529.4845" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-23.47599,524.4845)" >N16</text>
+<text x="-185.9534" y="479.8251" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-185.9534,474.8251)" >N3</text>
+<text x="-206.411" y="480.6295" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-206.411,475.6295)" >N2</text>
+<text x="-231.0558" y="479.4374" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-231.0558,474.4374)" >N1</text>
+<text x="-553.1899" y="398.233" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-553.1899,393.233)" >国土局J1600分接箱</text>
+<text x="-412.5655" y="128.1824" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-412.5655,123.1824)" >草洋H161环网柜</text>
+<text x="-416.0111" y="307.3547" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(-0.0479022,-416.0111,302.3547)" >草洋J161分接箱</text>
+<text x="-320.0721" y="416.9686" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-320.0721,411.9686)" >草洋云海箱式</text>
+<text x="-265.2652" y="313.5999" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-265.2652,308.5999)" >金山苑箱式</text>
+<text x="-144.8838" y="329.9666" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-144.8838,324.9666)" >草洋西J1602分接箱</text>
+<text x="-145.5298" y="473.3906" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-145.5298,468.3906)" >草洋西路箱式</text>
+<text x="-1.890481" y="134.2122" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-1.890481,129.2122)" >承修路J1601分接箱</text>
+<text x="14.04552" y="405.5549" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,14.04552,400.5549)" >国土局箱式</text>
+<text x="-575.8018" y="130.5513" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-575.8018,125.5513)" >世纪华园H160环网柜</text>
+<text x="-107.4126" y="473.606" class="DefaultText" font-size="4" font-family="SimSun" transform="rotate(0,-107.4126,468.606)" >华园阁(隆基房地产)箱式</text>
+<text x="-481.7458" y="229.1212" class="DefaultText" font-size="6" font-family="SimSun" transform="rotate(0,-481.7458,224.1212)" >世纪华园高压室</text>
+<text x="-142.8045" y="262.0825" class="DefaultText" font-size="5" font-family="SimSun" transform="rotate(0,-142.8045,257.0825)" >玫瑰华廷高压室</text>
+<text x="1.395667" y="69.07053" class="DefaultText" font-size="5" font-family="SimSun" transform="rotate(0,1.395667,64.07053)" >富丽达高压室</text>
+</g>
+<g id="TermMeasure_Layer" >
+<g id="FL$10325790$9010" > 
+<text x="-627.08" y="112.65" fill="rgb(255,0,0)" font-size="5"> 0.0 </text>
+</g>
+<g id="FL$10325790$9020" > 
+<text x="-627.08" y="117.65" fill="rgb(255,0,0)" font-size="5"> 0.0 </text>
+</g>
+<g id="LAP$10682542$B621"> 
+<text x="-439.4375" y="257.9959" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10682542$B621" Plane="0"/></metadata>
+</g>
+<g id="LAP$10682542$B622"> 
+<text x="-439.4375" y="261.9959" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10682542$B622" Plane="0"/></metadata>
+</g>
+<g id="LAP$10682542$B623"> 
+<text x="-439.4375" y="265.9959" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10682542$B623" Plane="0"/></metadata>
+</g>
+<g id="LAP$10682542$B630"> 
+<text x="-439.4375" y="269.9959" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10682542$B630" Plane="0"/></metadata>
+</g>
+<g id="LAP$10682687$B621"> 
+<text x="-380.7893" y="258.9899" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10682687$B621" Plane="0"/></metadata>
+</g>
+<g id="LAP$10682687$B622"> 
+<text x="-380.7893" y="262.9899" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10682687$B622" Plane="0"/></metadata>
+</g>
+<g id="LAP$10682687$B623"> 
+<text x="-380.7893" y="266.9899" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10682687$B623" Plane="0"/></metadata>
+</g>
+<g id="LAP$10682687$B630"> 
+<text x="-380.7893" y="270.9899" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10682687$B630" Plane="0"/></metadata>
+</g>
+<g id="LAP$10682716$B621"> 
+<text x="-408.5395" y="258.3065" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10682716$B621" Plane="0"/></metadata>
+</g>
+<g id="LAP$10682716$B622"> 
+<text x="-408.5395" y="262.3065" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10682716$B622" Plane="0"/></metadata>
+</g>
+<g id="LAP$10682716$B623"> 
+<text x="-408.5395" y="266.3065" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10682716$B623" Plane="0"/></metadata>
+</g>
+<g id="LAP$10682716$B630"> 
+<text x="-408.5395" y="270.3065" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10682716$B630" Plane="0"/></metadata>
+</g>
+<g id="DMR$10683386$B621"> 
+<text x="-307.1703" y="432.0045" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10683386$B621" Plane="0"/></metadata>
+</g>
+<g id="DMR$10683386$B622"> 
+<text x="-307.1703" y="436.0045" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10683386$B622" Plane="0"/></metadata>
+</g>
+<g id="DMR$10683386$B623"> 
+<text x="-307.1703" y="440.0045" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10683386$B623" Plane="0"/></metadata>
+</g>
+<g id="DMR$10683386$B630"> 
+<text x="-307.1703" y="444.0045" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10683386$B630" Plane="0"/></metadata>
+</g>
+<g id="DMR$10683633$B621"> 
+<text x="-218.8026" y="451.8539" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10683633$B621" Plane="0"/></metadata>
+</g>
+<g id="DMR$10683633$B622"> 
+<text x="-218.8026" y="455.8539" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10683633$B622" Plane="0"/></metadata>
+</g>
+<g id="DMR$10683633$B623"> 
+<text x="-218.8026" y="459.8539" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10683633$B623" Plane="0"/></metadata>
+</g>
+<g id="DMR$10683633$B630"> 
+<text x="-218.8026" y="463.8539" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10683633$B630" Plane="0"/></metadata>
+</g>
+<g id="LAP$10683683$B621"> 
+<text x="-198.487" y="445.3098" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10683683$B621" Plane="0"/></metadata>
+</g>
+<g id="LAP$10683683$B622"> 
+<text x="-198.487" y="449.3098" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10683683$B622" Plane="0"/></metadata>
+</g>
+<g id="LAP$10683683$B623"> 
+<text x="-198.487" y="453.3098" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10683683$B623" Plane="0"/></metadata>
+</g>
+<g id="LAP$10683683$B630"> 
+<text x="-198.487" y="457.3098" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10683683$B630" Plane="0"/></metadata>
+</g>
+<g id="DMR$10683737$B621"> 
+<text x="-178.7512" y="452.3095" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10683737$B621" Plane="0"/></metadata>
+</g>
+<g id="DMR$10683737$B622"> 
+<text x="-178.7512" y="456.3095" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10683737$B622" Plane="0"/></metadata>
+</g>
+<g id="DMR$10683737$B623"> 
+<text x="-178.7512" y="460.3095" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10683737$B623" Plane="0"/></metadata>
+</g>
+<g id="DMR$10683737$B630"> 
+<text x="-178.7512" y="464.3095" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10683737$B630" Plane="0"/></metadata>
+</g>
+<g id="DMR$10683880$B621"> 
+<text x="-298.7371" y="327.4351" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10683880$B621" Plane="0"/></metadata>
+</g>
+<g id="DMR$10683880$B622"> 
+<text x="-298.7371" y="331.4351" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10683880$B622" Plane="0"/></metadata>
+</g>
+<g id="DMR$10683880$B623"> 
+<text x="-298.7371" y="335.4351" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10683880$B623" Plane="0"/></metadata>
+</g>
+<g id="DMR$10683880$B630"> 
+<text x="-298.7371" y="339.4351" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10683880$B630" Plane="0"/></metadata>
+</g>
+<g id="DMR$10683966$B621"> 
+<text x="-289.1929" y="399.2527" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10683966$B621" Plane="0"/></metadata>
+</g>
+<g id="DMR$10683966$B622"> 
+<text x="-289.1929" y="403.2527" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10683966$B622" Plane="0"/></metadata>
+</g>
+<g id="DMR$10683966$B623"> 
+<text x="-289.1929" y="407.2527" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10683966$B623" Plane="0"/></metadata>
+</g>
+<g id="DMR$10683966$B630"> 
+<text x="-289.1929" y="411.2527" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10683966$B630" Plane="0"/></metadata>
+</g>
+<g id="DMR$10684094$B621"> 
+<text x="-243.3739" y="333.2278" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10684094$B621" Plane="0"/></metadata>
+</g>
+<g id="DMR$10684094$B622"> 
+<text x="-243.3739" y="337.2278" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10684094$B622" Plane="0"/></metadata>
+</g>
+<g id="DMR$10684094$B623"> 
+<text x="-243.3739" y="341.2278" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10684094$B623" Plane="0"/></metadata>
+</g>
+<g id="DMR$10684094$B630"> 
+<text x="-243.3739" y="345.2278" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10684094$B630" Plane="0"/></metadata>
+</g>
+<g id="LAP$10684454$B621"> 
+<text x="-91.02737" y="453.8834" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10684454$B621" Plane="0"/></metadata>
+</g>
+<g id="LAP$10684454$B622"> 
+<text x="-91.02737" y="457.8834" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10684454$B622" Plane="0"/></metadata>
+</g>
+<g id="LAP$10684454$B623"> 
+<text x="-91.02737" y="461.8834" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10684454$B623" Plane="0"/></metadata>
+</g>
+<g id="LAP$10684454$B630"> 
+<text x="-91.02737" y="465.8834" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10684454$B630" Plane="0"/></metadata>
+</g>
+<g id="DMR$10684525$B621"> 
+<text x="-119.813" y="446.8009" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10684525$B621" Plane="0"/></metadata>
+</g>
+<g id="DMR$10684525$B622"> 
+<text x="-119.813" y="450.8009" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10684525$B622" Plane="0"/></metadata>
+</g>
+<g id="DMR$10684525$B623"> 
+<text x="-119.813" y="454.8009" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10684525$B623" Plane="0"/></metadata>
+</g>
+<g id="DMR$10684525$B630"> 
+<text x="-119.813" y="458.8009" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10684525$B630" Plane="0"/></metadata>
+</g>
+<g id="LAP$10684930$B621"> 
+<text x="-106.2279" y="279.8854" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10684930$B621" Plane="0"/></metadata>
+</g>
+<g id="LAP$10684930$B622"> 
+<text x="-106.2279" y="283.8854" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10684930$B622" Plane="0"/></metadata>
+</g>
+<g id="LAP$10684930$B623"> 
+<text x="-106.2279" y="287.8854" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10684930$B623" Plane="0"/></metadata>
+</g>
+<g id="LAP$10684930$B630"> 
+<text x="-106.2279" y="291.8854" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10684930$B630" Plane="0"/></metadata>
+</g>
+<g id="LAP$10684995$B621"> 
+<text x="-75.03993" y="278.2287" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10684995$B621" Plane="0"/></metadata>
+</g>
+<g id="LAP$10684995$B622"> 
+<text x="-75.03993" y="282.2287" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10684995$B622" Plane="0"/></metadata>
+</g>
+<g id="LAP$10684995$B623"> 
+<text x="-75.03993" y="286.2287" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10684995$B623" Plane="0"/></metadata>
+</g>
+<g id="LAP$10684995$B630"> 
+<text x="-75.03993" y="290.2287" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10684995$B630" Plane="0"/></metadata>
+</g>
+<g id="LAP$10686117$B621"> 
+<text x="-177.343" y="70.18495" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10686117$B621" Plane="0"/></metadata>
+</g>
+<g id="LAP$10686117$B622"> 
+<text x="-177.343" y="74.18495" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10686117$B622" Plane="0"/></metadata>
+</g>
+<g id="LAP$10686117$B623"> 
+<text x="-177.343" y="78.18495" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10686117$B623" Plane="0"/></metadata>
+</g>
+<g id="LAP$10686117$B630"> 
+<text x="-177.343" y="82.18495" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10686117$B630" Plane="0"/></metadata>
+</g>
+<g id="DMR$10686150$B621"> 
+<text x="-80.93714" y="70.46733" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10686150$B621" Plane="0"/></metadata>
+</g>
+<g id="DMR$10686150$B622"> 
+<text x="-80.93714" y="74.46733" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10686150$B622" Plane="0"/></metadata>
+</g>
+<g id="DMR$10686150$B623"> 
+<text x="-80.93714" y="78.46733" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10686150$B623" Plane="0"/></metadata>
+</g>
+<g id="DMR$10686150$B630"> 
+<text x="-80.93714" y="82.46733" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10686150$B630" Plane="0"/></metadata>
+</g>
+<g id="DMR$10686209$B621"> 
+<text x="-253.9588" y="80.81969" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10686209$B621" Plane="0"/></metadata>
+</g>
+<g id="DMR$10686209$B622"> 
+<text x="-253.9588" y="84.81969" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10686209$B622" Plane="0"/></metadata>
+</g>
+<g id="DMR$10686209$B623"> 
+<text x="-253.9588" y="88.81969" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10686209$B623" Plane="0"/></metadata>
+</g>
+<g id="DMR$10686209$B630"> 
+<text x="-253.9588" y="92.81969" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10686209$B630" Plane="0"/></metadata>
+</g>
+<g id="DMR$10690290$B621"> 
+<text x="-216.906" y="163.9906" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10690290$B621" Plane="0"/></metadata>
+</g>
+<g id="DMR$10690290$B622"> 
+<text x="-216.906" y="167.9906" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10690290$B622" Plane="0"/></metadata>
+</g>
+<g id="DMR$10690290$B623"> 
+<text x="-216.906" y="171.9906" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10690290$B623" Plane="0"/></metadata>
+</g>
+<g id="DMR$10690290$B630"> 
+<text x="-216.906" y="175.9906" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10690290$B630" Plane="0"/></metadata>
+</g>
+<g id="LAP$10690375$B621"> 
+<text x="-255.8758" y="217.9573" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10690375$B621" Plane="0"/></metadata>
+</g>
+<g id="LAP$10690375$B622"> 
+<text x="-255.8758" y="221.9573" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10690375$B622" Plane="0"/></metadata>
+</g>
+<g id="LAP$10690375$B623"> 
+<text x="-255.8758" y="225.9573" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10690375$B623" Plane="0"/></metadata>
+</g>
+<g id="LAP$10690375$B630"> 
+<text x="-255.8758" y="229.9573" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10690375$B630" Plane="0"/></metadata>
+</g>
+<g id="LAP$10696490$B621"> 
+<text x="20.09772" y="417.0005" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10696490$B621" Plane="0"/></metadata>
+</g>
+<g id="LAP$10696490$B622"> 
+<text x="20.09772" y="421.0005" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10696490$B622" Plane="0"/></metadata>
+</g>
+<g id="LAP$10696490$B623"> 
+<text x="20.09772" y="425.0005" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10696490$B623" Plane="0"/></metadata>
+</g>
+<g id="LAP$10696490$B630"> 
+<text x="20.09772" y="429.0005" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$10696490$B630" Plane="0"/></metadata>
+</g>
+<g id="DMR$10696999$B621"> 
+<text x="-0.253242" y="386.9339" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10696999$B621" Plane="0"/></metadata>
+</g>
+<g id="DMR$10696999$B622"> 
+<text x="-0.253242" y="390.9339" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10696999$B622" Plane="0"/></metadata>
+</g>
+<g id="DMR$10696999$B623"> 
+<text x="-0.253242" y="394.9339" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10696999$B623" Plane="0"/></metadata>
+</g>
+<g id="DMR$10696999$B630"> 
+<text x="-0.253242" y="398.9339" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10696999$B630" Plane="0"/></metadata>
+</g>
+<g id="DMR$10697044$B621"> 
+<text x="10.99111" y="275.0385" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10697044$B621" Plane="0"/></metadata>
+</g>
+<g id="DMR$10697044$B622"> 
+<text x="10.99111" y="279.0385" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10697044$B622" Plane="0"/></metadata>
+</g>
+<g id="DMR$10697044$B623"> 
+<text x="10.99111" y="283.0385" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10697044$B623" Plane="0"/></metadata>
+</g>
+<g id="DMR$10697044$B630"> 
+<text x="10.99111" y="287.0385" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="DMR$10697044$B630" Plane="0"/></metadata>
+</g>
+<g id="LAP$17482092$B621"> 
+<text x="22.96689" y="83.86025" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$17482092$B621" Plane="0"/></metadata>
+</g>
+<g id="LAP$17482092$B622"> 
+<text x="22.96689" y="87.86025" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$17482092$B622" Plane="0"/></metadata>
+</g>
+<g id="LAP$17482092$B623"> 
+<text x="22.96689" y="91.86025" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$17482092$B623" Plane="0"/></metadata>
+</g>
+<g id="LAP$17482092$B630"> 
+<text x="22.96689" y="95.86025" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$17482092$B630" Plane="0"/></metadata>
+</g>
+<g id="LAP$17482100$B621"> 
+<text x="46.69197" y="83.83574" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$17482100$B621" Plane="0"/></metadata>
+</g>
+<g id="LAP$17482100$B622"> 
+<text x="46.69197" y="87.83574" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$17482100$B622" Plane="0"/></metadata>
+</g>
+<g id="LAP$17482100$B623"> 
+<text x="46.69197" y="91.83574" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$17482100$B623" Plane="0"/></metadata>
+</g>
+<g id="LAP$17482100$B630"> 
+<text x="46.69197" y="95.83574" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$17482100$B630" Plane="0"/></metadata>
+</g>
+<g id="LAP$17485587$B621"> 
+<text x="74.37983" y="83.44124" class="MeasureA" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$17485587$B621" Plane="0"/></metadata>
+</g>
+<g id="LAP$17485587$B622"> 
+<text x="74.37983" y="87.44124" class="MeasureB" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$17485587$B622" Plane="0"/></metadata>
+</g>
+<g id="LAP$17485587$B623"> 
+<text x="74.37983" y="91.44124" class="MeasureC" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$17485587$B623" Plane="0"/></metadata>
+</g>
+<g id="LAP$17485587$B630"> 
+<text x="74.37983" y="95.44124" class="MeasureQ" font-size="3">  0.0 </text>
+<metadata><cge:Meas_Ref ObjectID="LAP$17485587$B630" Plane="0"/></metadata>
+</g>
+
+<g id="17482063_mea"> 
+<text x="-31.3254" y="88.74168" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-17482063" Plane="0"/></metadata>
+</g>
+
+<g id="17482066_mea"> 
+<text x="-21.16232" y="88.69275" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-17482066" Plane="0"/></metadata>
+</g>
+
+<g id="17482078_mea"> 
+<text x="6.289014" y="88.34051" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-17482078" Plane="0"/></metadata>
+</g>
+
+<g id="10683619_mea"> 
+<text x="-183.0056" y="463.8652" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10683619" Plane="0"/></metadata>
+</g>
+
+<g id="10683623_mea"> 
+<text x="-202.9485" y="456.3064" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10683623" Plane="0"/></metadata>
+</g>
+
+<g id="10683627_mea"> 
+<text x="-223.1192" y="463.8859" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10683627" Plane="0"/></metadata>
+</g>
+
+<g id="10683849_mea"> 
+<text x="-303.0847" y="339.2289" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10683849" Plane="0"/></metadata>
+</g>
+
+<g id="10683960_mea"> 
+<text x="-295.0212" y="388.1527" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10683960" Plane="0"/></metadata>
+</g>
+
+<g id="10685845_mea"> 
+<text x="-249.3822" y="217.305" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10685845" Plane="0"/></metadata>
+</g>
+
+<g id="10685869_mea"> 
+<text x="-210.1544" y="163.0193" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10685869" Plane="0"/></metadata>
+</g>
+
+<g id="10686086_mea"> 
+<text x="-258.2547" y="91.69197" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10686086" Plane="0"/></metadata>
+</g>
+
+<g id="10686097_mea"> 
+<text x="-181.5974" y="81.40929" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10686097" Plane="0"/></metadata>
+</g>
+
+<g id="10686106_mea"> 
+<text x="-85.29516" y="81.58813" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10686106" Plane="0"/></metadata>
+</g>
+
+<g id="10696935_mea"> 
+<text x="-16.0634" y="387.7519" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10696935" Plane="0"/></metadata>
+</g>
+
+<g id="10696957_mea"> 
+<text x="-5.171104" y="275.8875" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10696957" Plane="0"/></metadata>
+</g>
+
+<g id="15080209_mea"> 
+<text x="-15.16151" y="472.4284" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-15080209" Plane="0"/></metadata>
+</g>
+
+<g id="10680030_mea"> 
+<text x="-578.7568" y="141.8385" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10680030" Plane="0"/></metadata>
+</g>
+
+<g id="10680039_mea"> 
+<text x="-560.1186" y="141.8385" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10680039" Plane="0"/></metadata>
+</g>
+
+<g id="10680045_mea"> 
+<text x="-543.3856" y="141.8385" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10680045" Plane="0"/></metadata>
+</g>
+
+<g id="10680055_mea"> 
+<text x="-520.3571" y="142.0042" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10680055" Plane="0"/></metadata>
+</g>
+
+<g id="10680060_mea"> 
+<text x="-419.7522" y="138.6907" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10680060" Plane="0"/></metadata>
+</g>
+
+<g id="10680064_mea"> 
+<text x="-397.0965" y="138.8564" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10680064" Plane="0"/></metadata>
+</g>
+
+<g id="10680069_mea"> 
+<text x="-372.9496" y="138.7735" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10680069" Plane="0"/></metadata>
+</g>
+
+<g id="10682485_mea"> 
+<text x="-514.3514" y="248.2212" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10682485" Plane="0"/></metadata>
+</g>
+
+<g id="10682498_mea"> 
+<text x="-489.0035" y="248.8839" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10682498" Plane="0"/></metadata>
+</g>
+
+<g id="10682504_mea"> 
+<text x="-475.584" y="248.8839" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10682504" Plane="0"/></metadata>
+</g>
+
+<g id="10682507_mea"> 
+<text x="-460.0107" y="248.3869" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10682507" Plane="0"/></metadata>
+</g>
+
+<g id="10683352_mea"> 
+<text x="-312.1534" y="441.4785" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10683352" Plane="0"/></metadata>
+</g>
+
+<g id="10684078_mea"> 
+<text x="-248.3325" y="342.6297" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10684078" Plane="0"/></metadata>
+</g>
+
+<g id="10684417_mea"> 
+<text x="-124.6474" y="437.2747" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10684417" Plane="0"/></metadata>
+</g>
+
+<g id="10684427_mea"> 
+<text x="-95.90311" y="444.3986" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10684427" Plane="0"/></metadata>
+</g>
+
+<g id="10684870_mea"> 
+<text x="-160.9543" y="276.2706" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10684870" Plane="0"/></metadata>
+</g>
+
+<g id="10684877_mea"> 
+<text x="-149.5811" y="276.572" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10684877" Plane="0"/></metadata>
+</g>
+
+<g id="10684892_mea"> 
+<text x="-124.6474" y="276.6548" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10684892" Plane="0"/></metadata>
+</g>
+
+<g id="10696430_mea"> 
+<text x="14.93205" y="426.4645" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10696430" Plane="0"/></metadata>
+</g>
+
+<g id="10696738_mea"> 
+<text x="-26.48617" y="256.0078" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10696738" Plane="0"/></metadata>
+</g>
+
+<g id="10645647_mea"> 
+<text x="-26.48977" y="500.9869" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-10645647" Plane="0"/></metadata>
+</g>
+
+<g id="17482048_mea"> 
+<text x="-38.30732" y="81.71625" class="MeasureB" font-size="3"> 0.0</text>
+<metadata><cge:Meas_Ref ObjectID="MV-0062-0-03-17482048" Plane="0"/></metadata>
+</g>
+
+</g>
+</svg>

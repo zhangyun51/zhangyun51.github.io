@@ -265,6 +265,9 @@
                         <li>
                             <a href="#" id="other"><i class="fa fa-bus fa-fw"></i>其它</a>
                         </li>
+                        <li>
+                            <a href="#" id="one"><i class="fa fa-bus fa-fw"></i>一次接线图</a>
+                        </li>
                     </ul>
                 </div>
                 <!-- /.sidebar-collapse -->
@@ -305,6 +308,9 @@
 
     <script type="text/javascript" src="../js/timelineOption.js"></script>
 
+    <!--<script type="text/javascript" src="../js/svg.min.js"></script>-->
+
+
     <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=qghjhumIkjeaYEPeMmPg9Qtk"></script>
 
     <script>
@@ -329,6 +335,10 @@
 
             $("#other").click(function() {
                 $("#page-wrapper").load("other.html");
+            });
+
+            $("#one").click(function() {
+                $("#page-wrapper").load("one.html");
             });
         });
 
