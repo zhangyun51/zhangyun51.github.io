@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">一次接线图
+        <small>
+        基于SVG的一次接线图
+        </small>
+        </h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <div class="panel panel-primary" id="map-0" style="height: 600px">
+            <embed id="svgEmbed" src="F16.svg" type="image/svg+xml" onload="initializeSvgDocument()"></embed>
+
+        </div>
+    </div>
+    </div>
+
+
+<!--<script type="text/javascript">-->
+    <!--function initializeSvgDocument() {-->
+        <!--svgDocument = document.getElementById("svgEmbed").getSVGDocument();-->
+        <!--console.log(svgDocument);-->
+
+        <!--//绑定文本元素<text>右键菜单事件属性-->
+        <!--//event为DOM的Event对象，由浏览器自动传入，参考文档：http://www.w3school.com.cn/jsref/dom_obj_event.asp-->
+        <!--$('text', svgDocument).attr('oncontextmenu', 'parentWindow.menu.bind(event)');-->
+        <!--console.log('draw done');-->
+    <!--}-->
+<!--</script>-->
+
+
+
+<!--<div id="svgjs"></div>-->
+<!--<script type="text/javascript">-->
+    <!--var draw = SVG('svgjs').size(300, 300);-->
+    <!--draw.rect(100,100).animate().fill('#f08').move(100,100);-->
+<!--</script>-->
+

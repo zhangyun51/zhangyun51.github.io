@@ -1,0 +1,657 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="zhangyun">
+
+    <title>风电生产管理系统</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- MetisMenu CSS -->
+    <link href="../bower_components/metisMenu/dist/metisMenu.min.css" rel="stylesheet">
+
+    <!-- DataTables CSS -->
+    <link href="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.css" rel="stylesheet">
+
+    <!-- DataTables Responsive CSS -->
+    <link href="../bower_components/datatables-responsive/css/dataTables.responsive.css" rel="stylesheet">
+
+
+    <!-- Timeline CSS -->
+    <link href="../dist/css/timeline.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="../dist/css/sb-admin-2.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <link href="../bower_components/morrisjs/morris.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body>
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">主面板
+        </h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+<h2>实时信息
+
+</h2>
+<div class="row">
+    <div class="col-lg-4 col-md-12">
+        <div class="panel panel-default" id="power-0" style="height: 300px">
+
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-12">
+        <div class="panel panel-default" id="power-1" style="height: 300px">
+
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-12">
+        <div class="panel panel-default" id="power-2" style="height: 300px">
+
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-12">
+        <div class="panel panel-default" id="power-3" style="height: 300px">
+
+        </div>
+    </div>
+    <div class="col-lg-4 col-md-12">
+        <div class="panel panel-default" style="height: 300px">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <i class="fa fa-cloud fa-fw"></i>环境监测
+                </div>
+                <!-- /.panel-heading -->
+                <div class="panel-body">
+                    <div class="list-group">
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-sun-o fa-fw"></i>当前辐照
+                                    <span class="pull-right text-muted">676 瓦/平方米
+                                    </span>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-th-large fa-fw"></i>环境温度
+                                    <span class="pull-right text-muted">35 摄氏度
+                                    </span>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-th-large fa-fw"></i>光伏组件温度
+                                    <span class="pull-right text-muted">42 摄氏度
+                                    </span>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-arrows  fa-fw"></i>当前风向
+                                    <span class="pull-right text-muted">56 度
+                                    </span>
+                        </a>
+                        <a href="#" class="list-group-item">
+                            <i class="fa fa-paper-plane  fa-fw"></i>当前风力
+                                    <span class="pull-right text-muted">3.2 米/秒
+                                    </span>
+                        </a>
+
+                    </div>
+
+                </div>
+                <!-- /.panel-body -->
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<h2>分时信息
+
+</h2>
+<div class="row">
+    <div class="col-lg-12 col-md-12">
+        <div class="panel panel-default" id="kw-0" style="height: 300px">
+
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12">
+        <div class="panel panel-default" id="kw-1" style="height: 300px">
+
+        </div>
+    </div>
+    <div class="col-lg-12 col-md-12">
+        <div class="panel panel-default" id="kw-2" style="height: 300px">
+
+        </div>
+    </div>
+
+</div>
+
+<script src="../bower_components/jquery/dist/jquery.min.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<!-- Metis Menu Plugin JavaScript -->
+<script src="../bower_components/metisMenu/dist/metisMenu.min.js"></script>
+
+<!-- Morris Charts JavaScript -->
+<script src="../bower_components/raphael/raphael-min.js"></script>
+<!--<script src="../bower_components/morrisjs/morris.min.js"></script>-->
+<!--<script src="../js/morris-data.js"></script>-->
+
+<script src="../bower_components/datatables/media/js/jquery.dataTables.min.js"></script>
+<script src="../bower_components/datatables-plugins/integration/bootstrap/3/dataTables.bootstrap.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="../dist/js/sb-admin-2.js"></script>
+
+<script type="text/javascript" src="../js/esl.js"></script>
+<script type="text/javascript" src="../js/echarts.js"></script>
+
+<script type="text/javascript" src="../js/timelineOption.js"></script>
+
+<!--<script type="text/javascript" src="../js/svg.min.js"></script>-->
+
+
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=qghjhumIkjeaYEPeMmPg9Qtk"></script>
+
+<script>
+    var stationName = ['浩特高尔风场','塔斯布拉克风场','布拉克巴斯风场','考期克风场','康阿热勒风场','布尔汗乔克风场'];
+
+    require.config({
+        paths: {
+            'echarts': '../js/echarts',
+            'echarts/chart/gauge': '../js/echarts',
+            'echarts/chart/bar': '../js/echarts'
+        }
+    });
+
+    require(
+            [
+                'echarts',
+                'echarts/chart/gauge',
+                'echarts/chart/bar'
+            ],
+            function (ec) {
+                initGraph1(ec);
+                initGraph2(ec);
+                initGraph3(ec);
+                initGraph4(ec);
+            }
+    );
+
+//    发电功率
+    function initGraph1(ec) {
+            var chart = ec.init(document.getElementById("power-0"));
+
+            var option = {
+                title: {
+                    text: '发电功率'
+                },
+                tooltip : {
+                    formatter: "{a} <br/>{c} {b}"
+                },
+                toolbox: {
+                    show : true,
+                    feature : {
+                        restore : {show: true},
+                        saveAsImage : {show: true}
+                    }
+                },
+                series : [
+                    {
+                        name:'发电功率',
+                        type:'gauge',
+                        min:0,
+                        max:50,
+                        splitNumber:10,
+                        axisLine: {            // 坐标轴线
+                            lineStyle: {       // 属性lineStyle控制线条样式
+                                width: 10
+                            }
+                        },
+                        axisTick: {            // 坐标轴小标记
+                            length :15,        // 属性length控制线长
+                            lineStyle: {       // 属性lineStyle控制线条样式
+                                color: 'auto'
+                            }
+                        },
+                        splitLine: {           // 分隔线
+                            length :20,         // 属性length控制线长
+                            lineStyle: {       // 属性lineStyle（详见lineStyle）控制线条样式
+                                color: 'auto'
+                            }
+                        },
+                        title : {
+                            textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                fontWeight: 'bolder',
+                                fontSize: 20,
+                                fontStyle: 'italic'
+                            }
+                        },
+                        detail : {
+                            textStyle: {       // 其余属性默认使用全局文本样式，详见TEXTSTYLE
+                                fontWeight: 'bolder'
+                            }
+                        },
+                        data:[{value: 40, name: 'MW'}]
+                    }
+                ]
+            };
+
+        chart.setOption(option);
+
+        setInterval(function () {
+            var newData;
+
+            do {
+                newData = (Math.random()*50).toFixed(2) - 0;
+            } while(newData < 35 || newData > 45);
+            option.series[0].data[0].value = newData;
+            chart.setOption(option,true);
+    }, 2000);
+    }
+
+    function initGraph3(ec) {
+        var chart = ec.init(document.getElementById("power-2"));
+
+        var option = {
+            title: {
+                text: '总发电量'
+            },
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                },
+                formatter: function (params) {
+                    var tar;
+                    if (params[1][2] != '-') {
+                        tar = params[1];
+                    }
+                    else {
+                        tar = params[2];
+                    }
+                    return tar[1] + '<br/>' + tar[0] + ' : ' + tar[2];
+                }
+            },
+            toolbox: {
+                show : true,
+                feature : {
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            xAxis : [
+                {
+                    type : 'category',
+                    splitLine: {show:false},
+                    data : ['MWH']
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value'
+                }
+            ],
+            series : [
+                {
+                    name:'发电量',
+                    type:'bar',
+                    stack: '总量',
+                    itemStyle : { normal: {color: 'blue',label : {show: true, position: 'inside'}}},
+                    data:[57648]
+                }
+            ]
+        };
+
+
+        chart.setOption(option);
+    }
+
+    function initGraph2(ec) {
+        var chart = ec.init(document.getElementById("power-1"));
+
+        var option = {
+            title: {
+                text: '今日发电量'
+            },
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                },
+                formatter: function (params) {
+                    var tar;
+                    if (params[1][2] != '-') {
+                        tar = params[1];
+                    }
+                    else {
+                        tar = params[2];
+                    }
+                    return tar[1] + '<br/>' + tar[0] + ' : ' + tar[2];
+                }
+            },
+            toolbox: {
+                show : true,
+                feature : {
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            xAxis : [
+                {
+                    type : 'category',
+                    splitLine: {show:false},
+                    data : ['计划','实际']
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value'
+                }
+            ],
+            series : [
+
+                {
+                    name:'发电量',
+                    type:'bar',
+                    stack: '总量',
+                    itemStyle : { normal: {label : {show: true, position: 'inside'}}},
+                    data:[360000, 255678]
+                }
+            ]
+        };
+
+
+        chart.setOption(option);
+    }
+
+    function initGraph4(ec) {
+        var chart = ec.init(document.getElementById("power-3"));
+
+        var option = {
+            title: {
+                text: '减排贡献'
+            },
+            tooltip : {
+                trigger: 'axis',
+                axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+                    type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+                },
+                formatter: function (params) {
+                    var tar;
+                    if (params[1][2] != '-') {
+                        tar = params[1];
+                    }
+                    else {
+                        tar = params[2];
+                    }
+                    return tar[1] + '<br/>' + tar[0] + ' : ' + tar[2];
+                }
+            },
+            toolbox: {
+                show : true,
+                feature : {
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            xAxis : [
+                {
+                    type : 'category',
+                    splitLine: {show:false},
+                    data : ['标准煤','二氧化碳']
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value'
+                }
+            ],
+            series : [
+
+                {
+                    name:'减排',
+                    type:'bar',
+                    stack: '总量',
+                    itemStyle : { normal: {color: 'green',label : {show: true, position: 'inside'}}},
+                    data:[19216, 43428]
+                }
+            ]
+        };
+
+
+        chart.setOption(option);
+    }
+</script>
+
+<script>
+    require.config({
+        paths: {
+            'echarts': '../js/echarts',
+            'echarts/chart/bar': '../js/echarts',
+            'echarts/chart/line': '../js/echarts'
+        }
+    });
+
+    require(
+            [
+                'echarts',
+                'echarts/chart/bar',
+                'echarts/chart/line'
+            ],
+            function (ec) {
+                initDayKw(ec);
+                initMonthKw(ec);
+                initYearKw(ec);
+            }
+    );
+
+
+    function initDayKw(ec) {
+
+        var chart = ec.init(document.getElementById('kw-0'));
+
+        var data = [];
+
+        for (var i = 0; i < 7; i++) {
+            data[i] = 40000 * ((Math.sqrt(i/6)).toFixed(2) - 0) + ((Math.random()).toFixed(2) - 0) * 3000;
+        }
+
+        var option = {
+            title : {
+                text: '日发电量'
+            },
+            legend: {
+                data:['发电量']
+            },
+            toolbox: {
+                show : true,
+                feature : {
+                    magicType : {show: true, type: ['line', 'bar']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            calculable : true,
+            xAxis : [
+                {
+                    type : 'category',
+                    boundaryGap : false,
+                    data : ['7点','8点','9点','10点','11点','12点']
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+                    axisLabel : {
+                        formatter: '{value} KWH'
+                    }
+                }
+            ],
+            series : [
+                {
+                    name: '发电量',
+                    type: 'line',
+                    smooth:true,
+                    itemStyle:{
+                        normal:
+                        {
+                            label : {show: true}
+                        }
+                    },
+                    data: data
+                }
+            ]
+
+        };
+
+        chart.setOption(option);
+    }
+
+    function initMonthKw(ec) {
+
+        var chart = ec.init(document.getElementById('kw-1'));
+
+        var dataX = [];
+        var dataY = [];
+
+        for (var i = 0; i < 11; i++) {
+            dataX[i] = "7月" + (i + 1) + "日";
+            dataY[i] = 150000 + ((Math.random() - 0.5).toFixed(2) - 0) * 100000;
+        }
+
+        var option = {
+            title : {
+                text: '月发电量'
+            },
+            tooltip : {
+                trigger: 'axis'
+            },
+            toolbox: {
+                show : true,
+                feature : {
+                    magicType : {show: true, type: ['line', 'bar']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            calculable : true,
+            xAxis : [
+                {
+                    type : 'category',
+                    boundaryGap : false,
+                    data : dataX
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+                    axisLabel : {
+                        formatter: '{value} KWH'
+                    }
+                }
+            ],
+            series : [
+                {
+                    name: '发电量',
+                    type: 'line',
+                    smooth:true,
+                    itemStyle:{
+                        normal:
+                        {
+                            label : {show: true}
+                        }
+                    },
+                    data: dataY
+                }
+            ]
+
+        };
+
+        chart.setOption(option);
+    }
+
+    function initYearKw(ec) {
+
+        var chart = ec.init(document.getElementById('kw-2'));
+
+        var dataX = [];
+        var dataY = [];
+
+        for (var i = 0; i < 6; i++) {
+            dataX[i] = "2014年" + (i + 1) + "月";
+            dataY[i] = 5400000 * ((Math.sqrt(i/6)).toFixed(2) - 0) + ((Math.random()).toFixed(2) - 0) * 1080000;
+        }
+
+        var option = {
+            title : {
+                text: '年发电量'
+            },
+            tooltip : {
+                trigger: 'axis'
+            },
+            toolbox: {
+                show : true,
+                feature : {
+                    magicType : {show: true, type: ['line', 'bar']},
+                    restore : {show: true},
+                    saveAsImage : {show: true}
+                }
+            },
+            calculable : true,
+            xAxis : [
+                {
+                    type : 'category',
+                    boundaryGap : false,
+                    data : dataX
+                }
+            ],
+            yAxis : [
+                {
+                    type : 'value',
+                    axisLabel : {
+                        formatter: '{value} KWH'
+                    }
+                }
+            ],
+            series : [
+                {
+                    name: '发电量',
+                    type: 'line',
+                    smooth:true,
+                    itemStyle:{
+                        normal:
+                        {
+                            label : {show: true}
+                        }
+                    },
+                    data: dataY
+                }
+            ]
+
+        };
+
+        chart.setOption(option);
+    }
+</script>
+
+</body>

@@ -1,0 +1,314 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">评价分析
+        </h1>
+    </div>
+    <!-- /.col-lg-12 -->
+</div>
+<!-- /.row -->
+
+<div class="row">
+    <div class="col-lg-6 col-md-12">
+        <div class="panel panel-default" id="power-0" style="height: 400px">
+
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-12">
+        <div class="panel panel-default" id="power-1" style="height: 400px">
+
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-12">
+        <div class="panel panel-default" id="power-2" style="height: 400px">
+
+        </div>
+    </div>
+    <div class="col-lg-6 col-md-12">
+        <div class="panel panel-default" id="power-3" style="height: 400px">
+
+        </div>
+    <!--</div>-->
+    <!--<div class="col-lg-6 col-md-12">-->
+        <!--<div class="panel panel-primary" id="device-4" style="height: 400px">-->
+
+        <!--</div>-->
+    <!--</div>-->
+    <!--<div class="col-lg-6 col-md-12">-->
+        <!--<div class="panel panel-primary" id="device-5" style="height: 400px">-->
+
+        <!--</div>-->
+    <!--</div>-->
+</div>
+
+
+
+<script>
+    var stationName = ['光伏组件', '逆变器', '汇流箱'];
+    require.config({
+        paths: {
+            'echarts': '../js/echarts',
+            'echarts/chart/pie': '../js/echarts',
+            'echarts/chart/radar': '../js/echarts'
+        }
+    });
+
+    require(
+            [
+                'echarts',
+                'echarts/chart/pie',
+                'echarts/chart/radar'
+            ],
+            function (ec) {
+                initGraph1(ec);
+                initGraph2(ec);
+                initGraph3(ec);
+                initGraph4(ec);
+            }
+    );
+
+
+    function initGraph1(ec) {
+
+            var chart = ec.init(document.getElementById('power-0'));
+
+            var option = {
+                title: {
+                    text: '光伏组件'
+                },
+                tooltip: {
+                    trigger: 'item',
+                    formatter: "{a} <br/>{b} : {c} ({d}%)"
+                },
+                legend: {
+                    y: 'bottom',
+                    data: ['正常', '异常', '故障', '低电流', '无电流', '通讯故障']
+                },
+                toolbox: {
+                    show: true,
+                    feature: {
+                        restore: {show: true},
+                        saveAsImage: {show: true}
+                    }
+                },
+                calculable: true,
+                series: [
+                    {
+                        name: '光伏组件状态',
+                        type: 'pie',
+                        radius: ['0%', '35%'],
+                        itemStyle: {
+                            normal: {
+                                label: {
+                                    position: 'inner'
+                                },
+                                labelLine: {
+                                    show: false
+                                }
+                            }
+                        },
+                        data: [{value: 10000, name: '正常'},
+                            {value: 1000, name: '异常'},
+                            {value: 4000, name: '故障'}]
+                    },
+                    {
+                        name: '光伏组件状态',
+                        type: 'pie',
+                        radius: ['50%', '75%'],
+                        data: [{value: 10300, name: '正常'},
+                            {value: 1000, name: '异常'},
+                            {value: 2000, name: '低电流'},
+                            {value: 1500, name: '无电流'},
+                            {value: 500, name: '通讯故障'}
+                        ]
+                    }
+                ]
+            };
+
+            chart.setOption(option);
+    }
+    function initGraph2(ec) {
+
+        var chart = ec.init(document.getElementById('power-1'));
+
+        var option = {
+            title: {
+                text: '汇流箱'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: {
+                y: 'bottom',
+                data: ['正常', '异常', '故障', '防雷故障', '电源故障', '通讯故障']
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    restore: {show: true},
+                    saveAsImage: {show: true}
+                }
+            },
+            calculable: true,
+            series: [
+                {
+                    name: '汇流箱状态',
+                    type: 'pie',
+                    radius: ['0%', '35%'],
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                position: 'inner'
+                            },
+                            labelLine: {
+                                show: false
+                            }
+                        }
+                    },
+                    data: [{value: 800, name: '正常'},
+                        {value: 50, name: '异常'},
+                        {value: 150, name: '故障'}]
+                },
+                {
+                    name: '汇流箱状态',
+                    type: 'pie',
+                    radius: ['50%', '75%'],
+                    data: [{value: 800, name: '正常'},
+                        {value: 50, name: '异常'},
+                        {value: 25, name: '防雷故障'},
+                        {value: 75, name: '电源故障'},
+                        {value: 50, name: '通讯故障'}
+                    ]
+                }
+            ]
+        };
+
+        chart.setOption(option);
+    }
+
+    function initGraph3(ec) {
+
+        var chart = ec.init(document.getElementById('power-2'));
+
+        var option = {
+            title: {
+                text: '逆变器'
+            },
+            tooltip: {
+                trigger: 'item',
+                formatter: "{a} <br/>{b} : {c} ({d}%)"
+            },
+            legend: {
+                y: 'bottom',
+                data: ['正常', '异常', '故障', '接地故障', '熔断器故障', '通讯故障']
+            },
+            toolbox: {
+                show: true,
+                feature: {
+                    restore: {show: true},
+                    saveAsImage: {show: true}
+                }
+            },
+            calculable: true,
+            series: [
+                {
+                    name: '逆变器状态',
+                    type: 'pie',
+                    radius: ['0%', '35%'],
+                    itemStyle: {
+                        normal: {
+                            label: {
+                                position: 'inner'
+                            },
+                            labelLine: {
+                                show: false
+                            }
+                        }
+                    },
+                    data: [{value: 80, name: '正常'},
+                        {value: 3, name: '异常'},
+                        {value: 18, name: '故障'}]
+                },
+                {
+                    name: '逆变器状态',
+                    type: 'pie',
+                    radius: ['50%', '75%'],
+                    data: [{value: 80, name: '正常'},
+                        {value: 3, name: '异常'},
+                        {value: 3, name: '接地故障'},
+                        {value: 5, name: '熔断器故障'},
+                        {value: 10, name: '通讯故障'}
+                    ]
+                }
+            ]
+        };
+
+        chart.setOption(option);
+    }
+
+    function initGraph4(ec) {
+
+        var chart = ec.init(document.getElementById('power-3'));
+
+        var option = {
+            title : {
+                text: '总体评价'
+            },
+            tooltip : {
+                trigger: 'axis'
+            },
+            polar : [
+                {
+                    indicator : [
+                        { text: '设备健康度', max: 1},
+                        { text: '设备运行率', max: 1},
+                        { text: '设备折旧率', max: 1},
+                        { text: '安全运行率', max: 1},
+                        { text: '预测符合度', max: 1}
+                    ]
+                }
+            ],
+            calculable : true,
+            series : [
+                {
+                    name: '总体评价',
+                    type: 'radar',
+                    data : [
+                        {
+                            value : generateRandom(5),
+                            name : '总体评价'
+                        }
+                    ]
+                }
+            ]
+        };
+
+
+        chart.setOption(option);
+
+    }
+
+    function generateRandom(length) {
+        var data = [];
+
+        for (var i = 0; i < length; i++) {
+            var randomData;
+
+            do {
+                randomData = Math.random();
+            } while(randomData < 0.8);
+
+            data.push(randomData.toFixed(2) - 0);
+        }
+
+        return data;
+    }
+</script>
+
+
+
+
+
+
+
+

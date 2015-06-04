@@ -1,9 +1,6 @@
 <div class="row">
     <div class="col-lg-12">
         <h1 class="page-header">总体运行
-            <small>
-                评价指标可视化
-            </small>
         </h1>
     </div>
     <!-- /.col-lg-12 -->
@@ -63,7 +60,13 @@
         var data = [];
 
         for (var i = 0; i < length; i++) {
-            data.push(Math.random());
+            var randomData;
+
+            do {
+                randomData = Math.random();
+            } while(randomData < 0.7);
+
+            data.push(randomData.toFixed(2) - 0);
         }
 
         return data;
